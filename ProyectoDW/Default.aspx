@@ -18,7 +18,7 @@
         </dx:GridViewDataTextColumn>
         <dx:GridViewDataTextColumn FieldName="ContactTitle" VisibleIndex="3">
         </dx:GridViewDataTextColumn>
-        <dx:GridViewDataTextColumn FieldName="City" VisibleIndex="5">
+        <dx:GridViewDataTextColumn FieldName="Ciudad" VisibleIndex="5">
         </dx:GridViewDataTextColumn>
         <dx:GridViewDataTextColumn FieldName="Phone" VisibleIndex="9">
         </dx:GridViewDataTextColumn>
