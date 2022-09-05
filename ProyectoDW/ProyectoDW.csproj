@@ -139,11 +139,40 @@
     <Content Include="App_Data\NWind.mdf" />
     <Content Include="App_Data\SideMenu.xml" />
     <Content Include="App_Data\TopMenu.xml" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\flexslider.css" />
+    <Content Include="Content\css\jquery-ui.css" />
+    <Content Include="Content\css\pignose.layerslider.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Images\1.png" />
+    <Content Include="Content\Images\2.png" />
     <Content Include="Content\Images\AquaHeader.jpg" />
+    <Content Include="Content\Images\arrow.png" />
     <Content Include="Content\Images\BlackGlassHeader.jpg" />
+    <Content Include="Content\Images\btn_next.png" />
+    <Content Include="Content\Images\btn_pause.png" />
+    <Content Include="Content\Images\btn_play.png" />
+    <Content Include="Content\Images\btn_prev.png" />
+    <Content Include="Content\Images\close_1.png" />
     <Content Include="Content\Images\GlassHeader.jpg" />
+    <Content Include="Content\Images\icons1.png" />
+    <Content Include="Content\Images\img-sp.png" />
+    <Content Include="Content\Images\mark1.png" />
     <Content Include="Content\Images\PlasticBlueHeader.jpg" />
     <Content Include="Content\Images\RedWineHeader.jpg" />
+    <Content Include="Content\Images\search.png" />
+    <Content Include="Content\Images\tick-mark1.png" />
+    <Content Include="Content\js\bootstrap-3.1.1.min.js" />
+    <Content Include="Content\js\easyResponsiveTabs.js" />
+    <Content Include="Content\js\imagezoom.js" />
+    <Content Include="Content\js\jquery-2.1.4.min.js" />
+    <Content Include="Content\js\jquery-ui.js" />
+    <Content Include="Content\js\jquery.easing.min.js" />
+    <Content Include="Content\js\jquery.flexslider.js" />
+    <Content Include="Content\js\pignose.layerslider.js" />
+    <Content Include="Content\js\responsiveslides.min.js" />
+    <Content Include="Content\js\simpleCart.min.js" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -161,7 +190,13 @@
     <Content Include="Root.master" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

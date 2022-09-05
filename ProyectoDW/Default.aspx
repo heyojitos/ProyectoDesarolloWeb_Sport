@@ -3,7 +3,7 @@
 
 <asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">
     <%-- DXCOMMENT: Configure ASPxGridView control --%>
-<dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="True" DataSourceID="SqlDataSource1" ClientInstanceName="ASPxGridView1"
+<dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="True" ClientInstanceName="ASPxGridView1"
     Width="100%">
     <SettingsAdaptivity AdaptivityMode="HideDataCells" />
     <SettingsPager PageSize="50" />
@@ -27,10 +27,7 @@
 
 
 <%-- DXCOMMENT: Configure your datasource for ASPxGridView --%>
-<!--asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:NWindConnectionString %>" 
-        SelectCommand="SELECT * FROM [Customers]">
-</!--asp:SqlDataSource-->
+
 
 
 </asp:Content>
