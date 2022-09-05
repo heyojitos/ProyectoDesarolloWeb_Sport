@@ -27,10 +27,10 @@
 
 
 <%-- DXCOMMENT: Configure your datasource for ASPxGridView --%>
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+<!--asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:NWindConnectionString %>" 
         SelectCommand="SELECT * FROM [Customers]">
-</asp:SqlDataSource>
+</!--asp:SqlDataSource-->
 
 
 </asp:Content>
