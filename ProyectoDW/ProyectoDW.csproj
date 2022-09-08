@@ -176,6 +176,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="WebForms\Mantenimientos\WebClientes.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
@@ -325,6 +326,15 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Content Include="App_Code\Dao\DaoMantenimiento\ClsDaoCliente.cs" />
+    <Content Include="App_Code\Controller\ControllerMantenimiento\ClsControllerCliente.cs" />
+    <Compile Include="WebForms\Mantenimientos\WebClientes.aspx.cs">
+      <DependentUpon>WebClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Mantenimientos\WebClientes.aspx.designer.cs">
+      <DependentUpon>WebClientes.aspx</DependentUpon>
+    </Compile>
     <Content Include="App_Code\Dao\ClsConexion.cs" />
     <Content Include="App_Code\Utilidades\ClsErrorHandler.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -365,8 +375,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\Controller\" />
     <Folder Include="App_Code\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
