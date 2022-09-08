@@ -12,7 +12,7 @@ namespace ProyectoDW.App_Code.Models
         private string producto;
         private string descripcion;
         private string imagen;
-        private string stock;
+        private int stock;
         private float precio;
 
         public int IdProducto
