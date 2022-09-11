@@ -408,6 +408,7 @@
     </Compile>
     <Content Include="App_Code\Dao\DaoMantenimiento\ClsDaoCliente.cs" />
     <Content Include="App_Code\Controller\ControllerMantenimiento\ClsControllerCliente.cs" />
+    <Content Include="App_Code\Dao\ClsDataLayer.cs" />
     <Compile Include="WebForms\Mantenimientos\WebClientes.aspx.cs">
       <DependentUpon>WebClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -468,6 +469,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="NewFolder1\" />
+    <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
