@@ -4,13 +4,18 @@
 
 
 <asp:content id="RegistroLogin" contentplaceholderid="MainContent" runat="server">
+    <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/bootstrap.css") %>" type="text/css" media="all"/>
+    <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/style.css") %>" type="text/css" media="all"/>
+    <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/flexslider.css") %>" type="text/css" media="all"/>
+    <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/jquery-ui.css") %>" type="text/css" media="all"/>
+    <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/pignose.layerslider.css") %>" type="text/css" media="all"/>
     <div class="accountHeader">
     <h2>Crear Usuario</h2>
     <p style="color:red">
       <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
 </div>
-    
+   <div class="login"> 
 <dx:ASPxTextBox ID="txtNombre" runat="server" Width="200px" Caption="Nombre:">
   <CaptionSettings Position="Top" />
   <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
@@ -65,6 +70,7 @@
            
         }" />
     </dx:ASPxCheckBox>
+       </div>
 <br />
 <dx:ASPxButton ID="btnCreateUser" runat="server" Text="Crear Usuario" ValidationGroup="RegisterUserValidationGroup"
     OnClick="btnCreateUser_Click">
