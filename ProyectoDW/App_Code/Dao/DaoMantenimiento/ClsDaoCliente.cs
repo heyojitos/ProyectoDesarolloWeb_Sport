@@ -45,19 +45,26 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
 
         public bool InsertCliente(ClsUsuario usuario)
         {
-            strSql = "";
+            strSql = "INSERT INTO TB_USUARIO (ID_USUARIO,NOMBRE,APELLIDO,EMAIL,PASSWORD) "+
+                "VALUES((SELECT ISNULL(MAX(ID_USUARIO),0) + 1 FROM TB_USUARIO),'"
+                + usuario.Nombre+"','"+usuario.Apellido+"','"+usuario.Email+"','"+usuario.Password+"')";
             return ExecuteSql(strSql);
         }
 
         public bool UpdateCliente(ClsUsuario usuario)
         {
-            strSql = "";
+            strSql = "UPDATE TB_USUARIO SET"+
+                " NOMBRE = '" + usuario.Nombre + "',"+
+                " APELLIDO = '" + usuario.Apellido + "',"+
+                " EMAIL = '" + usuario.Email + "',"+
+                " PASSWORD = '" + usuario.Password + "' "+
+                "WHERE ID_USUARIO = " + usuario.IdUsuario;
             return ExecuteSql(strSql);
         }
 
         public bool DeleteCliente(ClsUsuario usuario)
         {
-            strSql = "";
+            strSql = "DELETE FROM TB_USUARIO WHERE ID_USUARIO = " + usuario.IdUsuario;
             return ExecuteSql(strSql);
         }
     }
