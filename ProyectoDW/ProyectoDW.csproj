@@ -406,9 +406,10 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Content Include="App_Code\Dao\DaoMantenimiento\ClsDaoCliente.cs" />
-    <Content Include="App_Code\Controller\ControllerMantenimiento\ClsControllerCliente.cs" />
-    <Content Include="App_Code\Dao\ClsDataLayer.cs" />
+    <Compile Include="App_Code\Dao\ClsController.cs" />
+    <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoCliente.cs" />
+    <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerCliente.cs" />
+    <Compile Include="App_Code\Dao\ClsDataLayer.cs" />
     <Compile Include="WebForms\Mantenimientos\WebClientes.aspx.cs">
       <DependentUpon>WebClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -416,18 +417,18 @@
     <Compile Include="WebForms\Mantenimientos\WebClientes.aspx.designer.cs">
       <DependentUpon>WebClientes.aspx</DependentUpon>
     </Compile>
-    <Content Include="App_Code\Dao\ClsConexion.cs" />
-    <Content Include="App_Code\Utilidades\ClsErrorHandler.cs" />
+    <Compile Include="App_Code\Dao\ClsConexion.cs" />
+    <Compile Include="App_Code\Utilidades\ClsErrorHandler.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Content Include="App_Code\Models\ClsAnuncio.cs" />
-    <Content Include="App_Code\Models\ClsCategoria.cs" />
-    <Content Include="App_Code\Models\ClsDetallePedido.cs" />
-    <Content Include="App_Code\Models\ClsEstado.cs" />
-    <Content Include="App_Code\Models\ClsPedido.cs" />
-    <Content Include="App_Code\Models\ClsProducto.cs" />
-    <Content Include="App_Code\Models\ClsUsrDireccion.cs" />
-    <Content Include="App_Code\Models\ClsUsrTelefono.cs" />
-    <Content Include="App_Code\Models\ClsUsuario.cs" />
+    <Compile Include="App_Code\Models\ClsAnuncio.cs" />
+    <Compile Include="App_Code\Models\ClsCategoria.cs" />
+    <Compile Include="App_Code\Models\ClsDetallePedido.cs" />
+    <Compile Include="App_Code\Models\ClsEstado.cs" />
+    <Compile Include="App_Code\Models\ClsPedido.cs" />
+    <Compile Include="App_Code\Models\ClsProducto.cs" />
+    <Compile Include="App_Code\Models\ClsUsrDireccion.cs" />
+    <Compile Include="App_Code\Models\ClsUsrTelefono.cs" />
+    <Compile Include="App_Code\Models\ClsUsuario.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Default.aspx.cs">
@@ -468,8 +469,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NewFolder1\" />
-    <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
