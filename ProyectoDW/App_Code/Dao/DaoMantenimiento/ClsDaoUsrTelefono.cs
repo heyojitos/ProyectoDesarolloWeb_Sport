@@ -18,7 +18,7 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
         {
             try
             {
-                strSql = "";
+                strSql = "SELECT ID_TELEFONO, ID_USUARIO, DESCRIPCION FROM TB_USR_TELEFONO";
                 DsReturn = objSql.EjectuaSQL(strSql, "Telefono");
             }
             catch (Exception ex)
@@ -44,7 +44,10 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
 
         public bool InsertTelefono(ClsUsrTelefono telefono)
         {
-            strSql = "";
+            strSql = "INSERT INTO TB_USR_TELEFONO(ID_TELEFONO,ID_USUARIO,DESCRIPCION) "+
+                "VALUES((SELECT ISNULL(MAX(ID_TELEFONO),0) + 1 FROM TB_USR_TELEFONO)," 
+                + telefono.IdUsuario + ",'" 
+                + telefono.Descripcion + "')";
             return ExecuteSql(strSql);
         }
 
