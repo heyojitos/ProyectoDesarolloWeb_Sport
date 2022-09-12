@@ -22,49 +22,76 @@ namespace ProyectoDW {
         protected global::System.Web.UI.WebControls.Literal ErrorMessage;
         
         /// <summary>
-        /// Control tbUserName.
+        /// Control txtNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox tbUserName;
+        protected global::DevExpress.Web.ASPxTextBox txtNombre;
         
         /// <summary>
-        /// Control tbUserName1.
+        /// Control txtApellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox tbUserName1;
+        protected global::DevExpress.Web.ASPxTextBox txtApellido;
         
         /// <summary>
-        /// Control tbEmail.
+        /// Control txtEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox tbEmail;
+        protected global::DevExpress.Web.ASPxTextBox txtEmail;
         
         /// <summary>
-        /// Control tbPassword.
+        /// Control txtContra.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox tbPassword;
+        protected global::DevExpress.Web.ASPxTextBox txtContra;
         
         /// <summary>
-        /// Control tbConfirmPassword.
+        /// Control txtConfirmContra.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox tbConfirmPassword;
+        protected global::DevExpress.Web.ASPxTextBox txtConfirmContra;
+        
+        /// <summary>
+        /// Control txtDireccionEnvio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTextBox txtDireccionEnvio;
+        
+        /// <summary>
+        /// Control txtDireccionFacturacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTextBox txtDireccionFacturacion;
+        
+        /// <summary>
+        /// Control chboxDireccion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxCheckBox chboxDireccion;
         
         /// <summary>
         /// Control btnCreateUser.
