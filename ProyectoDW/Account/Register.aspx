@@ -1,66 +1,78 @@
 <%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Light.master" CodeBehind="Register.aspx.cs" Inherits="ProyectoDW.Register" %>
 
-<asp:content id="ClientArea" contentplaceholderid="MainContent" runat="server">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<%@ Register Assembly="DevExpress.Web.Bootstrap.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.Bootstrap" TagPrefix="dx" %>
 
-   
-    <form style="width: 23rem;"> 
 
+<asp:content id="RegistroLogin" contentplaceholderid="MainContent" runat="server">
+    <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/bootstrap.css") %>" type="text/css" media="all"/>
+    <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/style.css") %>" type="text/css" media="all"/>
+    <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/flexslider.css") %>" type="text/css" media="all"/>
+    <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/jquery-ui.css") %>" type="text/css" media="all"/>
+    <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/pignose.layerslider.css") %>" type="text/css" media="all"/>
     <div class="accountHeader">
-        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Crear una cuenta nueva</h3>
-    </div>
-    
-    <div class="form-outline mb-4">
-        <dx:ASPxTextBox ID="tbUserName" runat="server" Width="400px" Caption="Nombre" CssClass="form-control form-control-lg">
-            <CaptionSettings Position="Top" />
-            <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
-                <RequiredField ErrorText="El nombre de usuario es obligatorio." IsRequired="true" />
-            </ValidationSettings>
-        </dx:ASPxTextBox>
-    </div>
-    
-    <div class="form-outline mb-4">
-        <dx:ASPxTextBox ID="tbEmail" runat="server" Width="400px" Caption="E-mail" CssClass="form-control form-control-lg">
-            <CaptionSettings Position="Top" />
-            <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
-                <RequiredField ErrorText="E-mail is required." IsRequired="true" />
-                <RegularExpression ErrorText="Email validation failed" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
-            </ValidationSettings>
-        </dx:ASPxTextBox>
-    </div>
-
-        <div class="form-outline mb-4">
-            <dx:ASPxTextBox ID="tbPassword" ClientInstanceName="Contraseña" Password="true" runat="server" Width="400px" Caption="Password" CssClass="form-control form-control-lg">
-                <CaptionSettings Position="Top" />
-                <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
-                    <RequiredField ErrorText="Password is required." IsRequired="true" />
-                </ValidationSettings>
-            </dx:ASPxTextBox>
-        </div>
-
-        <div class="form-outline mb-4">
-            <dx:ASPxTextBox ID="tbConfirmPassword" Password="true" runat="server" Width="400px" Caption="Confirme contraseña" CssClass="form-control form-control-lg">
-                <CaptionSettings Position="Top" />
-                <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
-                    <RequiredField ErrorText="Confirm Password is required." IsRequired="true" />
-                </ValidationSettings>
-                <ClientSideEvents Validation="function(s, e) {
+    <h2>Crear Usuario</h2>
+    <p style="color:red">
+      <asp:Literal runat="server" ID="ErrorMessage" />
+    </p>
+</div>
+   <div class="login"> 
+<dx:ASPxTextBox ID="txtNombre" runat="server" Width="200px" Caption="Nombre:">
+  <CaptionSettings Position="Top" />
+  <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
+    <RequiredField ErrorText="Se requiere su nombre" IsRequired="true" />
+  </ValidationSettings>
+</dx:ASPxTextBox>
+    <dx:ASPxTextBox ID="txtApellido" runat="server" Width="200px" Caption="Apellido:">
+  <CaptionSettings Position="Top" />
+  <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
+    <RequiredField ErrorText="Se requiere su apellido" IsRequired="true" />
+  </ValidationSettings>
+</dx:ASPxTextBox>
+<dx:ASPxTextBox ID="txtEmail" runat="server" Width="200px" Caption="Correo electrï¿½nico:">
+  <CaptionSettings Position="Top" />
+  <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
+    <RequiredField ErrorText="Se requiere su correo" IsRequired="true" />
+    <RegularExpression ErrorText="Falla de validaciï¿½n de correo" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+  </ValidationSettings>
+</dx:ASPxTextBox>
+<dx:ASPxTextBox ID="txtContra" ClientInstanceName="Password" Password="true" runat="server" Width="200px" Caption="Contraseï¿½a:">
+  <CaptionSettings Position="Top" />
+  <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
+    <RequiredField ErrorText="Se requiere su contraseï¿½a" IsRequired="true" />
+  </ValidationSettings>
+</dx:ASPxTextBox>
+<dx:ASPxTextBox ID="txtConfirmContra" Password="true" runat="server" Width="200px" Caption="Confirmar contraseï¿½a:">
+  <CaptionSettings Position="Top" />
+  <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
+    <RequiredField ErrorText="Se requiere la confirmaciï¿½n de contraseï¿½a" IsRequired="true" />
+  </ValidationSettings>
+  <ClientSideEvents Validation="function(s, e) {
             var originalPasswd = Password.GetText();
             var currentPasswd = s.GetText();
             e.isValid = (originalPasswd  == currentPasswd );
-            e.errorText = 'The Password and Confirmation Password must match.';
+            e.errorText = 'La contraseï¿½a debe coincidir';
         }" />
-            </dx:ASPxTextBox>
-        </div>
-
-        <div class="pt-1 mb-4">
-            <dx:ASPxButton ID="btnCreateUser" runat="server" Text="Create User" ValidationGroup="RegisterUserValidationGroup" CssClass=" btn-lg" Width="200px"
-                OnClick="btnCreateUser_Click">
-            </dx:ASPxButton>
-        </div>
-
-
-
-
-
+</dx:ASPxTextBox>
+    <dx:ASPxTextBox ID="txtDireccionEnvio" runat="server" Width="200px" Caption="Direccion de envio:">
+  <CaptionSettings Position="Top" />
+  <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
+    <RequiredField ErrorText="Se requiere una direccion" IsRequired="true" />
+  </ValidationSettings>
+</dx:ASPxTextBox>
+    <dx:ASPxTextBox ID="txtDireccionFacturacion" runat="server" Width="200px" Caption="Direccion de facturaciï¿½n:">
+  <CaptionSettings Position="Top" />
+  <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
+    <RequiredField ErrorText="Se requiere una direccion" IsRequired="true" />
+  </ValidationSettings>
+</dx:ASPxTextBox>
+    <dx:ASPxCheckBox ID="chboxDireccion" runat="server" Width="200px" Text="ï¿½Desea usar la misma direcciï¿½n de envio?">
+        <ClientSideEvents CheckedChanged="function(s, e) {
+           
+        }" />
+    </dx:ASPxCheckBox>
+       </div>
+<br />
+<dx:ASPxButton ID="btnCreateUser" runat="server" Text="Crear Usuario" ValidationGroup="RegisterUserValidationGroup"
+    OnClick="btnCreateUser_Click">
+</dx:ASPxButton>
 </asp:content>

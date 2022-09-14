@@ -9,34 +9,34 @@ using System.Web;
 
 namespace ProyectoDW.App_Code.Controller.ControllerMantenimiento
 {
-    public class ClsControllerCliente : ClsController
+    public class ClsControllerUsrDireccion : ClsController
     {
         ClsErrorHandler log = new ClsErrorHandler();
-        ClsDaoCliente objCliente = new ClsDaoCliente();
+        ClsDaoUsrDireccion objDireccion = new ClsDaoUsrDireccion();
 
-        public bool GetClienteAll()
+        public bool GetDireccionAll()
         {
             try
             {
-                if (objCliente.getClienteAll())
+                if (objDireccion.getDireccionAll())
                 {
-                    DsReturn = objCliente.DsReturn;
+                    DsReturn = objDireccion.DsReturn;
                     return true;
                 }
             }
             catch (Exception ex)
             {
                 log.LogError(ex.ToString(), ex.StackTrace);
-                //throw;
+                return false;
             }
             return false;
         }
 
-        public bool InsertCliente(ClsUsuario usuario)
+        public bool InsertDireccion(ClsUsrDireccion direccion)
         {
             try
             {
-                if (objCliente.InsertCliente(usuario))
+                if (objDireccion.InsertDireccion(direccion))
                 {
                     return true;
                 }
@@ -49,11 +49,11 @@ namespace ProyectoDW.App_Code.Controller.ControllerMantenimiento
             return false;
         }
 
-        public bool UpdateCliente(ClsUsuario usuario)
+        public bool UpdateDireccion(ClsUsrDireccion direccion)
         {
             try
             {
-                if (objCliente.UpdateCliente(usuario))
+                if (objDireccion.UpdateDireccion(direccion))
                 {
                     return true;
                 }
@@ -66,11 +66,11 @@ namespace ProyectoDW.App_Code.Controller.ControllerMantenimiento
             return false;
         }
 
-        public bool DeleteCliente(ClsUsuario usuario)
+        public bool DeleteDireccion(ClsUsrDireccion direccion)
         {
             try
             {
-                if (objCliente.DeleteCliente(usuario))
+                if (objDireccion.DeleteDireccion(direccion))
                 {
                     return true;
                 }

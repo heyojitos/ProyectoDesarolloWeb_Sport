@@ -9,34 +9,34 @@ using System.Web;
 
 namespace ProyectoDW.App_Code.Controller.ControllerMantenimiento
 {
-    public class ClsControllerCliente : ClsController
+    public class ClsControllerUsrTelefono : ClsController
     {
         ClsErrorHandler log = new ClsErrorHandler();
-        ClsDaoCliente objCliente = new ClsDaoCliente();
+        ClsDaoUsrTelefono objTelefono = new ClsDaoUsrTelefono();
 
-        public bool GetClienteAll()
+        public bool GetTelefonoAll()
         {
             try
             {
-                if (objCliente.getClienteAll())
+                if (objTelefono.GetTelefonoAll())
                 {
-                    DsReturn = objCliente.DsReturn;
+                    DsReturn = objTelefono.DsReturn;
                     return true;
                 }
             }
             catch (Exception ex)
             {
                 log.LogError(ex.ToString(), ex.StackTrace);
-                //throw;
+                return false;
             }
             return false;
         }
 
-        public bool InsertCliente(ClsUsuario usuario)
+        public bool InsertTelefono(ClsUsrTelefono telefono)
         {
             try
             {
-                if (objCliente.InsertCliente(usuario))
+                if (objTelefono.InsertTelefono(telefono))
                 {
                     return true;
                 }
@@ -49,11 +49,11 @@ namespace ProyectoDW.App_Code.Controller.ControllerMantenimiento
             return false;
         }
 
-        public bool UpdateCliente(ClsUsuario usuario)
+        public bool UpdateTelefono(ClsUsrTelefono telefono)
         {
             try
             {
-                if (objCliente.UpdateCliente(usuario))
+                if (objTelefono.UpdateTelefono(telefono))
                 {
                     return true;
                 }
@@ -66,11 +66,11 @@ namespace ProyectoDW.App_Code.Controller.ControllerMantenimiento
             return false;
         }
 
-        public bool DeleteCliente(ClsUsuario usuario)
+        public bool DeleteTelefono(ClsUsrTelefono telefono)
         {
             try
             {
-                if (objCliente.DeleteCliente(usuario))
+                if (objTelefono.DeleteTelefono(telefono))
                 {
                     return true;
                 }
