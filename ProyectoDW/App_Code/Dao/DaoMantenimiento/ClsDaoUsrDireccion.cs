@@ -18,7 +18,7 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
         {
             try
             {
-                strSql = "";
+                strSql = "SELECT * FROM TB_USR_DIRECCION";
                 DsReturn = objSql.EjectuaSQL(strSql, "Direccion");
             }
             catch (Exception ex)
@@ -44,19 +44,24 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
 
         public bool InsertDireccion(ClsUsrDireccion direccion)
         {
-            strSql = "";
+            strSql = "INSERT INTO TB_USR_DIRECCION(ID_DIRECCION,ID_USUARIO,DESCRIPCION) "+
+                "VALUES((SELECT ISNULL(MAX(ID_DIRECCION),0)+ 1 FROM TB_USR_DIRECCION)," 
+                + direccion.IdUsuario + ",'" + direccion.Descripcion + "')";
             return ExecuteSql(strSql);
         }
 
         public bool UpdateDireccion(ClsUsrDireccion direccion)
         {
-            strSql = "";
+            strSql = "UPDATE TB_USR_DIRECCION SET "+
+                "ID_USUARIO = " + direccion.IdUsuario + 
+                ", DESCRIPCION = '" + direccion.Descripcion + 
+                "' WHERE ID_DIRECCION = " + direccion.IdDireccion;
             return ExecuteSql(strSql);
         }
 
         public bool DeleteDireccion(ClsUsrDireccion direccion)
         {
-            strSql = "";
+            strSql = "DELETE FROM TB_USR_DIRECCION WHERE ID_DIRECCION = " + direccion.IdDireccion;
             return ExecuteSql(strSql);
         }
     }
