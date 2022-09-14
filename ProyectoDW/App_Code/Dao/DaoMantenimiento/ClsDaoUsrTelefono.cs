@@ -53,13 +53,16 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
 
         public bool UpdateTelefono(ClsUsrTelefono telefono)
         {
-            strSql = "";
+            strSql = "UPDATE TB_USR_TELEFONO SET "+
+                "ID_USUARIO = " + telefono.IdUsuario + 
+                ", DESCRIPCION = '" + telefono.Descripcion + 
+                "' WHERE ID_TELEFONO = " + telefono.IdTelefono;
             return ExecuteSql(strSql);
         }
 
         public bool DeleteTelefono(ClsUsrTelefono telefono)
         {
-            strSql = "";
+            strSql = "DELETE FROM TB_USR_TELEFONO WHERE ID_TELEFONO =" + telefono.IdTelefono;
             return ExecuteSql(strSql);
         }
     }
