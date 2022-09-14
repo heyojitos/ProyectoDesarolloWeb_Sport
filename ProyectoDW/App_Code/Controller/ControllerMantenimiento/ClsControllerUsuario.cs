@@ -32,6 +32,24 @@ namespace ProyectoDW.App_Code.Controller.ControllerMantenimiento
             return false;
         }
 
+        public bool GetIdUsuario(ClsUsuario usuario)
+        {
+            try
+            {
+                if (objCliente.getUsuarioID(usuario))
+                {
+                    DsReturn = objCliente.DsReturn;
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                //throw;
+            }
+            return false;
+        }
+
         public bool InsertCliente(ClsUsuario usuario)
         {
             try

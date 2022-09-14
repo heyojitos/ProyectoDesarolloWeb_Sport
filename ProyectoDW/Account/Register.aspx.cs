@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using ProyectoDW.App_Code.Models;
 using ProyectoDW.App_Code.Controller.ControllerMantenimiento;
+using System.Data;
 
 namespace ProyectoDW {
     public partial class Register : System.Web.UI.Page {
@@ -35,6 +36,11 @@ namespace ProyectoDW {
 
                 if (controllUsuario.InsertCliente(usuario))
                 {
+                    if (controllUsuario.GetIdUsuario(usuario))
+                    {
+                        DataTable dtUsu = controllUsuario.DsReturn.Tables["UsuarioId"];
+                        int id = int.Parse(dtUsu.Rows[0]["ID_USUARIO"].ToString());
+                    }
                     limpiarForm();
                     string StrQry = "<script language='javascript'>";
                     StrQry += "alert('Registro guardado correctamente'); ";

@@ -43,6 +43,22 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
             return true;
         }
 
+        public bool getUsuarioID(ClsUsuario usuario)
+        {
+
+            try
+            {
+                strSql = "SELECT [ID_USUARIO] FROM [TB_USUARIO] WHERE [NOMBRE] = '"+ usuario.Nombre +"'  AND [APELLIDO] = '"+ usuario.Apellido +"' AND [EMAIL] = '"+ usuario.Email +"' AND [PASSWORD] = '"+ usuario.Password +"' ";
+                DsReturn = objSql.EjectuaSQL(strSql, "UsuarioId");
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                //throw;
+            }
+            return true;
+        }
+
         public bool InsertCliente(ClsUsuario usuario)
         {
             strSql = "INSERT INTO TB_USUARIO (ID_USUARIO,NOMBRE,APELLIDO,EMAIL,PASSWORD) "+
