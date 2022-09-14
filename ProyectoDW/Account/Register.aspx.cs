@@ -31,7 +31,7 @@ namespace ProyectoDW {
                 usuario.Nombre = txtNombre.Text;
                 usuario.Apellido = txtApellido.Text;
                 usuario.Email = txtEmail.Text;
-                usuario.Password = txtEmail.Text;
+                usuario.Password = txtContra.Text;
 
                 if (controllUsuario.InsertCliente(usuario))
                 {
