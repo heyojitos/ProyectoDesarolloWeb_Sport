@@ -70,6 +70,12 @@
            
         }" />
     </dx:ASPxCheckBox>
+        <dx:ASPxTextBox ID="txtTelefono" runat="server" Width="200px" Caption="Telefono:">
+  <CaptionSettings Position="Top" />
+  <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
+    <RequiredField ErrorText="Se requiere un numero de telefono" IsRequired="true" />
+  </ValidationSettings>
+</dx:ASPxTextBox>
        </div>
 <br />
 <dx:ASPxButton ID="btnCreateUser" runat="server" Text="Crear Usuario" ValidationGroup="RegisterUserValidationGroup"

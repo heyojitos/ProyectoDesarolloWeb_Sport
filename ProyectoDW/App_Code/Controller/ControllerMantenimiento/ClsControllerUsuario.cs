@@ -9,7 +9,7 @@ using System.Web;
 
 namespace ProyectoDW.App_Code.Controller.ControllerMantenimiento
 {
-    public class ClsControllerCliente : ClsController
+    public class ClsControllerUsuario : ClsController
     {
         ClsErrorHandler log = new ClsErrorHandler();
         ClsDaoCliente objCliente = new ClsDaoCliente();
