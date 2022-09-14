@@ -8,18 +8,18 @@ using System.Web;
 
 namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
 {
-    public class ClsDaoUsrDireccion : ClsDataLayer
+    public class ClsDaoProducto : ClsDataLayer
     {
         ClsConexion objSql = new ClsConexion();
         ClsErrorHandler log = new ClsErrorHandler();
         string strSql = string.Empty;
 
-        public bool getDireccionAll()
+        public bool getProductoAll()
         {
             try
             {
-                strSql = "SELECT * FROM TB_USR_DIRECCION";
-                DsReturn = objSql.EjectuaSQL(strSql, "Direccion");
+                strSql = "SELECT * FROM TB_PRODUCTO";
+                DsReturn = objSql.EjectuaSQL(strSql, "Producto");
             }
             catch (Exception ex)
             {
@@ -42,26 +42,21 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
             }
         }
 
-        public bool InsertDireccion(ClsUsrDireccion direccion)
+        public bool InsertProducto(ClsProducto producto)
         {
-            strSql = "INSERT INTO TB_USR_DIRECCION(ID_DIRECCION,ID_USUARIO,DESCRIPCION) "+
-                "VALUES((SELECT ISNULL(MAX(ID_DIRECCION),0)+ 1 FROM TB_USR_DIRECCION)," 
-                + direccion.IdUsuario + ",'" + direccion.Descripcion + "')";
+            strSql = "";
             return ExecuteSql(strSql);
         }
 
-        public bool UpdateDireccion(ClsUsrDireccion direccion)
+        public bool UpdateProducto(ClsProducto producto)
         {
-            strSql = "UPDATE TB_USR_DIRECCION SET "+
-                "ID_USUARIO = " + direccion.IdUsuario + 
-                ", DESCRIPCION = '" + direccion.Descripcion + 
-                "' WHERE ID_DIRECCION = " + direccion.IdDireccion;
+            strSql = "";
             return ExecuteSql(strSql);
         }
 
-        public bool DeleteDireccion(ClsUsrDireccion direccion)
+        public bool DeleteProducto(ClsProducto producto)
         {
-            strSql = "DELETE FROM TB_USR_DIRECCION WHERE ID_DIRECCION = " + direccion.IdDireccion;
+            strSql = "";
             return ExecuteSql(strSql);
         }
     }

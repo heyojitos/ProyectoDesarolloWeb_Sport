@@ -18,7 +18,7 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
         {
             try
             {
-                strSql = "";
+                strSql = "SELECT ID_TELEFONO, ID_USUARIO, DESCRIPCION FROM TB_USR_TELEFONO";
                 DsReturn = objSql.EjectuaSQL(strSql, "Telefono");
             }
             catch (Exception ex)
@@ -44,19 +44,25 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
 
         public bool InsertTelefono(ClsUsrTelefono telefono)
         {
-            strSql = "";
+            strSql = "INSERT INTO TB_USR_TELEFONO(ID_TELEFONO,ID_USUARIO,DESCRIPCION) "+
+                "VALUES((SELECT ISNULL(MAX(ID_TELEFONO),0) + 1 FROM TB_USR_TELEFONO)," 
+                + telefono.IdUsuario + ",'" 
+                + telefono.Descripcion + "')";
             return ExecuteSql(strSql);
         }
 
         public bool UpdateTelefono(ClsUsrTelefono telefono)
         {
-            strSql = "";
+            strSql = "UPDATE TB_USR_TELEFONO SET "+
+                "ID_USUARIO = " + telefono.IdUsuario + 
+                ", DESCRIPCION = '" + telefono.Descripcion + 
+                "' WHERE ID_TELEFONO = " + telefono.IdTelefono;
             return ExecuteSql(strSql);
         }
 
         public bool DeleteTelefono(ClsUsrTelefono telefono)
         {
-            strSql = "";
+            strSql = "DELETE FROM TB_USR_TELEFONO WHERE ID_TELEFONO =" + telefono.IdTelefono;
             return ExecuteSql(strSql);
         }
     }
