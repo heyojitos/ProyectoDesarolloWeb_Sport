@@ -40,12 +40,29 @@ namespace ProyectoDW {
                     {
                         DataTable dtUsu = controllUsuario.DsReturn.Tables["UsuarioId"];
                         int id = int.Parse(dtUsu.Rows[0]["ID_USUARIO"].ToString());
+                        usrDireccion.IdUsuario = id;
+                        usrDireccion.Descripcion = txtDireccionEnvio.Text;
+                        if (controlDireccion.InsertDireccion(usrDireccion))
+                        {
+                            if (chboxDireccion.Checked == false)
+                            {
+                                usrDireccion.IdUsuario = id;
+                                usrDireccion.Descripcion = txtDireccionFacturacion.Text;
+                                controlDireccion.InsertDireccion(usrDireccion);
+                            }
+                            usrTelefono.IdUsuario = id;
+                            usrTelefono.Descripcion = txtTelefono.Text;
+                            if (controlTelefono.InsertTelefono(usrTelefono))
+                            {
+                                limpiarForm();
+                                string StrQry = "<script language='javascript'>";
+                                StrQry += "alert('Registro guardado correctamente'); ";
+                                StrQry += "</script>";
+                                ClientScript.RegisterStartupScript(GetType(), "mensaje", StrQry, false);
+                            }
+                        }
                     }
-                    limpiarForm();
-                    string StrQry = "<script language='javascript'>";
-                    StrQry += "alert('Registro guardado correctamente'); ";
-                    StrQry += "</script>";
-                    ClientScript.RegisterStartupScript(GetType(), "mensaje", StrQry, false);
+                    
                 }
                 else
                 {
