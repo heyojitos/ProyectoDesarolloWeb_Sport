@@ -59,16 +59,14 @@
     <RequiredField ErrorText="Se requiere una direccion" IsRequired="true" />
   </ValidationSettings>
 </dx:ASPxTextBox>
-    <dx:ASPxTextBox ID="txtDireccionFacturacion" runat="server" Width="200px" Caption="Direccion de facturación:">
+    <dx:ASPxTextBox ID="txtDireccionFacturacion" runat="server" Width="200px" Caption="Direccion de facturación:" ClientInstanceName="txtDirFactura">
   <CaptionSettings Position="Top" />
   <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
     <RequiredField ErrorText="Se requiere una direccion" IsRequired="true" />
   </ValidationSettings>
 </dx:ASPxTextBox>
-    <dx:ASPxCheckBox ID="chboxDireccion" runat="server" Width="200px" Text="¿Desea usar la misma dirección de envio?">
-        <ClientSideEvents CheckedChanged="function(s, e) {
-           
-        }" />
+    <dx:ASPxCheckBox ID="chboxDireccion" runat="server" Width="200px" Text="¿Desea usar la misma dirección de envio?" AutoPostBack="true" OnCheckedChanged="chboxDireccion_CheckedChanged">
+        
     </dx:ASPxCheckBox>
         <dx:ASPxTextBox ID="txtTelefono" runat="server" Width="200px" Caption="Telefono:">
   <CaptionSettings Position="Top" />

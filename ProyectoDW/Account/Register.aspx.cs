@@ -48,7 +48,7 @@ namespace ProyectoDW {
                             {
                                 usrDireccion.IdUsuario = id;
                                 usrDireccion.Descripcion = txtDireccionFacturacion.Text;
-                                controlDireccion.InsertDireccion(usrDireccion);
+                                controlDireccion.InsertDireccion(usrDireccion); 
                             }
                             usrTelefono.IdUsuario = id;
                             usrTelefono.Descripcion = txtTelefono.Text;
@@ -92,6 +92,18 @@ namespace ProyectoDW {
             txtNombre.Text = "";
             txtTelefono.Text = "";
             chboxDireccion.Checked = false;
+        }
+
+        protected void chboxDireccion_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chboxDireccion.Checked == true)
+            {
+                txtDireccionFacturacion.Enabled = false;
+            }
+            else
+            {
+                txtDireccionFacturacion.Enabled = true;
+            }
         }
     }
 }
