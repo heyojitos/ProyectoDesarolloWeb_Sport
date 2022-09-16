@@ -9,7 +9,7 @@ using System.Web;
 
 namespace ProyectoDW.App_Code.Controller.ControllerMantenimiento
 {
-    public class ClsControllerCliente : ClsController
+    public class ClsControllerUsuario : ClsController
     {
         ClsErrorHandler log = new ClsErrorHandler();
         ClsDaoCliente objCliente = new ClsDaoCliente();
@@ -19,6 +19,24 @@ namespace ProyectoDW.App_Code.Controller.ControllerMantenimiento
             try
             {
                 if (objCliente.getClienteAll())
+                {
+                    DsReturn = objCliente.DsReturn;
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                //throw;
+            }
+            return false;
+        }
+
+        public bool GetIdUsuario(ClsUsuario usuario)
+        {
+            try
+            {
+                if (objCliente.getUsuarioID(usuario))
                 {
                     DsReturn = objCliente.DsReturn;
                     return true;

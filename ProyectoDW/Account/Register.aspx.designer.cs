@@ -94,6 +94,15 @@ namespace ProyectoDW {
         protected global::DevExpress.Web.ASPxCheckBox chboxDireccion;
         
         /// <summary>
+        /// Control txtTelefono.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTextBox txtTelefono;
+        
+        /// <summary>
         /// Control btnCreateUser.
         /// </summary>
         /// <remarks>

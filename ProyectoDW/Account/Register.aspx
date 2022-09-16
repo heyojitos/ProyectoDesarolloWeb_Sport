@@ -59,17 +59,21 @@
     <RequiredField ErrorText="Se requiere una direccion" IsRequired="true" />
   </ValidationSettings>
 </dx:ASPxTextBox>
-    <dx:ASPxTextBox ID="txtDireccionFacturacion" runat="server" Width="200px" Caption="Direccion de facturaci�n:">
+    <dx:ASPxTextBox ID="txtDireccionFacturacion" runat="server" Width="200px" Caption="Direccion de facturaci�n:" ClientInstanceName="txtDirFactura">
   <CaptionSettings Position="Top" />
   <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
     <RequiredField ErrorText="Se requiere una direccion" IsRequired="true" />
   </ValidationSettings>
 </dx:ASPxTextBox>
-    <dx:ASPxCheckBox ID="chboxDireccion" runat="server" Width="200px" Text="�Desea usar la misma direcci�n de envio?">
-        <ClientSideEvents CheckedChanged="function(s, e) {
-           
-        }" />
+    <dx:ASPxCheckBox ID="chboxDireccion" runat="server" Width="200px" Text="�Desea usar la misma direcci�n de envio?" AutoPostBack="true" OnCheckedChanged="chboxDireccion_CheckedChanged">
+        
     </dx:ASPxCheckBox>
+        <dx:ASPxTextBox ID="txtTelefono" runat="server" Width="200px" Caption="Telefono:">
+  <CaptionSettings Position="Top" />
+  <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
+    <RequiredField ErrorText="Se requiere un numero de telefono" IsRequired="true" />
+  </ValidationSettings>
+</dx:ASPxTextBox>
        </div>
 <br />
 <dx:ASPxButton ID="btnCreateUser" runat="server" Text="Crear Usuario" ValidationGroup="RegisterUserValidationGroup"
