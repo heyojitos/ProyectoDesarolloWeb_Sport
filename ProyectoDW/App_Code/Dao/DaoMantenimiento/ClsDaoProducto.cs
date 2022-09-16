@@ -44,19 +44,33 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
 
         public bool InsertProducto(ClsProducto producto)
         {
-            strSql = "";
+            strSql = "INSERT INTO TB_PRODUCTO(ID_PRODUCTO,PRODUCTO,DESCRIPCION,ID_CATEGORIA,PRECIO,IMAGEN,STOCK) "+
+                "VALUES((SELECT ISNULL(MAX(ID_PRODUCTO),0)+ 1 FROM TB_PRODUCTO),'" 
+                + producto.Producto + "','" 
+                + producto.Descripcion + "'," 
+                + producto.IdCategoria + "," 
+                + producto.Precio + ",'" 
+                + producto.Imagen + "'," 
+                + producto.Stock + ")";
             return ExecuteSql(strSql);
         }
 
         public bool UpdateProducto(ClsProducto producto)
         {
-            strSql = "";
+            strSql = "UPDATE TB_PRODUCTO SET"+
+                " PRODUCTO = '" + producto.Producto + 
+                "', DESCRIPCION = '" + producto.Descripcion + 
+                "', ID_CATEGORIA = " + producto.IdCategoria + 
+                ", PRECIO = " + producto.Precio + 
+                ", IMAGEN = '" + producto.Imagen + 
+                "', STOCK = " + producto.Stock + 
+                " WHERE ID_PRODUCTO = " + producto.IdProducto;
             return ExecuteSql(strSql);
         }
 
         public bool DeleteProducto(ClsProducto producto)
         {
-            strSql = "";
+            strSql = "DELETE FROM TB_PRODUCTO WHERE ID_PRODUCTO = " + producto.IdProducto;
             return ExecuteSql(strSql);
         }
     }

@@ -216,6 +216,10 @@
     <Content Include="bin\ru\DevExpress.Printing.v17.2.Core.resources.dll" />
     <Content Include="bin\ru\DevExpress.RichEdit.v17.2.Core.resources.dll" />
     <Content Include="bin\ru\DevExpress.Web.v17.2.resources.dll" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\flexslider.css" />
     <Content Include="Content\css\jquery-ui.css" />
@@ -227,15 +231,19 @@
     <Content Include="Content\Images\AquaHeader.jpg" />
     <Content Include="Content\Images\arrow.png" />
     <Content Include="Content\Images\BlackGlassHeader.jpg" />
+    <Content Include="Content\Images\borrar.png" />
     <Content Include="Content\Images\btn_next.png" />
     <Content Include="Content\Images\btn_pause.png" />
     <Content Include="Content\Images\btn_play.png" />
     <Content Include="Content\Images\btn_prev.png" />
     <Content Include="Content\Images\close_1.png" />
+    <Content Include="Content\Images\edit.png" />
     <Content Include="Content\Images\GlassHeader.jpg" />
     <Content Include="Content\Images\icons1.png" />
     <Content Include="Content\Images\img-sp.png" />
+    <Content Include="Content\Images\loading2.gif" />
     <Content Include="Content\Images\mark1.png" />
+    <Content Include="Content\Images\new.png" />
     <Content Include="Content\Images\PlasticBlueHeader.jpg" />
     <Content Include="Content\Images\RedWineHeader.jpg" />
     <Content Include="Content\Images\search.png" />
@@ -251,9 +259,17 @@
     <Content Include="Content\js\responsiveslides.min.js" />
     <Content Include="Content\js\simpleCart.min.js" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\StyleWebFactura.css" />
+    <Content Include="Content\StyleWebForm.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.0.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
     <Content Include="WebForms\Mantenimientos\WebClientes.aspx" />
+    <Content Include="WebForms\Mantenimientos\WebProducto.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
@@ -284,6 +300,7 @@
     <Content Include="obj\Debug\ProyectoDW.csproj.CoreCompileInputs.cache" />
     <Content Include="obj\Debug\ProyectoDW.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.9.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -411,6 +428,8 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerProducto.cs" />
+    <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoProducto.cs" />
     <Compile Include="App_Code\Utilidades\ClsController.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerUsrDireccion.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerUsrTelefono.cs" />
@@ -477,6 +496,13 @@
       <DependentUpon>Root.master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="WebForms\Mantenimientos\WebProducto.aspx.cs">
+      <DependentUpon>WebProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Mantenimientos\WebProducto.aspx.designer.cs">
+      <DependentUpon>WebProducto.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
