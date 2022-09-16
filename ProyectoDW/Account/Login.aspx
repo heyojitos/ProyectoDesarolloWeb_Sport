@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Light.master" CodeBehind="Login.aspx.cs" Inherits="ProyectoDW.Login" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Light.master" CodeBehind="Login.aspx.cs" Inherits="ProyectoDW.Login" %>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
     <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
@@ -7,20 +7,21 @@
 <form style="width: 23rem;">   
 
     <div class="accountHeader">
-        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Iniciar sesión</h3>
+        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Iniciar sesiï¿½n</h3>
     </div>
 
     <div class="form-outline mb-4">
-        <dx:ASPxTextBox ID="tbUserName" runat="server" Width="400px" Caption="Correo Electrónico" CssClass="form-control form-control-lg">
+        <dx:ASPxTextBox ID="tbUserName" runat="server" Width="400px" Caption="Correo Electrï¿½nico" CssClass="form-control form-control-lg">
             <CaptionSettings Position="Top" />
             <ValidationSettings ValidationGroup="LoginUserValidationGroup" ErrorTextPosition="Bottom" Display="Dynamic" ErrorDisplayMode="Text">
+                <RegularExpression ErrorText="Falla de validaciÃ³n de correo" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
                 <RequiredField ErrorText="Completa este campo." IsRequired="true" />
             </ValidationSettings>
         </dx:ASPxTextBox>
     </div>
 
     <div class="form-outline mb-4">
-        <dx:ASPxTextBox ID="tbPassword" runat="server" Password="true" Width="400px" Caption="Contraseña"  CssClass="form-control form-control-lg" >
+        <dx:ASPxTextBox ID="tbPassword" runat="server" Password="true" Width="400px" Caption="Contraseï¿½a"  CssClass="form-control form-control-lg" >
             <CaptionSettings Position="Top" />
             <ValidationSettings ValidationGroup="LoginUserValidationGroup" ErrorTextPosition="Bottom" Display="Dynamic" ErrorDisplayMode="Text">
                 <RequiredField ErrorText="Completa este campo." IsRequired="true" />
