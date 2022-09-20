@@ -28,20 +28,20 @@
     <RequiredField ErrorText="Se requiere su apellido" IsRequired="true" />
   </ValidationSettings>
 </dx:ASPxTextBox>
-<dx:ASPxTextBox ID="txtEmail" runat="server" Width="200px" Caption="Correo electr�nico:">
+<dx:ASPxTextBox ID="txtEmail" runat="server" Width="200px" Caption="Correo electronico:">
   <CaptionSettings Position="Top" />
   <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
     <RequiredField ErrorText="Se requiere su correo" IsRequired="true" />
     <RegularExpression ErrorText="Falla de validaci�n de correo" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
   </ValidationSettings>
 </dx:ASPxTextBox>
-<dx:ASPxTextBox ID="txtContra" ClientInstanceName="Password" Password="true" runat="server" Width="200px" Caption="Contrase�a:">
+<dx:ASPxTextBox ID="txtContra" ClientInstanceName="Password" Password="true" runat="server" Width="200px" Caption="Contraseña:">
   <CaptionSettings Position="Top" />
   <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
-    <RequiredField ErrorText="Se requiere su contrase�a" IsRequired="true" />
+    <RequiredField ErrorText="Se requiere su contraseña" IsRequired="true" />
   </ValidationSettings>
 </dx:ASPxTextBox>
-<dx:ASPxTextBox ID="txtConfirmContra" Password="true" runat="server" Width="200px" Caption="Confirmar contrase�a:">
+<dx:ASPxTextBox ID="txtConfirmContra" Password="true" runat="server" Width="200px" Caption="Confirmar contraseña:">
   <CaptionSettings Position="Top" />
   <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
     <RequiredField ErrorText="Se requiere la confirmaci�n de contrase�a" IsRequired="true" />
@@ -59,13 +59,13 @@
     <RequiredField ErrorText="Se requiere una direccion" IsRequired="true" />
   </ValidationSettings>
 </dx:ASPxTextBox>
-    <dx:ASPxTextBox ID="txtDireccionFacturacion" runat="server" Width="200px" Caption="Direccion de facturaci�n:" ClientInstanceName="txtDirFactura">
+    <dx:ASPxTextBox ID="txtDireccionFacturacion" runat="server" Width="200px" Caption="Direccion de facturacion:" ClientInstanceName="txtDirFactura">
   <CaptionSettings Position="Top" />
   <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
     <RequiredField ErrorText="Se requiere una direccion" IsRequired="true" />
   </ValidationSettings>
 </dx:ASPxTextBox>
-    <dx:ASPxCheckBox ID="chboxDireccion" runat="server" Width="200px" Text="�Desea usar la misma direcci�n de envio?" AutoPostBack="true" OnCheckedChanged="chboxDireccion_CheckedChanged">
+    <dx:ASPxCheckBox ID="chboxDireccion" runat="server" Width="200px" Text="Desea usar la misma direccion de envio?" AutoPostBack="true" OnCheckedChanged="chboxDireccion_CheckedChanged">
         
     </dx:ASPxCheckBox>
         <dx:ASPxTextBox ID="txtTelefono" runat="server" Width="200px" Caption="Telefono:">

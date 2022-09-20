@@ -266,6 +266,17 @@
     <Content Include="public\uploads\DM0259-001-PHSRH000-2000_1.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="WebForms\Productos\Deporte\WebDeporteRunning.aspx" />
+    <Content Include="WebForms\Productos\Deporte\WebDeportes.aspx" />
+    <Content Include="WebForms\Productos\Deporte\WebDeporteTraining.aspx" />
+    <Content Include="WebForms\Productos\Hombre\WebHombre.aspx" />
+    <Content Include="WebForms\Productos\Hombre\WebHombreAccesorio.aspx" />
+    <Content Include="WebForms\Productos\Hombre\WebHombreCalzados.aspx" />
+    <Content Include="WebForms\Productos\Hombre\WebHombreRopa.aspx" />
+    <Content Include="WebForms\Productos\Mujer\WebMujer.aspx" />
+    <Content Include="WebForms\Productos\Mujer\WebMujerAccesorio.aspx" />
+    <Content Include="WebForms\Productos\Mujer\WebMujerCalzado.aspx" />
+    <Content Include="WebForms\Productos\Mujer\WebMujerRopa.aspx" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery-1.9.0.min.js" />
@@ -503,6 +514,83 @@
     </Compile>
     <Compile Include="WebForms\Mantenimientos\WebProducto.aspx.designer.cs">
       <DependentUpon>WebProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Deporte\WebDeporteRunning.aspx.cs">
+      <DependentUpon>WebDeporteRunning.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Deporte\WebDeporteRunning.aspx.designer.cs">
+      <DependentUpon>WebDeporteRunning.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Deporte\WebDeportes.aspx.cs">
+      <DependentUpon>WebDeportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Deporte\WebDeportes.aspx.designer.cs">
+      <DependentUpon>WebDeportes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Deporte\WebDeporteTraining.aspx.cs">
+      <DependentUpon>WebDeporteTraining.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Deporte\WebDeporteTraining.aspx.designer.cs">
+      <DependentUpon>WebDeporteTraining.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombre.aspx.cs">
+      <DependentUpon>WebHombre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombre.aspx.designer.cs">
+      <DependentUpon>WebHombre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombreAccesorio.aspx.cs">
+      <DependentUpon>WebHombreAccesorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombreAccesorio.aspx.designer.cs">
+      <DependentUpon>WebHombreAccesorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombreCalzados.aspx.cs">
+      <DependentUpon>WebHombreCalzados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombreCalzados.aspx.designer.cs">
+      <DependentUpon>WebHombreCalzados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombreRopa.aspx.cs">
+      <DependentUpon>WebHombreRopa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombreRopa.aspx.designer.cs">
+      <DependentUpon>WebHombreRopa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujer.aspx.cs">
+      <DependentUpon>WebMujer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujer.aspx.designer.cs">
+      <DependentUpon>WebMujer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujerAccesorio.aspx.cs">
+      <DependentUpon>WebMujerAccesorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujerAccesorio.aspx.designer.cs">
+      <DependentUpon>WebMujerAccesorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujerCalzado.aspx.cs">
+      <DependentUpon>WebMujerCalzado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujerCalzado.aspx.designer.cs">
+      <DependentUpon>WebMujerCalzado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujerRopa.aspx.cs">
+      <DependentUpon>WebMujerRopa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujerRopa.aspx.designer.cs">
+      <DependentUpon>WebMujerRopa.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

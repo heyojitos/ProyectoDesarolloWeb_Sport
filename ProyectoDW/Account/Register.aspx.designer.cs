@@ -1,10 +1,10 @@
 //------------------------------------------------------------------------------
-// <generado automï¿½ticamente>
-//     Este cï¿½digo fue generado por una herramienta.
+// <generado automáticamente>
+//     Este código fue generado por una herramienta.
 //
-//     Los cambios en este archivo podrï¿½an causar un comportamiento incorrecto y se perderï¿½n si
-//     se vuelve a generar el cï¿½digo. 
-// </generado automï¿½ticamente>
+//     Los cambios en este archivo podrían causar un comportamiento incorrecto y se perderán si
+//     se vuelve a generar el código. 
+// </generado automáticamente>
 //------------------------------------------------------------------------------
 
 namespace ProyectoDW {
@@ -16,8 +16,8 @@ namespace ProyectoDW {
         /// Control ErrorMessage.
         /// </summary>
         /// <remarks>
-        /// Campo generado automï¿½ticamente.
-        /// Para modificarlo, mueva la declaraciï¿½n del campo del archivo del diseï¿½ador al archivo de cï¿½digo subyacente.
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ErrorMessage;
         
@@ -25,8 +25,8 @@ namespace ProyectoDW {
         /// Control txtNombre.
         /// </summary>
         /// <remarks>
-        /// Campo generado automï¿½ticamente.
-        /// Para modificarlo, mueva la declaraciï¿½n del campo del archivo del diseï¿½ador al archivo de cï¿½digo subyacente.
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtNombre;
         
@@ -34,8 +34,8 @@ namespace ProyectoDW {
         /// Control txtApellido.
         /// </summary>
         /// <remarks>
-        /// Campo generado automï¿½ticamente.
-        /// Para modificarlo, mueva la declaraciï¿½n del campo del archivo del diseï¿½ador al archivo de cï¿½digo subyacente.
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtApellido;
         
@@ -43,8 +43,8 @@ namespace ProyectoDW {
         /// Control txtEmail.
         /// </summary>
         /// <remarks>
-        /// Campo generado automï¿½ticamente.
-        /// Para modificarlo, mueva la declaraciï¿½n del campo del archivo del diseï¿½ador al archivo de cï¿½digo subyacente.
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtEmail;
         
@@ -52,8 +52,8 @@ namespace ProyectoDW {
         /// Control txtContra.
         /// </summary>
         /// <remarks>
-        /// Campo generado automï¿½ticamente.
-        /// Para modificarlo, mueva la declaraciï¿½n del campo del archivo del diseï¿½ador al archivo de cï¿½digo subyacente.
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtContra;
         
@@ -61,8 +61,8 @@ namespace ProyectoDW {
         /// Control txtConfirmContra.
         /// </summary>
         /// <remarks>
-        /// Campo generado automï¿½ticamente.
-        /// Para modificarlo, mueva la declaraciï¿½n del campo del archivo del diseï¿½ador al archivo de cï¿½digo subyacente.
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtConfirmContra;
         
@@ -70,8 +70,8 @@ namespace ProyectoDW {
         /// Control txtDireccionEnvio.
         /// </summary>
         /// <remarks>
-        /// Campo generado automï¿½ticamente.
-        /// Para modificarlo, mueva la declaraciï¿½n del campo del archivo del diseï¿½ador al archivo de cï¿½digo subyacente.
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtDireccionEnvio;
         
@@ -79,8 +79,8 @@ namespace ProyectoDW {
         /// Control txtDireccionFacturacion.
         /// </summary>
         /// <remarks>
-        /// Campo generado automï¿½ticamente.
-        /// Para modificarlo, mueva la declaraciï¿½n del campo del archivo del diseï¿½ador al archivo de cï¿½digo subyacente.
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtDireccionFacturacion;
         
@@ -88,8 +88,8 @@ namespace ProyectoDW {
         /// Control chboxDireccion.
         /// </summary>
         /// <remarks>
-        /// Campo generado automï¿½ticamente.
-        /// Para modificarlo, mueva la declaraciï¿½n del campo del archivo del diseï¿½ador al archivo de cï¿½digo subyacente.
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxCheckBox chboxDireccion;
         
@@ -106,8 +106,8 @@ namespace ProyectoDW {
         /// Control btnCreateUser.
         /// </summary>
         /// <remarks>
-        /// Campo generado automï¿½ticamente.
-        /// Para modificarlo, mueva la declaraciï¿½n del campo del archivo del diseï¿½ador al archivo de cï¿½digo subyacente.
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnCreateUser;
     }
