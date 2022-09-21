@@ -32,7 +32,7 @@
   <CaptionSettings Position="Top" />
   <ValidationSettings ValidationGroup="RegisterUserValidationGroup" Display="Dynamic" ErrorTextPosition="Bottom" ErrorDisplayMode="Text">
     <RequiredField ErrorText="Se requiere su correo" IsRequired="true" />
-    <RegularExpression ErrorText="Falla de validaci�n de correo" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+    <RegularExpression ErrorText="Falla de validacion de correo" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
   </ValidationSettings>
 </dx:ASPxTextBox>
 <dx:ASPxTextBox ID="txtContra" ClientInstanceName="Password" Password="true" runat="server" Width="200px" Caption="Contraseña:">

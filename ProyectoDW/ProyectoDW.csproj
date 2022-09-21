@@ -264,6 +264,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="public\uploads\DM0259-001-PHSRH000-2000_1.jpg" />
+    <Content Include="public\uploads\zapato1.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="WebForms\Productos\Deporte\WebDeporteRunning.aspx" />
