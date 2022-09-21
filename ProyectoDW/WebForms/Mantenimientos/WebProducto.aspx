@@ -51,8 +51,6 @@
             SelectCommand="SELECT ID_CATEGORIA AS TIPO_PRODUCTO, DESCRIPCION FROM TB_CATEGORIA">
 
         </asp:SqlDataSource>
-        <div>
-            <asp:Image ID="Image1" runat="server" src="../../public/uploads/DM0259-001-PHSRH000-2000_1.jpg" width="15%" Height="15%"/>
-        </div>
+        
     </div>
 </asp:Content>

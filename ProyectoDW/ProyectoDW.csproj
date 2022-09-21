@@ -278,6 +278,7 @@
     <Content Include="WebForms\Productos\Mujer\WebMujerAccesorio.aspx" />
     <Content Include="WebForms\Productos\Mujer\WebMujerCalzado.aspx" />
     <Content Include="WebForms\Productos\Mujer\WebMujerRopa.aspx" />
+    <Content Include="WebForms\Productos\SoloProducto\WebSoloProducto.aspx" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery-1.9.0.min.js" />
@@ -592,6 +593,13 @@
     </Compile>
     <Compile Include="WebForms\Productos\Mujer\WebMujerRopa.aspx.designer.cs">
       <DependentUpon>WebMujerRopa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\SoloProducto\WebSoloProducto.aspx.cs">
+      <DependentUpon>WebSoloProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\SoloProducto\WebSoloProducto.aspx.designer.cs">
+      <DependentUpon>WebSoloProducto.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

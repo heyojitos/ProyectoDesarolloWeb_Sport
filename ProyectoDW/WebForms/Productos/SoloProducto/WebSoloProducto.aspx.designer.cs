@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ProyectoDW.WebForms.Productos.Hombre {
+namespace ProyectoDW.WebForms.Productos.SoloProducto {
     
     
-    public partial class WebHombreAccesorio {
+    public partial class WebSoloProducto {
     }
 }
