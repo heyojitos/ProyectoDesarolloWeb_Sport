@@ -1,0 +1,78 @@
+CODIGO INTERNO: RUN1
+DESCRIPCION BASICA: Medias Armour Dry Run Crew Unisex
+MARCA:Under Armour
+PRECIO: Q149.5
+MAS INFORMACION:
+Artículo	1361156-100
+Modelo	1361156
+Color	Blanco
+Deporte	running
+Género	Unisex
+Marca	Under Armour
+Clase	Medias
+Composición	91% POLIESTER,5% NYLON,4% ELASTENO
+País de origen	CN
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: RUN2
+DESCRIPCION BASICA: Gorra Isochill Launch Run Unisex
+MARCA:Under Armour
+PRECIO: Q224.95
+MAS INFORMACION:
+Artículo	1361562-001
+Modelo	1361562
+Color	Negro
+Deporte	running
+Género	Unisex
+Marca	Under Armour
+Clase	Gorras
+Composición	100% POLIESTER
+País de origen	Vietnam
+Proveedor	UA COLOMBIA S.A.S.
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: RUN3
+DESCRIPCION BASICA: Gorra Adizero 4p Heat.rdy Unisex
+MARCA: adidas
+PRECIO: Q349.95
+MAS INFORMACION:
+Artículo	HE9756
+Modelo	V0966
+Color	Rosado
+Deporte	running
+Género	Unisex
+Marca	adidas
+Clase	Gorras
+Composición	CUERPO100% ALGODON FORROSIN FORRO TEJIDO
+País de origen	China
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: RUN4
+DESCRIPCION BASICA: Calcetines tobilleros Performance Running Unisex
+MARCA:adidas
+PRECIO: Q124.95
+MAS INFORMACION:
+Artículo	HA0104
+Modelo	HO349
+Color	Blanco
+Deporte	running
+Género	Unisex
+Marca	adidas
+Clase	Medias
+Composición	74% ALGODÓN 24% POLIESTER1% SPANDEX 1% NYLON
+País de origen	Turquía
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: RUN5
+DESCRIPCION BASICA: Armourdry Run No Show
+MARCA:Under Armour
+PRECIO: Q124.95
+MAS INFORMACION:
+Artículo	1361164-001
+Modelo	1361164
+Color	Negro
+Deporte	running
+Género	Unisex
+Marca	Under Armour
+Clase	Medias
+Composición	96% POLIESTER/4% ELASTANO
+País de origen	China
+Proveedor	UA COLOMBIA S.A.S.
+------------------------------------------------------------------------------------------------------------------------------------------------

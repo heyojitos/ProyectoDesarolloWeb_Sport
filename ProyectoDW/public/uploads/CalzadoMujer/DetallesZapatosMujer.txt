@@ -1,0 +1,77 @@
+INTERNO: ZAPATOM1
+DESCRIPCION BASICA: Zapatillas Venture Runner de Mujer
+MARCA: 	Nike
+PRECIO: Q749.95
+TALLAS DISPONIBLES: 6.5 / 7 / 7.5 / 9
+MAS INFORMACION: 
+Artículo	CK2948-001
+Modelo	CK2948
+Color	Negro
+Deporte	casual
+Género	Mujer
+Marca	Nike
+Clase	Zapatillas
+Composición	CAPELLADACUERO 49 %SINTETICO 9 %TEXTIL 42 % SUELACAUCHO 100 % FORROPOLIESTER 100 % CONSTITUCION PEGADO-COSIDO
+País de origen	Indonesia
+Proveedor	NORTHBAY INTERNATIONAL INC
+------------------------------------------------------------------------------------------------------------------------------------------------CODIGOINTERNO: ZAPATOM2
+DESCRIPCION BASICA: Zapatillas Zoomx Invincible Run Flyknit 2 De Mujer
+MARCA: 	Nike
+PRECIO: Q1,899.95
+TALLAS DISPONIBLES: 5.5 / 6 / 6.5 / 7 /  7.5 / 8 / 8.5
+MAS INFORMACION: 
+Artículo	DC9993-300
+Modelo	DC9993
+Color	Verde
+Deporte	running
+Género	Mujer
+Marca	Nike
+Clase	Zapatillas
+Composición	CAPELLADASINTETICO 2 % TEXTIL 98 %SUELACAUCHO 90 %PLASTICO 10 %FORROPOLIESTER 100 % CONSTPEGADO
+País de origen	Vietnam
+Proveedor	NORTHBAY INTERNATIONAL INC
+------------------------------------------------------------------------------------------------------------------------------------------------CODIGOINTERNO: ZAPATOM3
+DESCRIPCION BASICA: Zapatillas Under Armour HovrPhantom 2 Intelliknit de Mujer
+MARCA: Under Armour
+PRECIO: Q1,049.99
+TALLAS DISPONIBLES: 5.5 / 6 / 7 / 8.5 / 9.5
+MAS INFORMACION: 
+Artículo	3024155-002
+Modelo	3024155
+Color	Negro
+Deporte	running
+Género	Mujer
+Marca	Under Armour
+Clase	Zapatillas
+Composición	PARTE SUPERIOR89% TEXTIL11% SINTÉTICOSUELA100% GOMA
+País de origen	VIETNAM
+------------------------------------------------------------------------------------------------------------------------------------------------CODIGOINTERNO: ZAPATOM4
+DESCRIPCION BASICA: Zapatillas De Running Ua Phade Rn 2 de Mujer
+MARCA: Under Armour
+PRECIO: Q499.95
+TALLAS DISPONIBLES: 5 / 8
+MAS INFORMACION:  
+Artículo	3024891-600
+Modelo	3024891
+Color	Rojo
+Deporte	running
+Género	Mujer
+Marca	Under Armour
+Clase	Zapatillas
+Composición	CAPA84% TEXTIL 16% SINTETICO SUELA100% ETILENO ACETATO DE VINILO (EVA)
+País de origen	VN
+------------------------------------------------------------------------------------------------------------------------------------------------CODIGOINTERNO: ZAPATOM5
+DESCRIPCION BASICA: Zapatilla Ultraboost 5 Dna De Mujer
+MARCA: adidas
+PRECIO: Q2,099.95	
+TALLAS DISPONIBLES:6 / 6.5 / 7 / 7.5 / 8
+MAS INFORMACION: 
+Artículo	GZ0429
+Modelo	LWQ42
+Color	Azul
+Deporte	running
+Género	Mujer
+Marca	adidas
+Clase	Zapatillas
+Composición	CAPELLADASINTETICO 32 % TEXTIL 68 % SUECAUCHO 100 % FORROPOLIESTER 100 % CONSTPEGADO-COSIDO
+País de origen	China

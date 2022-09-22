@@ -1,0 +1,81 @@
+CODIGO INTERNO: ZAPATOH1
+DESCRIPCION BASICA: Zapatillas City Rep Tr de Hombre
+MARCA: NIKE	
+PRECIO: Q799.95
+TALLAS DISPONIBLES: 7 / 7.5 / 8.5 / 9 / 9.5 / 10
+MAS INFORMACION: 
+Artículo DA1352-002
+Modelo	DA1352
+Color	Negro
+Deporte	training
+Género	Hombre
+Marca	Nike
+Clase	Zapatillas
+Composición	CAPELLADASINTETICO 29 % TEXTIL 71 %SUELACAUCHO 80 %PLASTICO 20 %FORROPOLIESTER 100 % CONSTPEGADO-COSIDO
+País de origen	Indonesia
+Proveedor	NORTHBAY INTERNATIONAL INC
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: ZAPATOH2
+DESCRIPCION BASICA: Zapatillas Nike Metcon 7 AMP de Hombre
+MARCA: NIKE	
+PRECIO: Q1649.95
+TALLAS DISPONIBLES: 7 / 7.5 / 8 / 8.5 / 9 / 9.5 / 10 / 10.5 / 11
+MAS INFORMACION: 
+Artículo	DM0259-001
+Modelo	DM0259
+Color	Negro
+Deporte	training
+Género	Hombre
+Marca	Nike
+Clase	Zapatillas
+Composición	CAPELLADASINTETICO 15 % TEXTIL 85 % SUECAUCHO 100 % FORROPOLIESTER 100 % CONSTPEGADO
+País de origen	Vietnam
+Proveedor	NORTHBAY INTERNATIONAL INC
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: ZAPATOH3
+DESCRIPCION BASICA: Zapatillas Charged Rogue 3 de Hombre
+MARCA: Under Armour
+PRECIO: Q749.95
+TALLAS DISPONIBLES: 8.5 / 9 / 9.5 / 10
+MAS INFORMACION: 
+Artículo	3024877-400
+Modelo	3024877
+Color	Azul
+Deporte	running
+Género	Hombre
+Marca	Under Armour
+Clase	Zapatillas
+Composición	CAPELLADA54% TEXTIL/46% SINTETICO SUELA80% CAUCHO/20% ETHYLENE-VINYL ACETATE (EVA)
+País de origen	VN
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: ZAPATOH4
+DESCRIPCION BASICA: Zoom Fly 4 Premium
+MARCA: Nike
+PRECIO: Q1,999.95
+TALLAS DISPONIBLES: 7 / 7.5 / 8 / 8.5 / 9 / 9.5 / 10.5 / 11 / 12
+MAS INFORMACION: 
+Artículo	DO9583-700
+Modelo	DO9583
+Color	Amarillo
+Deporte	running
+Género	Hombre
+Marca	Nike
+Clase	Zapatillas
+Composición	CAPELLADA: SINTETICO 98 % TEXTIL 2 % SUE: CAUCHO 100 % FORRO: POLIESTER 100 % CONST: PEGADO
+País de origen	VN
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: ZAPATOH5
+DESCRIPCION BASICA: Zapatillas de futbol Copa Sense.3 Laceless moqueta de Hombre
+MARCA: adidas
+PRECIO: Q949.95
+TALLAS DISPONIBLES: 8 / 8.5 / 9 / 9.5 / 10.5 / 11
+MAS INFORMACION: 
+Artículo	GZ1372
+Modelo	LIQ01
+Color	Multicolor
+Deporte	futbol
+Género	Hombre
+Marca	adidas
+Clase	Tacos
+Composición	CAPELLADA SINTETICA 100%
+País de origen	Indonesia

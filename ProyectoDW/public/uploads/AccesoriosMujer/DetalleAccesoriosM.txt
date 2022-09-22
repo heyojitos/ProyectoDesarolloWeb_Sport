@@ -1,0 +1,29 @@
+CODIGO INTERNO: ACCM1
+DESCRIPCION BASICA: Maleta Frozen Backpack Unisex
+MARCA:adidas
+PRECIO: Q349.99
+MAS INFORMACION:
+Artículo	FN0985
+Modelo	GVE37
+Color	Celeste
+Deporte	casual
+Género	Unisex
+Marca	adidas
+Clase	Maletas
+Composición	* 100% PES
+País de origen	VN
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: ACCM2
+DESCRIPCION BASICA: Maleta Elemental Unisex
+MARCA:Nike
+PRECIO: Q324.95
+MAS INFORMACION:
+Artículo	BA6030-684
+Modelo	BA6030
+Color	Rosado
+Deporte	casual
+Género	Unisex
+Marca	Nike
+Clase	Maletas
+Composición	100% POLIESTER RECUBRIMIENTO : 100% POLIESTER
+País de origen	INDONESIA
