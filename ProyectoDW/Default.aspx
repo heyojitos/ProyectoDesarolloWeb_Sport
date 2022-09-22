@@ -25,7 +25,7 @@
     </Columns>
 </dx:ASPxGridView>
 
-
+<%--<img src="public/uploads/CalzadoMujer/ZapatoM1.png" />--%>
 <%-- DXCOMMENT: Configure your datasource for ASPxGridView --%>
 
 
