@@ -53,5 +53,70 @@ namespace ProyectoDW.WebForms.Mantenimientos
             dxGridUsuario.DataSource = ((DataSet)Session["Usuario"]);
             dxGridUsuario.DataBind();
         }
+
+        protected void dxGridUsuario_RowInserting(object sender, DevExpress.Web.Data.ASPxDataInsertingEventArgs e)
+        {
+            try
+            {
+                usuario.Nombre = e.NewValues["NOMBRE"].ToString();
+                usuario.Apellido = e.NewValues["APELLIDO"].ToString();
+                usuario.Email = e.NewValues["EMAIL"].ToString();
+                usuario.Password = e.NewValues["PASSWORD"].ToString();
+                if (objUsuario.InsertCliente(usuario))
+                {
+                    CargarGrid();
+                }
+                e.Cancel = true;
+                dxGridUsuario.CancelEdit();
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                //throw;
+            }
+
+        }
+
+        protected void dxGridUsuario_RowUpdating(object sender, DevExpress.Web.Data.ASPxDataUpdatingEventArgs e)
+        {
+            try
+            {
+                usuario.IdUsuario = int.Parse(e.NewValues["ID_USUARIO"].ToString());
+                usuario.Nombre = e.NewValues["NOMBRE"].ToString();
+                usuario.Apellido = e.NewValues["APELLIDO"].ToString();
+                usuario.Email = e.NewValues["EMAIL"].ToString();
+                usuario.Password = e.NewValues["PASSWORD"].ToString();
+                if (objUsuario.UpdateCliente(usuario))
+                {
+                    CargarGrid();
+                }
+                e.Cancel = true;
+                dxGridUsuario.CancelEdit();
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                //throw;
+            }
+        }
+
+        protected void dxGridUsuario_RowDeleting(object sender, DevExpress.Web.Data.ASPxDataDeletingEventArgs e)
+        {
+            try
+            {
+                usuario.IdUsuario = int.Parse(e.Values["ID_USUARIO"].ToString());
+                if (objUsuario.DeleteCliente(usuario))
+                {
+                    CargarGrid();
+                }
+                e.Cancel = true;
+                dxGridUsuario.CancelEdit();
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                //throw;
+            }
+        }
     }
 }

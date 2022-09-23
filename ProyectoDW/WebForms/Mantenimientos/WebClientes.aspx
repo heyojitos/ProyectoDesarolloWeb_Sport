@@ -7,7 +7,7 @@
             <th>Mantenimiento de Usuarios</th>
         </div>
         
-        <dx:ASPxGridView ID="dxGridUsuario" runat="server" AutoGenerateColumns="false"  ClientInstanceName="dxGridUsuario" KeyFieldName="ID_USUARIO" SettingsBehavior-ConfirmDelete ="true"
+        <dx:ASPxGridView ID="dxGridUsuario" runat="server" AutoGenerateColumns="false"  ClientInstanceName="dxGridUsuario" KeyFieldName="ID_USUARIO" SettingsBehavior-ConfirmDelete ="true" OnRowInserting="dxGridUsuario_RowInserting" OnRowUpdating="dxGridUsuario_RowUpdating" OnRowDeleting="dxGridUsuario_RowDeleting"
              Width="100%">
             <SettingsAdaptivity AdaptivityMode="HideDataCells" />
             <SettingsPager PageSize="10" />            
