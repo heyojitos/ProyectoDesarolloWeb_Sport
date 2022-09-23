@@ -79,12 +79,47 @@ namespace ProyectoDW.WebForms.Mantenimientos
 
         protected void dxGridProducto_RowUpdating(object sender, DevExpress.Web.Data.ASPxDataUpdatingEventArgs e)
         {
-
+            try
+            {
+                producto.IdProducto = int.Parse(e.NewValues["ID_PRODUCTO"].ToString());
+                producto.Producto = e.NewValues["PRODUCTO"].ToString();
+                producto.Descripcion = e.NewValues["DESCRIPCION"].ToString();
+                producto.IdCategoria = int.Parse(e.NewValues["ID_CATEGORIA"].ToString());
+                producto.Precio = long.Parse(e.NewValues["PRECIO"].ToString());
+                producto.Imagen = e.NewValues["IMAGEN"].ToString();
+                producto.Stock = int.Parse(e.NewValues["STOCK"].ToString());
+                if (objProducto.UpdateProducto(producto))
+                {
+                    CargarProductos();
+                }
+                e.Cancel = true;
+                dxGridProducto.CancelEdit();
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                //throw;
+            }
         }
 
         protected void dxGridProducto_RowDeleting(object sender, DevExpress.Web.Data.ASPxDataDeletingEventArgs e)
         {
-
+            try
+            {
+                producto.IdProducto = int.Parse(e.NewValues["ID_PRODUCTO"].ToString());
+                
+                if (objProducto.DeleteProducto(producto))
+                {
+                    CargarProductos();
+                }
+                e.Cancel = true;
+                dxGridProducto.CancelEdit();
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                //throw;
+            }
         }
     }
 }
