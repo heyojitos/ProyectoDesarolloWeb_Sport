@@ -36,7 +36,7 @@
                     </PropertiesComboBox>
                     <Settings AllowAutoFilter="False" />
                 </dx:GridViewDataComboBoxColumn>
-                <dx:GridViewDataTextColumn Caption="PRECIO" FieldName="PRECIO" VisibleIndex="3">
+                <dx:GridViewDataTextColumn Caption="PRECIO" FieldName="PRECIO" VisibleIndex="3" PropertiesTextEdit-DisplayFormatString="{0:C}">
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn Caption="ILUSTRACION" FieldName="IMAGEN" VisibleIndex="4">
                 </dx:GridViewDataTextColumn>

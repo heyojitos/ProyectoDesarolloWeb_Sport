@@ -23,11 +23,11 @@
 							});
 						</script>
 					<!-- //FlexSlider-->
-					<ul class="slides">
+					
 						<li data-thumb="../../../public/uploads/zapato1.png">
 							<div class="thumb-image"><img src="../../../public/uploads/zapato1.png" data-imagezoom="true" class="img-responsive"/> </div>
 						</li>							
-					</ul>
+					
 					<div class="clearfix"></div>
 				</div>	
 			</div>
