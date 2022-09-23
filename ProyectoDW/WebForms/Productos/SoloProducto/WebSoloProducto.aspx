@@ -1,10 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="WebSoloProducto.aspx.cs" Inherits="ProyectoDW.WebForms.Productos.SoloProducto.WebSoloProducto" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/bootstrap.css") %>" type="text/css" media="all" />
-    <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/style.css") %>" type="text/css" media="all" />
-    <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/flexslider.css") %>" type="text/css" media="all" />
+    <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/style.css") %>" type="text/css" media="all" />    
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/jquery-ui.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/pignose.layerslider.css") %>" type="text/css" media="all" />
+    <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/jquery-2.1.4.min.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/imagezoom.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/jquery.flexslider.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/simpleCart.min.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/bootstrap-3.1.1.min.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/jquery.easing.min.js") %>"></script>
+    <link rel="stylesheet" href="flexslider.css" type="text/css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="jquery.flexslider.js" type="text/javascript"></script>
 
     <!-- single -->
 <div class="single">
@@ -23,11 +31,11 @@
 							});
 						</script>
 					<!-- //FlexSlider-->
-					
-						<li data-thumb="../../../public/uploads/zapato1.png">
-							<div class="thumb-image"><img src="../../../public/uploads/zapato1.png" data-imagezoom="true" class="img-responsive"/> </div>
+					<ul class="slides">
+						<li data-thumb="../../../public/uploads/DM0259-001-PHSRH000-2000_1.jpg">
+							<div class="thumb-image"><img src="../../../public/uploads/DM0259-001-PHSRH000-2000_1.jpg" data-imagezoom="true" class="img-responsive"/> </div>
 						</li>							
-					
+					</ul>
 					<div class="clearfix"></div>
 				</div>	
 			</div>
