@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <items>
-  <item Text="Home" NavigateUrl="#" />
+  <item Text="Inicio" NavigateUrl="#" />
   <group Text="Hombre" NavigateUrl="~/WebForms/Productos/Hombre/WebHombre.aspx">
     <item Text="Calzados" NavigateUrl="~/WebForms/Productos/Hombre/WebHombreCalzados.aspx"  />
     <item Text="Ropa" NavigateUrl="~/WebForms/Productos/Hombre/WebHombreRopa.aspx"  />
@@ -20,5 +20,5 @@
     <item Text="Producto" NavigateUrl="~/WebForms/Mantenimientos/WebProducto.aspx"  />
     <item Text="Categoria" NavigateUrl="~/WebForms/Mantenimientos/WebCategoria.aspx"  />
   </group>
-  <item Text="Support" NavigateUrl="#"  />
+  <item Text="Soporte" NavigateUrl="#"  />
 </items>

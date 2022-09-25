@@ -485,7 +485,7 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Content Include="App_Code\Controller\ControllerMantenimiento\ClsControllerAnuncio.cs" />
+    <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerAnuncio.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerCategoria.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerProducto.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoAnuncio.cs" />
