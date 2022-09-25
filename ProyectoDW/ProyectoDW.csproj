@@ -309,6 +309,7 @@
     <Content Include="public\uploads\zapato1.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="WebForms\Mantenimientos\WebCategoria.aspx" />
     <Content Include="WebForms\Productos\Deporte\WebDeporteRunning.aspx" />
     <Content Include="WebForms\Productos\Deporte\WebDeportes.aspx" />
     <Content Include="WebForms\Productos\Deporte\WebDeporteTraining.aspx" />
@@ -484,7 +485,10 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerCategoria.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerProducto.cs" />
+    <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoAnuncio.cs" />
+    <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoCategoria.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoProducto.cs" />
     <Compile Include="App_Code\Utilidades\ClsController.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerUsrDireccion.cs" />
@@ -495,6 +499,13 @@
     <Compile Include="App_Code\Dao\ClsDataLayer.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoUsrDireccion.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoUsrTelefono.cs" />
+    <Compile Include="WebForms\Mantenimientos\WebCategoria.aspx.cs">
+      <DependentUpon>WebCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Mantenimientos\WebCategoria.aspx.designer.cs">
+      <DependentUpon>WebCategoria.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForms\Mantenimientos\WebClientes.aspx.cs">
       <DependentUpon>WebClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

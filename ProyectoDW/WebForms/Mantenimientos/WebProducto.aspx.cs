@@ -106,7 +106,7 @@ namespace ProyectoDW.WebForms.Mantenimientos
         {
             try
             {
-                producto.IdProducto = int.Parse(e.NewValues["ID_PRODUCTO"].ToString());
+                producto.IdProducto = int.Parse(e.Values["ID_PRODUCTO"].ToString());
                 
                 if (objProducto.DeleteProducto(producto))
                 {

@@ -64,7 +64,7 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
             try
             {
                 strSql = "SELECT ID_USUARIO, NOMBRE, APELLIDO, EMAIL, PASSWORD FROM TB_USUARIO  WHERE EMAIL = '" + usuario.Email + "';";
-            DsReturn = objSql.EjectuaSQL(strSql, "TB_USUARIO");
+                DsReturn = objSql.EjectuaSQL(strSql, "TB_USUARIO");
             }
             catch (Exception ex)
             {

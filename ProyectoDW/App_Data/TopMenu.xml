@@ -18,7 +18,7 @@
   <group Text="Mantenimientos">
     <item Text="Cliente" NavigateUrl="~/WebForms/Mantenimientos/WebClientes.aspx"  />
     <item Text="Producto" NavigateUrl="~/WebForms/Mantenimientos/WebProducto.aspx"  />
-    <!--<item Text="Tipo de Producto" NavigateUrl="~/WebForms/Mantenimientos/TipoProducto/WebTipoProducto.aspx"  />-->
+    <item Text="Categoria" NavigateUrl="~/WebForms/Mantenimientos/WebCategoria.aspx"  />
   </group>
   <item Text="Support" NavigateUrl="#"  />
 </items>
