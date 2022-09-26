@@ -73,5 +73,7 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
             strSql = "DELETE FROM TB_PRODUCTO WHERE ID_PRODUCTO = " + producto.IdProducto;
             return ExecuteSql(strSql);
         }
+
+        
     }
 }

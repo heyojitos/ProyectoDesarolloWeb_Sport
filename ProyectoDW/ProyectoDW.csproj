@@ -488,9 +488,11 @@
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerAnuncio.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerCategoria.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerProducto.cs" />
+    <Compile Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerDeporte.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoAnuncio.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoCategoria.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoProducto.cs" />
+    <Compile Include="App_Code\Dao\DaoPaginasWeb\ClsDaoDeporte.cs" />
     <Compile Include="App_Code\Utilidades\ClsController.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerUsrDireccion.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerUsrTelefono.cs" />
@@ -657,6 +659,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Eventos\Log\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="WebForms\LogIn\" />
   </ItemGroup>
