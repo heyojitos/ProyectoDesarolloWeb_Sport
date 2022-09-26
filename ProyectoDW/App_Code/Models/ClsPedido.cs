@@ -15,6 +15,21 @@ namespace ProyectoDW.App_Code.Models
         private DateTime fechaPedido;
         private float monto;
 
+        public ClsPedido(int idPedido, int idUsuario, int idEstado, string nit, string nombreCliente, DateTime fechaPedido, float monto) : this(idPedido)
+        {
+            this.idUsuario = idUsuario;
+            this.idEstado = idEstado;
+            this.nit = nit;
+            this.nombreCliente = nombreCliente;
+            this.fechaPedido = fechaPedido;
+            this.monto = monto;
+        }
+
+        public ClsPedido(int idPedido)
+        {
+            this.idPedido = idPedido;
+        }
+
         public int IdPedido
         {
             get

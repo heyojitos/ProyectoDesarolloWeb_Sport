@@ -27,7 +27,7 @@
                             <div class="loginControl">
                                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                                     <AnonymousTemplate>
-                                        <a href="~/Account/Login.aspx" runat="server" id="loginLink">Log In</a> 
+                                        <a href="~/Account/Login.aspx" runat="server" id="loginLink">Iniciar Sesion</a> 
                                         | 
                                         <a href="~/Account/Register.aspx" runat="server" id="registerLink">Registro</a>
                                     </AnonymousTemplate>
