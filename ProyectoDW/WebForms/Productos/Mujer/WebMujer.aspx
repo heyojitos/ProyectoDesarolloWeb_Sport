@@ -8,180 +8,35 @@
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/pignose.layerslider.css") %>" type="text/css" media="all" />
 
     <div class="clearfix"></div>
+
     <div class="single-pro">
+        <asp:Repeater ID="contenidoProductos" runat="server">
+            <ItemTemplate>
+                <div class="col-md-3 product-men">
+                    <div class="men-pro-item simpleCart_shelfItem">
+                        <div class="men-thumb-item">
 
-        <div class="col-md-3 product-men">
-            <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                    <img src="../../../public/uploads/zapato1.png" alt="" class="pro-image-front" />
-                    <img src="../../../public/uploads/zapato1.png" alt="" class="pro-image-back" />
-                    <div class="men-cart-pro">
-                        <div class="inner-men-cart-pro">
-                            <a href="#" class="link-product-add-cart">Quick View</a>
+                            <img src="../../../<%# Eval("IMAGEN") %>" alt="" class="pro-image-front" />
+                            <img src="../../../<%# Eval("IMAGEN") %>" alt="" class="pro-image-back" />
+                            <div class="men-cart-pro">
+                                <div class="inner-men-cart-pro">
+                                    <a href="#" class="link-product-add-cart">Vista Rapida</a>
+                                </div>
+                            </div>
+                            <!--span class="product-new-top">New</!--span-->
+                        </div>
+                        <div class="item-info-product ">
+                            <h4><a href="#"><%# Eval("PRODUCTO") %></a></h4>
+                            <div class="info-product-price">
+                                <span class="item_price">Q.<%# Eval("PRECIO") %></span>
+                            </div>
+                            <a href="#" class="item_add single-item hvr-outline-out button2">Agregar al carrito</a>
                         </div>
                     </div>
-                    <span class="product-new-top">New</span>
                 </div>
-                <div class="item-info-product ">
-                    <h4><a href="single.html">Blazers</a></h4>
-                    <div class="info-product-price">
-                        <span class="item_price">$45.99</span>
-                    </div>
-                    <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men">
-            <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                    <img src="../../../public/uploads/DM0259-001-PHSRH000-2000_1.jpg" alt="" class="pro-image-front" />
-                    <img src="../../../public/uploads/DM0259-001-PHSRH000-2000_1.jpg" alt="" class="pro-image-back" />
-                    <div class="men-cart-pro">
-                        <div class="inner-men-cart-pro">
-                            <a href="#" class="link-product-add-cart">Quick View</a>
-                        </div>
-                    </div>
-                    <span class="product-new-top">New</span>
-                </div>
-                <div class="item-info-product ">
-                    <h4><a href="#">Sandals</a></h4>
-                    <div class="info-product-price">
-                        <span class="item_price">$45.99</span>
-                    </div>
-                    <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men">
-            <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                    <img src="images/ep3.png" alt="" class="pro-image-front">
-                    <img src="images/ep3.png" alt="" class="pro-image-back">
-                    <div class="men-cart-pro">
-                        <div class="inner-men-cart-pro">
-                            <a href="#" class="link-product-add-cart">Quick View</a>
-                        </div>
-                    </div>
-                    <span class="product-new-top">New</span>
-                </div>
-                <div class="item-info-product ">
-                    <h4><a href="single.html">Watches</a></h4>
-                    <div class="info-product-price">
-                        <span class="item_price">$45.99</span>
-                    </div>
-                    <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men">
-            <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                    <img src="images/" alt="" class="pro-image-front">
-                    <img src="images/mw3.png" alt="" class="pro-image-back">
-                    <div class="men-cart-pro">
-                        <div class="inner-men-cart-pro">
-                            <a href="#" class="link-product-add-cart">Quick View</a>
-                        </div>
-                    </div>
-                    <span class="product-new-top">New</span>
-                </div>
-                <div class="item-info-product ">
-                    <h4><a href="single.html">Shoes</a></h4>
-                    <div class="info-product-price">
-                        <span class="item_price">$45.99</span>
-                    </div>
-                    <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men yes-marg">
-            <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                    <img src="images/g3.png" alt="" class="pro-image-front">
-                    <img src="images/g3.png" alt="" class="pro-image-back">
-                    <div class="men-cart-pro">
-                        <div class="inner-men-cart-pro">
-                            <a href="#" class="link-product-add-cart">Quick View</a>
-                        </div>
-                    </div>
-                    <span class="product-new-top">New</span>
+            </ItemTemplate>
+        </asp:Repeater>
 
-                </div>
-                <div class="item-info-product ">
-                    <h4><a href="single.html">Shirts</a></h4>
-                    <div class="info-product-price">
-                        <span class="item_price">$45.99</span>
-                    </div>
-                    <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men yes-marg">
-            <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                    <img src="images/ep4.png" alt="" class="pro-image-front">
-                    <img src="images/ep4.png" alt="" class="pro-image-back">
-                    <div class="men-cart-pro">
-                        <div class="inner-men-cart-pro">
-                            <a href="#" class="link-product-add-cart">Quick View</a>
-                        </div>
-                    </div>
-                    <span class="product-new-top">New</span>
-
-                </div>
-                <div class="item-info-product ">
-                    <h4><a href="#">Watches</a></h4>
-                    <div class="info-product-price">
-                        <span class="item_price">$119.99</span>
-                    </div>
-                    <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men yes-marg">
-            <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                    <img src="images/mw2.png" alt="" class="pro-image-front">
-                    <img src="images/mw2.png" alt="" class="pro-image-back">
-                    <div class="men-cart-pro">
-                        <div class="inner-men-cart-pro">
-                            <a href="#" class="link-product-add-cart">Quick View</a>
-                        </div>
-                    </div>
-                    <span class="product-new-top">New</span>
-
-                </div>
-                <div class="item-info-product ">
-                    <h4><a href="single.html">T shirts</a></h4>
-                    <div class="info-product-price">
-                        <span class="item_price">$45.99</span>
-                    </div>
-                    <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men yes-marg">
-            <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                    <img src="images/g2.png" alt="" class="pro-image-front">
-                    <img src="images/g2.png" alt="" class="pro-image-back">
-                    <div class="men-cart-pro">
-                        <div class="inner-men-cart-pro">
-                            <a href="#" class="link-product-add-cart">Quick View</a>
-                        </div>
-                    </div>
-                    <span class="product-new-top">New</span>
-
-                </div>
-                <div class="item-info-product ">
-                    <h4><a href="single.html">Shirts</a></h4>
-                    <div class="info-product-price">
-                        <span class="item_price">$45.99</span>
-                    </div>
-                    <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-                </div>
-            </div>
-        </div>
         <div class="clearfix"></div>
     </div>
 </asp:Content>

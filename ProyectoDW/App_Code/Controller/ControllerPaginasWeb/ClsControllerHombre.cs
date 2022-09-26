@@ -7,18 +7,18 @@ using System.Web;
 
 namespace ProyectoDW.App_Code.Controller.ControllerPaginasWeb
 {
-    public class ClsControllerDeporte : ClsController
+    public class ClsControllerHombre : ClsController
     {
         ClsErrorHandler log = new ClsErrorHandler();
-        ClsDaoDeporte daoDeporte = new ClsDaoDeporte();
+        ClsDaoHombre daoHombre = new ClsDaoHombre();
 
-        public bool getAllProductoDeportes()
+        public bool getAllProductoHombre()
         {
             try
             {
-                if (daoDeporte.getProducto_Deporte())
+                if (daoHombre.getProducto_Hombre())
                 {
-                    DsReturn = daoDeporte.DsReturn;
+                    DsReturn = daoHombre.DsReturn;
                     return true;
                 }
             }
@@ -30,13 +30,13 @@ namespace ProyectoDW.App_Code.Controller.ControllerPaginasWeb
             return false;
         }
 
-        public bool getAllProductoDeportesRunning()
+        public bool getAllProductoHombreCalzado()
         {
             try
             {
-                if (daoDeporte.getProducto_Deporte_Running())
+                if (daoHombre.getProducto_Hombre_Calzado())
                 {
-                    DsReturn = daoDeporte.DsReturn;
+                    DsReturn = daoHombre.DsReturn;
                     return true;
                 }
             }
@@ -48,13 +48,31 @@ namespace ProyectoDW.App_Code.Controller.ControllerPaginasWeb
             return false;
         }
 
-        public bool getAllProductoDeportesTraining()
+        public bool getAllProductoHombreRopa()
         {
             try
             {
-                if (daoDeporte.getProducto_Deporte_Training())
+                if (daoHombre.getProducto_Hombre_Ropa())
                 {
-                    DsReturn = daoDeporte.DsReturn;
+                    DsReturn = daoHombre.DsReturn;
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                //throw;
+            }
+            return false;
+        }
+
+        public bool getAllProductoHombreAccesorio()
+        {
+            try
+            {
+                if (daoHombre.getProducto_Hombre_Accesorio())
+                {
+                    DsReturn = daoHombre.DsReturn;
                     return true;
                 }
             }

@@ -7,18 +7,18 @@ using System.Web;
 
 namespace ProyectoDW.App_Code.Controller.ControllerPaginasWeb
 {
-    public class ClsControllerDeporte : ClsController
+    public class ClsControllerMujer : ClsController
     {
         ClsErrorHandler log = new ClsErrorHandler();
-        ClsDaoDeporte daoDeporte = new ClsDaoDeporte();
+        ClsDaoMujer daoMujer = new ClsDaoMujer();
 
-        public bool getAllProductoDeportes()
+        public bool getAllProductoMujer()
         {
             try
             {
-                if (daoDeporte.getProducto_Deporte())
+                if (daoMujer.getProducto_Mujer())
                 {
-                    DsReturn = daoDeporte.DsReturn;
+                    DsReturn = daoMujer.DsReturn;
                     return true;
                 }
             }
@@ -30,13 +30,13 @@ namespace ProyectoDW.App_Code.Controller.ControllerPaginasWeb
             return false;
         }
 
-        public bool getAllProductoDeportesRunning()
+        public bool getAllProductoMujerCalzado()
         {
             try
             {
-                if (daoDeporte.getProducto_Deporte_Running())
+                if (daoMujer.getProducto_Mujer_Calzado())
                 {
-                    DsReturn = daoDeporte.DsReturn;
+                    DsReturn = daoMujer.DsReturn;
                     return true;
                 }
             }
@@ -48,13 +48,31 @@ namespace ProyectoDW.App_Code.Controller.ControllerPaginasWeb
             return false;
         }
 
-        public bool getAllProductoDeportesTraining()
+        public bool getAllProductoMujerRopa()
         {
             try
             {
-                if (daoDeporte.getProducto_Deporte_Training())
+                if (daoMujer.getProducto_Mujer_Ropa())
                 {
-                    DsReturn = daoDeporte.DsReturn;
+                    DsReturn = daoMujer.DsReturn;
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                //throw;
+            }
+            return false;
+        }
+
+        public bool getAllProductoMujerAccesorio()
+        {
+            try
+            {
+                if (daoMujer.getProducto_Mujer_Accesorio())
+                {
+                    DsReturn = daoMujer.DsReturn;
                     return true;
                 }
             }
