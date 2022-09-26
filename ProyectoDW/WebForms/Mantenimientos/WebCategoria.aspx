@@ -28,8 +28,8 @@
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn Caption="CATEGORIA" FieldName="DESCRIPCION" VisibleIndex="2">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn Caption="PRODUCTO" FieldName="DESCRIPCION" VisibleIndex="2">
-                </dx:GridViewDataTextColumn>
+                <%--<dx:GridViewDataTextColumn Caption="PRODUCTO" FieldName="DESCRIPCION" VisibleIndex="2">
+                </dx:GridViewDataTextColumn>--%>
                 
             </Columns>
             <SettingsPager>
