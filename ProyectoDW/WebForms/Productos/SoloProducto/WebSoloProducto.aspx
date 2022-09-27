@@ -25,7 +25,7 @@
                             <div class="flexslider">
                                 <!-- FlexSlider -->
                                 <script = "text/javascript" >
-                                // Can also be used with $(document).ready()
+                                    // Can also be used with $(document).ready()
                                     $(windows).load(function () {
                                         $('.flexslider').flexslider({
                                             animation: "slide",
@@ -49,52 +49,42 @@
                         <h3><%# Eval("PRODUCTO") %></h3>
                         <p><span class="item_price">Q.<%# Eval("PRECIO") %></span></p>
                         <div class="description">
-                            <h5>Check delivery, payment options and charges at your location</h5>
+                            <h5><%# Eval("DESCRIPCION") %></h5>
                         </div>
                         <div class="color-quality">
                             <div class="color-quality-right">
-                                <h5>Quality :</h5>
-
+                                <h5>Cantidad :</h5>
+                                <div class="quantity">
+                                    <div class="quantity-select">
+                                        <div class="entry value-minus">&nbsp;</div>
+                                        <div class="entry value"><span>1</span></div>
+                                        <div class="entry value-plus active">&nbsp;</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="occasional">
-                            <h5>Types :</h5>
-                            <div class="colr ert">
-                                <label class="radio">
-                                    <input type="radio" name="radio" checked=""><i></i>Casual Shoes</label>
-                            </div>
-                            <div class="colr">
-                                <label class="radio">
-                                    <input type="radio" name="radio"><i></i>Sports Shoes</label>
-                            </div>
-                            <div class="colr">
-                                <label class="radio">
-                                    <input type="radio" name="radio"><i></i>Formal Shoes</label>
-                            </div>
+                            
                             <div class="clearfix"></div>
                         </div>
                         <div class="occasion-cart">
-                            <a href="#" class="item_add hvr-outline-out button2">Add to cart</a>
+                            <a href="#" class="item_add hvr-outline-out button2">Agregar al carrito</a>
                         </div>
-
                     </div>
                     <div class="clearfix"></div>
+                    <!--quantity-->
+                    <script ="text/javascript">
+                        $('.value-plus').on('click', function () {
+                            var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) + 1;
+                            divUpd.text(newVal);
+                        });
 
-                    <div class="bootstrap-tab animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
-                        <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-                            <ul id="myTab" class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Descripcion</a></li>
-                            </ul>
-                            <div id="myTabContent" class="tab-content">
-                                <div role="tabpanel" class="tab-pane fade in active bootstrap-tab-text" id="home" aria-labelledby="home-tab">
-                                    <h5>Product Brief Description</h5>
-                                    <p><%# Eval("DESCRIPCION") %></span>
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                        $('.value-minus').on('click', function () {
+                            var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) - 1;
+                            if (newVal >= 1) divUpd.text(newVal);
+                        });
+                    </script>
+                    <!--quantity-->
                 </div>
             </ItemTemplate>
         </asp:DataList>

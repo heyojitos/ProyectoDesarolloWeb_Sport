@@ -492,14 +492,14 @@
     <Compile Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerDeporte.cs" />
     <Compile Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerHombre.cs" />
     <Compile Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerMujer.cs" />
-    <Content Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerSolo.cs" />
+    <Compile Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerSolo.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoAnuncio.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoCategoria.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoProducto.cs" />
     <Compile Include="App_Code\Dao\DaoPaginasWeb\ClsDaoDeporte.cs" />
     <Compile Include="App_Code\Dao\DaoPaginasWeb\ClsDaoMujer.cs" />
     <Compile Include="App_Code\Dao\DaoPaginasWeb\ClsDaoHombre.cs" />
-    <Content Include="App_Code\Dao\DaoPaginasWeb\ClsDaoSolo.cs" />
+    <Compile Include="App_Code\Dao\DaoPaginasWeb\ClsDaoSolo.cs" />
     <Compile Include="App_Code\Utilidades\ClsController.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerUsrDireccion.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerUsrTelefono.cs" />
