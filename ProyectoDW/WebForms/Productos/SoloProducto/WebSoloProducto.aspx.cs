@@ -11,6 +11,16 @@ namespace ProyectoDW.WebForms.Productos.SoloProducto
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                if (Request.QueryString["idProducto"] == null) return;
+                String id = Request.QueryString["idProducto"].ToString();
+                cargarProducto(id);
+            }
+        }
+
+        private void cargarProducto(String id)
+        {
 
         }
     }

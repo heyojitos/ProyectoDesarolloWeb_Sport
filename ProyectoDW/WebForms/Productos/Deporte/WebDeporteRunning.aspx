@@ -19,8 +19,8 @@
                             <img src="../../../<%# Eval("IMAGEN") %>" alt="" class="pro-image-front" />
                             <img src="../../../<%# Eval("IMAGEN") %>" alt="" class="pro-image-back" />
                             <div class="men-cart-pro">
-                                <div class="inner-men-cart-pro">
-                                    <a href="#" class="link-product-add-cart">Vista Rapida</a>
+                                <div class="inner-men-cart-pro">                                    
+                                    <a class="link-product-add-cart" href="../SoloProducto/WebSoloProducto.aspx?idProducto=<%# Eval("ID_PRODUCTO") %>">Vista Rapida</a>
                                 </div>
                             </div>
                             <!--span class="product-new-top">New</!--span-->
