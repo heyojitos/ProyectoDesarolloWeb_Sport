@@ -27,14 +27,14 @@ namespace ProyectoDW {
 
         protected void btnLogin_Click(object sender, EventArgs e) {
 
-            string StrQry = "<script language='javascript'>";
+            //string StrQry = "<script language='javascript'>";
 
             validar();
 
-            usuarioIngresado.Email = tbUserName.Text;
-            usuarioIngresado.Password = tbPassword.Text;
+            /*usuarioIngresado.Email = tbUserName.Text;
+            usuarioIngresado.Password = tbPassword.Text;*/
 
-            if (objUsuario.getCliente(usuarioIngresado))
+            /*if (objUsuario.getCliente(usuarioIngresado))
             {
                 if (usuarioIngresado.Password == objUsuario.DsReturn.Tables["TB_USUARIO"].Rows[0]["PASSWORD"].ToString())
                 {
@@ -48,7 +48,7 @@ namespace ProyectoDW {
             }
 
             StrQry += "</script>";
-            ClientScript.RegisterStartupScript(GetType(), "mensaje", StrQry, false);
+            ClientScript.RegisterStartupScript(GetType(), "mensaje", StrQry, false);*/
 
 
         }
