@@ -22,17 +22,17 @@
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
                         <div class="headerTop">
                             <div class="templateTitle">
-                                <a id="TitleLink" href="~/" runat="server">Project Title</a>
+                                <a id="TitleLink" href="~/" runat="server">SPORT CENTER - tienda OnLine</a>
                             </div>
                             <div class="loginControl">
                                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                                     <AnonymousTemplate>
-                                        <a href="~/Account/Login.aspx" runat="server" id="loginLink">Log In</a> 
+                                        <a href="~/Account/Login.aspx" runat="server" id="loginLink">Iniciar Sesion</a> 
                                         | 
-                                        <a href="~/Account/Register.aspx" runat="server" id="registerLink">Register</a>
+                                        <a href="~/Account/Register.aspx" runat="server" id="registerLink">Registro</a>
                                     </AnonymousTemplate>
                                     <LoggedInTemplate>
-                                        Welcome <span class="bold">
+                                        Bienvenido <span class="bold">
                                         <a runat="server" href="~/Account/Manage.aspx" title="Manage your account"> 
                                             <asp:LoginName ID="HeadLoginName" runat="server" />
                                         </a> 
@@ -55,7 +55,7 @@
             </PanelCollection>
             <ExpandBarTemplate>
                 <div class="templateTitle">
-                    <a id="TitleLink" href="~/" runat="server">Project Title</a>
+                    <a id="TitleLink" href="~/" runat="server">SPORT CENTER - tienda OnLine</a>
                 </div>
             </ExpandBarTemplate>
         </dx:ASPxPanel>

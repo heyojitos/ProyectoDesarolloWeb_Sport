@@ -1,0 +1,78 @@
+CODIGO INTERNO: ACCH1
+DESCRIPCION BASICA: Maleta Brasilia Just Do It Unisex
+MARCA:Nike 
+PRECIO: Q249.95
+MAS INFORMACION:
+Artículo	BA5559-070
+Modelo	BA5559
+Color	Gris
+Deporte	casual
+Género	Unisex
+Marca	Nike
+Clase	Maletas
+Composición	CUERPO100% POLIESTER FORRO100% POLIESTER
+País de origen	Indonesia
+Proveedor	NORTHBAY INTERNATIONAL INC
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: ACCH2
+DESCRIPCION BASICA: Calcetines Nike Swoosh Crew 2 Pares Unisex
+MARCA: Nike
+PRECIO: Q59.95
+Talla: 7
+MAS INFORMACION:
+Artículo	GN0607-A96
+Modelo	GN0607
+Color	Rosado
+Deporte	training
+Género	Unisex
+Marca	Nike
+Clase	Medias
+Composición	97% POLIESTER3% ELASTANO
+País de origen	China
+Proveedor	NETWORK SALES & LOGISTICS SA
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: ACCH3
+DESCRIPCION BASICA: Riñonera Tailored For Her Material Unisex
+MARCA: adidas
+PRECIO: Q224.95
+MAS INFORMACION:
+Artículo	HC7201
+Modelo	MBL92
+Color	Rosado
+Deporte	casual
+Género	Unisex
+Marca	adidas
+Clase	Maletas
+Composición	67% POLIESTER 33% NYLON
+País de origen	Indonesia
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: ACCH4
+DESCRIPCION BASICA: Gorra 4CMTE City Unisex
+MARCA: adidas
+PRECIO: Q349.95
+Talla: 7
+MAS INFORMACION:
+Artículo	H64827
+Modelo	H64827
+Color	Negro
+Deporte	training
+Género	Unisex
+Marca	adidas
+Clase	Gorras
+Composición	100% RECICLAJE POLIESTER
+País de origen	China
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: ACCH5
+DESCRIPCION BASICA: Maleta Loudon Backpack Unisex
+MARCA: Under Armour
+PRECIO: Q349.95
+MAS INFORMACION:
+Artículo	1364186-100
+Modelo	1364186
+Color	Blanco
+Deporte	casual
+Género	Unisex
+Marca	Under Armour
+Clase	Maletas
+Composición	100% POLIESTER
+País de origen	ID

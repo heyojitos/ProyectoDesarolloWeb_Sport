@@ -1,7 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <items>
-  <item Text="Home" NavigateUrl="#" />
-  <item Text="Products" NavigateUrl="#"  />
-  <item Text="Downloads" NavigateUrl="#"  />
-  <item Text="Support" NavigateUrl="#"  />
+  <item Text="Inicio" NavigateUrl="#" />
+  <group Text="Hombre" NavigateUrl="~/WebForms/Productos/Hombre/WebHombre.aspx">
+    <item Text="Calzados" NavigateUrl="~/WebForms/Productos/Hombre/WebHombreCalzados.aspx"  />
+    <item Text="Ropa" NavigateUrl="~/WebForms/Productos/Hombre/WebHombreRopa.aspx"  />
+    <item Text="Accesorios" NavigateUrl="~/WebForms/Productos/Hombre/WebHombreAccesorio.aspx"  />
+  </group>
+  <group Text="Mujer" NavigateUrl="~/WebForms/Productos/Mujer/WebMujer.aspx">
+    <item Text="Calzados" NavigateUrl="~/WebForms/Productos/Mujer/WebMujerCalzado.aspx"  />
+    <item Text="Ropa" NavigateUrl="~/WebForms/Productos/Mujer/WebMujerRopa.aspx"  />
+    <item Text="Accesorios" NavigateUrl="~/WebForms/Productos/Mujer/WebMujerAccesorio.aspx"  />
+  </group>
+  <group Text="Deporte" NavigateUrl="~/WebForms/Productos/Deporte/WebDeportes.aspx">
+    <item Text="Running" NavigateUrl="~/WebForms/Productos/Deporte/WebDeporteRunning.aspx"  />
+    <item Text="Training" NavigateUrl="~/WebForms/Productos/Deporte/WebDeporteTraining.aspx"  />
+  </group>
+  <group Text="Mantenimientos">
+    <item Text="Cliente" NavigateUrl="~/WebForms/Mantenimientos/WebClientes.aspx"  />
+    <item Text="Producto" NavigateUrl="~/WebForms/Mantenimientos/WebProducto.aspx"  />
+    <item Text="Categoria" NavigateUrl="~/WebForms/Mantenimientos/WebCategoria.aspx"  />
+  </group>
+  <item Text="Carrito" NavigateUrl="~/WebForms/Carrito/WebCarrito.aspx"  />
 </items>

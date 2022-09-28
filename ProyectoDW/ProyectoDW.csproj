@@ -44,6 +44,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Web.Bootstrap.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -137,8 +139,87 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="App_Data\NWind.mdf" />
+    <Content Include="App_Data\NWind_log.ldf">
+      <DependentUpon>NWind.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\SideMenu.xml" />
     <Content Include="App_Data\TopMenu.xml" />
+    <Content Include="bin\DevExpress.Data.v17.2.dll" />
+    <Content Include="bin\DevExpress.Data.v17.2.xml" />
+    <Content Include="bin\DevExpress.Images.v17.2.dll" />
+    <Content Include="bin\DevExpress.Office.v17.2.Core.dll" />
+    <Content Include="bin\DevExpress.Office.v17.2.Core.xml" />
+    <Content Include="bin\DevExpress.Pdf.v17.2.Core.dll" />
+    <Content Include="bin\DevExpress.Pdf.v17.2.Core.xml" />
+    <Content Include="bin\DevExpress.Printing.v17.2.Core.dll" />
+    <Content Include="bin\DevExpress.Printing.v17.2.Core.xml" />
+    <Content Include="bin\DevExpress.RichEdit.v17.2.Core.dll" />
+    <Content Include="bin\DevExpress.RichEdit.v17.2.Core.xml" />
+    <Content Include="bin\DevExpress.RichEdit.v17.2.Export.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxThemes.v17.2.dll" />
+    <Content Include="bin\DevExpress.Web.v17.2.dll" />
+    <Content Include="bin\DevExpress.Web.v17.2.xml" />
+    <Content Include="bin\de\DevExpress.Data.v17.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.Office.v17.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Pdf.v17.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Printing.v17.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.RichEdit.v17.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.v17.2.resources.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\es\DevExpress.Data.v17.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.Office.v17.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Pdf.v17.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Printing.v17.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.RichEdit.v17.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.v17.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Data.v17.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Office.v17.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Pdf.v17.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Printing.v17.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.RichEdit.v17.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.v17.2.resources.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.xml" />
+    <Content Include="bin\Microsoft.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.xml" />
+    <Content Include="bin\Microsoft.Owin.xml" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="bin\ProyectoDW.dll" />
+    <Content Include="bin\ProyectoDW.pdb" />
+    <Content Include="bin\ru\DevExpress.Data.v17.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Office.v17.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Pdf.v17.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Printing.v17.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.RichEdit.v17.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.v17.2.resources.dll" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\flexslider.css" />
     <Content Include="Content\css\jquery-ui.css" />
@@ -150,15 +231,19 @@
     <Content Include="Content\Images\AquaHeader.jpg" />
     <Content Include="Content\Images\arrow.png" />
     <Content Include="Content\Images\BlackGlassHeader.jpg" />
+    <Content Include="Content\Images\borrar.png" />
     <Content Include="Content\Images\btn_next.png" />
     <Content Include="Content\Images\btn_pause.png" />
     <Content Include="Content\Images\btn_play.png" />
     <Content Include="Content\Images\btn_prev.png" />
     <Content Include="Content\Images\close_1.png" />
+    <Content Include="Content\Images\edit.png" />
     <Content Include="Content\Images\GlassHeader.jpg" />
     <Content Include="Content\Images\icons1.png" />
     <Content Include="Content\Images\img-sp.png" />
+    <Content Include="Content\Images\loading2.gif" />
     <Content Include="Content\Images\mark1.png" />
+    <Content Include="Content\Images\new.png" />
     <Content Include="Content\Images\PlasticBlueHeader.jpg" />
     <Content Include="Content\Images\RedWineHeader.jpg" />
     <Content Include="Content\Images\search.png" />
@@ -174,8 +259,75 @@
     <Content Include="Content\js\responsiveslides.min.js" />
     <Content Include="Content\js\simpleCart.min.js" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\StyleWebFactura.css" />
+    <Content Include="Content\StyleWebForm.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="public\uploads\AccesoriosHombre\AccH1.png" />
+    <Content Include="public\uploads\AccesoriosHombre\AccH2.png" />
+    <Content Include="public\uploads\AccesoriosHombre\AccH3.png" />
+    <Content Include="public\uploads\AccesoriosHombre\AccH4.png" />
+    <Content Include="public\uploads\AccesoriosHombre\AccH5.png" />
+    <Content Include="public\uploads\AccesoriosHombre\DetalleAccesoriosH.txt" />
+    <Content Include="public\uploads\AccesoriosMujer\AccM1.png" />
+    <Content Include="public\uploads\AccesoriosMujer\AccM2.png" />
+    <Content Include="public\uploads\AccesoriosMujer\DetalleAccesoriosM.txt" />
+    <Content Include="public\uploads\CalzadoHombre\DetallesZapatosHombre.txt" />
+    <Content Include="public\uploads\CalzadoHombre\ZapatoH1.png" />
+    <Content Include="public\uploads\CalzadoHombre\ZapatoH2.jpg" />
+    <Content Include="public\uploads\CalzadoHombre\ZapatoH3.png" />
+    <Content Include="public\uploads\CalzadoHombre\ZapatoH4.png" />
+    <Content Include="public\uploads\CalzadoHombre\ZapatoH5.png" />
+    <Content Include="public\uploads\CalzadoMujer\DetallesZapatosMujer.txt" />
+    <Content Include="public\uploads\CalzadoMujer\ZapatoM1.png" />
+    <Content Include="public\uploads\CalzadoMujer\ZapatoM2.png" />
+    <Content Include="public\uploads\CalzadoMujer\ZapatoM3.png" />
+    <Content Include="public\uploads\CalzadoMujer\ZapatoM4.png" />
+    <Content Include="public\uploads\CalzadoMujer\ZapatoM5.png" />
+    <Content Include="public\uploads\DeporteRunning\DetalleDeporteRunning.txt" />
+    <Content Include="public\uploads\DeporteRunning\Run1.png" />
+    <Content Include="public\uploads\DeporteRunning\Run2.png" />
+    <Content Include="public\uploads\DeporteRunning\Run3.png" />
+    <Content Include="public\uploads\DeporteRunning\Run4.png" />
+    <Content Include="public\uploads\DeporteRunning\Run5.png" />
+    <Content Include="public\uploads\DeporteTraining\DetalleDeporteTraining.txt" />
+    <Content Include="public\uploads\DeporteTraining\Tra1.png" />
+    <Content Include="public\uploads\DeporteTraining\Tra2.png" />
+    <Content Include="public\uploads\DeporteTraining\Tra3.png" />
+    <Content Include="public\uploads\DM0259-001-PHSRH000-2000_1.jpg" />
+    <Content Include="public\uploads\RopaHombre\DetalleRopaH.txt" />
+    <Content Include="public\uploads\RopaHombre\RPH1.png" />
+    <Content Include="public\uploads\RopaHombre\RPH2.png" />
+    <Content Include="public\uploads\RopaHombre\RPH3.png" />
+    <Content Include="public\uploads\RopaHombre\RPH4.png" />
+    <Content Include="public\uploads\RopaHombre\RPH5.png" />
+    <Content Include="public\uploads\RopaMujer\DetalleRopaM.txt" />
+    <Content Include="public\uploads\RopaMujer\RPM1.png" />
+    <Content Include="public\uploads\RopaMujer\RPM2.png" />
+    <Content Include="public\uploads\RopaMujer\RPM3.png" />
+    <Content Include="public\uploads\RopaMujer\RPM4.png" />
+    <Content Include="public\uploads\zapato1.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="WebForms\Carrito\WebCarrito.aspx" />
+    <Content Include="WebForms\Mantenimientos\WebCategoria.aspx" />
+    <Content Include="WebForms\Productos\Deporte\WebDeporteRunning.aspx" />
+    <Content Include="WebForms\Productos\Deporte\WebDeportes.aspx" />
+    <Content Include="WebForms\Productos\Deporte\WebDeporteTraining.aspx" />
+    <Content Include="WebForms\Productos\Hombre\WebHombre.aspx" />
+    <Content Include="WebForms\Productos\Hombre\WebHombreAccesorio.aspx" />
+    <Content Include="WebForms\Productos\Hombre\WebHombreCalzados.aspx" />
+    <Content Include="WebForms\Productos\Hombre\WebHombreRopa.aspx" />
+    <Content Include="WebForms\Productos\Mujer\WebMujer.aspx" />
+    <Content Include="WebForms\Productos\Mujer\WebMujerAccesorio.aspx" />
+    <Content Include="WebForms\Productos\Mujer\WebMujerCalzado.aspx" />
+    <Content Include="WebForms\Productos\Mujer\WebMujerRopa.aspx" />
+    <Content Include="WebForms\Productos\SoloProducto\WebSoloProducto.aspx" />
+    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.0.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="WebForms\Mantenimientos\WebClientes.aspx" />
+    <Content Include="WebForms\Mantenimientos\WebProducto.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
@@ -187,6 +339,9 @@
     <Content Include="Main.master" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="obj\Debug\ProyectoDW.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ProyectoDW.dll" />
+    <Content Include="obj\Debug\ProyectoDW.pdb" />
     <Content Include="Root.master" />
   </ItemGroup>
   <ItemGroup>
@@ -197,7 +352,13 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="bin\ProyectoDW.dll.config" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\ProyectoDW.csproj.CopyComplete" />
+    <Content Include="obj\Debug\ProyectoDW.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\ProyectoDW.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.9.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -325,6 +486,62 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerAnuncio.cs" />
+    <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerCategoria.cs" />
+    <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerProducto.cs" />
+    <Compile Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerDeporte.cs" />
+    <Compile Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerHombre.cs" />
+    <Compile Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerMujer.cs" />
+    <Compile Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerSolo.cs" />
+    <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoAnuncio.cs" />
+    <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoCategoria.cs" />
+    <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoProducto.cs" />
+    <Compile Include="App_Code\Dao\DaoPaginasWeb\ClsDaoDeporte.cs" />
+    <Compile Include="App_Code\Dao\DaoPaginasWeb\ClsDaoMujer.cs" />
+    <Compile Include="App_Code\Dao\DaoPaginasWeb\ClsDaoHombre.cs" />
+    <Compile Include="App_Code\Dao\DaoPaginasWeb\ClsDaoSolo.cs" />
+    <Compile Include="App_Code\Utilidades\ClsController.cs" />
+    <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerUsrDireccion.cs" />
+    <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerUsrTelefono.cs" />
+    <Compile Include="App_Code\Dao\ClsController.cs" />
+    <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoCliente.cs" />
+    <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerUsuario.cs" />
+    <Compile Include="App_Code\Dao\ClsDataLayer.cs" />
+    <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoUsrDireccion.cs" />
+    <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoUsrTelefono.cs" />
+    <Compile Include="WebForms\Carrito\WebCarrito.aspx.cs">
+      <DependentUpon>WebCarrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Carrito\WebCarrito.aspx.designer.cs">
+      <DependentUpon>WebCarrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Mantenimientos\WebCategoria.aspx.cs">
+      <DependentUpon>WebCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Mantenimientos\WebCategoria.aspx.designer.cs">
+      <DependentUpon>WebCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Mantenimientos\WebClientes.aspx.cs">
+      <DependentUpon>WebClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Mantenimientos\WebClientes.aspx.designer.cs">
+      <DependentUpon>WebClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Dao\ClsConexion.cs" />
+    <Compile Include="App_Code\Utilidades\ClsErrorHandler.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="App_Code\Models\ClsAnuncio.cs" />
+    <Compile Include="App_Code\Models\ClsCategoria.cs" />
+    <Compile Include="App_Code\Models\ClsDetallePedido.cs" />
+    <Compile Include="App_Code\Models\ClsEstado.cs" />
+    <Compile Include="App_Code\Models\ClsPedido.cs" />
+    <Compile Include="App_Code\Models\ClsProducto.cs" />
+    <Compile Include="App_Code\Models\ClsUsrDireccion.cs" />
+    <Compile Include="App_Code\Models\ClsUsrTelefono.cs" />
+    <Compile Include="App_Code\Models\ClsUsuario.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Default.aspx.cs">
@@ -351,7 +568,9 @@
     <Compile Include="Main.master.designer.cs">
       <DependentUpon>Main.master</DependentUpon>
     </Compile>
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Root.master.cs">
       <DependentUpon>Root.master</DependentUpon>
@@ -361,7 +580,107 @@
       <DependentUpon>Root.master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="WebForms\Mantenimientos\WebProducto.aspx.cs">
+      <DependentUpon>WebProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Mantenimientos\WebProducto.aspx.designer.cs">
+      <DependentUpon>WebProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Deporte\WebDeporteRunning.aspx.cs">
+      <DependentUpon>WebDeporteRunning.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Deporte\WebDeporteRunning.aspx.designer.cs">
+      <DependentUpon>WebDeporteRunning.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Deporte\WebDeportes.aspx.cs">
+      <DependentUpon>WebDeportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Deporte\WebDeportes.aspx.designer.cs">
+      <DependentUpon>WebDeportes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Deporte\WebDeporteTraining.aspx.cs">
+      <DependentUpon>WebDeporteTraining.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Deporte\WebDeporteTraining.aspx.designer.cs">
+      <DependentUpon>WebDeporteTraining.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombre.aspx.cs">
+      <DependentUpon>WebHombre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombre.aspx.designer.cs">
+      <DependentUpon>WebHombre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombreAccesorio.aspx.cs">
+      <DependentUpon>WebHombreAccesorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombreAccesorio.aspx.designer.cs">
+      <DependentUpon>WebHombreAccesorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombreCalzados.aspx.cs">
+      <DependentUpon>WebHombreCalzados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombreCalzados.aspx.designer.cs">
+      <DependentUpon>WebHombreCalzados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombreRopa.aspx.cs">
+      <DependentUpon>WebHombreRopa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Hombre\WebHombreRopa.aspx.designer.cs">
+      <DependentUpon>WebHombreRopa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujer.aspx.cs">
+      <DependentUpon>WebMujer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujer.aspx.designer.cs">
+      <DependentUpon>WebMujer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujerAccesorio.aspx.cs">
+      <DependentUpon>WebMujerAccesorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujerAccesorio.aspx.designer.cs">
+      <DependentUpon>WebMujerAccesorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujerCalzado.aspx.cs">
+      <DependentUpon>WebMujerCalzado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujerCalzado.aspx.designer.cs">
+      <DependentUpon>WebMujerCalzado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujerRopa.aspx.cs">
+      <DependentUpon>WebMujerRopa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\Mujer\WebMujerRopa.aspx.designer.cs">
+      <DependentUpon>WebMujerRopa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Productos\SoloProducto\WebSoloProducto.aspx.cs">
+      <DependentUpon>WebSoloProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Productos\SoloProducto\WebSoloProducto.aspx.designer.cs">
+      <DependentUpon>WebSoloProducto.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Eventos\Log\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="WebForms\LogIn\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

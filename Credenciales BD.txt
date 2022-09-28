@@ -1,0 +1,7 @@
+workstation id=BDSPORTCENTERDW.mssql.somee.com;
+packet size=4096;
+user id=soportejavier_SQLLogin_1;
+pwd=5ot2kf5d8q;
+data source=BDSPORTCENTERDW.mssql.somee.com;
+persist security info=False;
+initial catalog=BDSPORTCENTERDW

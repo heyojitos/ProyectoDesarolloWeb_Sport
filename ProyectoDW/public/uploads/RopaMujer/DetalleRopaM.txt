@@ -1,0 +1,79 @@
+CODIGO INTERNO: RPM1
+DESCRIPCION BASICA: Pantalón 7/8 Designed 2 Move Studio Sport de Mujer
+MARCA:adidas
+PRECIO: Q524.95
+TALLAS: XS / S / M / L
+MAS INFORMACION:
+Artículo	HD6828
+Modelo	VU752
+Color	Rojo
+Deporte	training
+Género	Mujer
+Marca	adidas
+Clase	Pantalones
+Composición	53%ALGODON/47% POLIESTER RECICLADO
+País de origen	Cambodia
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: RPM2
+DESCRIPCION BASICA: Camiseta adidas x Zoe Saldana Graphic de Mujer
+MARCA:adidas
+PRECIO: Q349.95
+TALLAS: XS / S / M / L
+MAS INFORMACION:
+Artículo	HB1514
+Modelo	II898
+Color	Blanco
+Deporte	casual
+Género	Mujer
+Marca	adidas
+Clase	Camisetas
+Composición	100% ALGODÓN
+País de origen	Camboya
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: RPM3
+DESCRIPCION BASICA: Mallas 7/8 Farm Print Feel Brilliant AEROREADY High-Waisted de Mujer
+MARCA:adidas
+PRECIO: Q.549.95
+TALLAS: XS / S / M / L
+MAS INFORMACION:
+Artículo	HA1231
+Modelo	CW502
+Color	Azul
+Deporte	training
+Género	Mujer
+Marca	adidas
+Clase	Pantalones
+Composición	89% POLIESTER RECICLADO /11% ELASTANO
+País de origen	Vietnam
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: RPM4
+DESCRIPCION BASICA: Camiseta de tirantes AEROREADY Designed 2 Move Logo Sport de Mujer
+MARCA:adidas
+PRECIO: Q.295.95
+TALLAS: XS / S / M / L
+MAS INFORMACION:
+Artículo	HE6706
+Modelo	28837
+Color	Negro
+Deporte	training
+Género	Mujer
+Marca	adidas
+Clase	Camisetas
+Composición	100% RECICLAJE POLIESTER
+País de origen	Cambodia
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: RPM5
+DESCRIPCION BASICA: Pantalon corto Run Icons Running 3 bandas de Mujer
+MARCA: adidas
+PRECIO: Q.424.95
+TALLAS: XS / S / M / L
+MAS INFORMACION:
+Artículo	H57186
+Modelo	L9404
+Color	Rojo
+Deporte	running
+Género	Mujer
+Marca	adidas
+Clase	Pantalones
+Composición	CUERPO:POLIESTER100%/FORRO:NINGUNO/TEXTIL PLANO
+País de origen	Vietnam

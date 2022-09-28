@@ -1,0 +1,82 @@
+CODIGO INTERNO: RPH1
+DESCRIPCION BASICA: Camiseta Tech 2.0 de Hombre
+MARCA:Under Armour
+PRECIO: Q324.95
+TALLAS: XL
+MAS INFORMACION:
+Artículo	1328495-001
+Modelo	1328495
+Color	Negro
+Deporte	training
+Género	Hombre
+Marca	Under Armour
+Clase	Camisetas
+Composición	* 100% POLIESTER
+País de origen	CAMBOYA
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: RPH2
+DESCRIPCION BASICA: Sudadera con capucha Botanical Dyed (Genero neutro) de Hombre
+MARCA: adidas
+PRECIO: Q999.95
+TALLA: M / L /XL
+Más Información
+Artículo	H65782
+Modelo	L9854
+Color	Multicolor
+Deporte	casual
+Género	Hombre
+Marca	adidas
+Clase	Jackets
+Composición	70% ALGODON/30% RECICLAJE POLIESTER
+País de origen	Cambodia
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: RPH3
+DESCRIPCION BASICA: Camiseta Sportswear Just Do It Swoosh de Hombre
+MARCA:Nike
+PRECIO: Q299.95
+TALLA: S / M / L /XL
+MAS INFORMACION:
+Más Información
+Artículo	AR5006-106
+Modelo	AR5006
+Color	Blanco
+Deporte	casual
+Género	Hombre
+Marca	Nike
+Clase	Camisetas
+Composición	CUERPO100% ALGODON FORRONINGUNO TEXTIL PUNTO
+País de origen	Mexico
+Proveedor	NORTHBAY INTERNATIONAL INC
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: RPH4
+DESCRIPCION BASICA: Pantalón Stretch Woven Shorts de Hombre
+MARCA: Under Armour
+PRECIO: Q499.95
+TALLAS: XS / S / M / L
+MAS INFORMACION:
+Artículo	1351667-001
+Modelo	1351667
+Color	Negro
+Deporte	training
+Género	Hombre
+Marca	Under Armour
+Clase	Pantalones
+Composición	* 87% POLIESTER / 13% ELASTANO
+País de origen	VIETNAM
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODIGO INTERNO: RPH5
+DESCRIPCION BASICA: Mallas Well Being Training de Hombre
+MARCA:adidas
+PRECIO: Q474.95
+TALLAS: XS / S / M / L
+MAS INFORMACION:
+Más Información
+Artículo	HC4442
+Modelo	VE511
+Color	Negro
+Deporte	training
+Género	Hombre
+Marca	adidas
+Clase	Pantalones
+Composición	79% RECICLAJE POLIESTER/21% ELASTANO
+País de origen	Thailand
