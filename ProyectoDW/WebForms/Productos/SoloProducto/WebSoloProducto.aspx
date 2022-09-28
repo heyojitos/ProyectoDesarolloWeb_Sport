@@ -47,7 +47,7 @@
                     </div>
                     <div class="col-md-6 single-right-left simpleCart_shelfItem animated wow slideInRight animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
                         <h3><%# Eval("PRODUCTO") %></h3>
-                        <p><span class="item_price">Q.<%# Eval("PRECIO") %></span></p>
+                        <p><span class="item_price"><%# Eval("PRECIO", "{0:c}") %></span></p>
                         <div class="description">
                             <h5><%# Eval("DESCRIPCION") %></h5>
                         </div>

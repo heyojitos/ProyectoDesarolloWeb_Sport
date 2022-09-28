@@ -7,6 +7,14 @@
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/jquery-ui.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/pignose.layerslider.css") %>" type="text/css" media="all" />
 
+    <!-- banner -->
+    <div class="page-head">
+        <div class="container">
+            <h3>Productos para Deporte</h3>
+        </div>
+    </div>
+    <!-- //banner -->
+
     <div class="clearfix"></div>
 
     <div class="single-pro">
@@ -28,9 +36,9 @@
                         <div class="item-info-product ">
                             <h4><a href="#"><%# Eval("PRODUCTO") %></a></h4>
                             <div class="info-product-price">
-                                <span class="item_price">Q.<%# Eval("PRECIO") %></span>
-                            </div>
-                            <a href="#" class="item_add single-item hvr-outline-out button2">Agregar al carrito</a>
+                                <span class="item_price"><%# Eval("PRECIO", "{0:c}") %></span>
+                            </div>                            
+                            <a href="../../Carrito/WebCarrito.aspx" class="item_add single-item hvr-outline-out button2">Agregar al carrito</a>
                         </div>
                     </div>
                 </div>
