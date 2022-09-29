@@ -1,0 +1,9 @@
+1. A diferencia del carito del súper el de nosotros no es necesario que se tome (crearlo) al principio; no mas llegue a nuestro sitio el cliente. Sino que el cliente puede revisar el catalogo de productos y hasta que este listo a comprar se le asignara un carrito donde introducir su compra.
+
+2. Nuestro carro de compras debe ser capaz de contener una gran cantidad de productos.
+
+3. El carro de supermercado me permite introducir de un productos varios del mismo, el que programaremos debe ser capaz de hacerlo.
+
+4. Nuestro carro de compras debe ser capaz de mostrarnos el subtotal a partir de cada producto que llevamos y así como en el supermercado me debe de permitir eliminar un producto si no me alcanza el dinero.
+
+5. El carro de compras me debe permitir actualizar la cantidad de producto si quiero mas de un producto del mismo tipo o quiero dejar de ese producto uno.
