@@ -1,0 +1,9 @@
+==========================================================================
+original	| tupla (bd)							  |   modelo
+==========================================================================
+ItemId 		= ID_DETALLE_PEDIDO (TB_DETALLE_PEDIDO) --> idDetallePedido
+CartId 		= ID_USUARIO (TB_PEDIDO) 				--> idUsuario
+Quantity 	= CANTIDAD (TB_DETALLE_PEDIDO) 			--> cantidad
+ProductId 	= ID_PRODUCTO (TB_DETALLE_PEDIDO) 		--> idProducto
+Producto 	= PRODUCTO (TB_PRODUCTO) 				--> producto
+PedidoId	= ID_PEDIDO (TB_DETALLE_PEDIDO)			--> idPedido
