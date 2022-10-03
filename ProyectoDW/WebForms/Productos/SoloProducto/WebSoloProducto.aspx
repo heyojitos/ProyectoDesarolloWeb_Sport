@@ -68,7 +68,7 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="occasion-cart">
-                            <a href="#" class="item_add hvr-outline-out button2">Agregar al carrito</a>
+                            <a href="../../Carrito/WebCarrito.aspx?idProducto=<%# Eval("ID_PRODUCTO") %>&cantidad=1" class="item_add hvr-outline-out button2">Agregar al carrito</a>
                         </div>
                     </div>
                     <div class="clearfix"></div>

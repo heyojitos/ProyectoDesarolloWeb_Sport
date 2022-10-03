@@ -29,6 +29,21 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
             return true;
         }
 
+        public bool getProducto_by_ID(String idPro)
+        {
+            try
+            {
+                strSql = "SELECT * FROM TB_PRODUCTO WHERE ID_PRODUCTO = " + int.Parse(idPro);
+                DsReturn = objSql.EjectuaSQL(strSql, "BuscarProducto");
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                return false;
+            }
+            return true;
+        }
+
         public bool ExecuteSql(string strSql)
         {
             try

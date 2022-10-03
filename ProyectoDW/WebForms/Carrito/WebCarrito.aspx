@@ -27,10 +27,10 @@
                                 <asp:ImageButton ID="eliminarID_DETALLE" runat="server" ImageUrl="~/Content/Images/close_1.png" OnClick="eliminarID_DETALLE_Click" CssClass=""/>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="ID_DETALLE_PRODUCTO" HeaderText="ID_DETALLE" ReadOnly="true"/>
-                        <asp:BoundField DataField="ID_PRODUCTO" HeaderText="ID_PRODUCTO" ReadOnly="true"/>
-                        <asp:ImageField DataImageUrlField="URL_IMAGEN_PRODUCTO" HeaderText="IMAGEN_PRODUCTO" ReadOnly="true"></asp:ImageField>
+                        <asp:BoundField DataField="ID_DETALLE_REGISTRO" HeaderText="ID_DETALLE" ReadOnly="true"/>
+                        <asp:BoundField DataField="ID_PRODUCTO" HeaderText="ID_PRODUCTO" ReadOnly="true"/>        
                         <asp:BoundField DataField="PRODUCTO" HeaderText="PRODUCTO" ReadOnly="true"/>
+                        <asp:BoundField DataField="PRECIO_PRODUCTO" HeaderText="PRODUCTO" ReadOnly="true"/>
                         <asp:TemplateField HeaderText="CANTIDAD">
                             <ItemTemplate>
                                 <asp:TextBox ID="txtCantidad" runat="server" Text=""></asp:TextBox>
