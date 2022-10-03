@@ -11,6 +11,11 @@ namespace ProyectoDW.WebForms.Carrito
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
+        }
+
+        protected void eliminarID_DETALLE_Click(object sender, ImageClickEventArgs e)
+        {
 
         }
     }

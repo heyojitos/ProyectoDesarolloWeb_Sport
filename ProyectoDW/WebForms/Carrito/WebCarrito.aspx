@@ -22,25 +22,21 @@
             <div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
                 <asp:GridView ID="idCarrito" runat="server" CssClass="timetable_sub" AutoGenerateColumns="False" ShowFooter="True" EnableCallBacks="false">
                     <Columns>
-                        <asp:TemplateField HeaderText="Eliminar">
+                        <asp:TemplateField HeaderText="Eliminar" ItemStyle-CssClass="">
                             <ItemTemplate>
-                                <asp:CheckBox ID="Remove" runat="server"></asp:CheckBox>
+                                <asp:ImageButton ID="eliminarID_DETALLE" runat="server" ImageUrl="~/Content/Images/close_1.png" OnClick="eliminarID_DETALLE_Click" CssClass=""/>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="ProductID" HeaderText="ID" SortExpression="ID_PRODUCTO"  />
-                        <asp:BoundField DataField="Product.ProductName" HeaderText="PRODUCTO" />
-                        <asp:BoundField DataField="Product.UnitPrice" HeaderText="PRECIO" DataFormatString="{0:c}" />
-                        <asp:TemplateField HeaderText="Cantidad">
+                        <asp:BoundField DataField="ID_DETALLE_PRODUCTO" HeaderText="ID_DETALLE" ReadOnly="true"/>
+                        <asp:BoundField DataField="ID_PRODUCTO" HeaderText="ID_PRODUCTO" ReadOnly="true"/>
+                        <asp:ImageField DataImageUrlField="URL_IMAGEN_PRODUCTO" HeaderText="IMAGEN_PRODUCTO" ReadOnly="true"></asp:ImageField>
+                        <asp:BoundField DataField="PRODUCTO" HeaderText="PRODUCTO" ReadOnly="true"/>
+                        <asp:TemplateField HeaderText="CANTIDAD">
                             <ItemTemplate>
                                 <asp:TextBox ID="txtCantidad" runat="server" Text=""></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="SubTotal">
-                            <ItemTemplate>
-                               
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                        
+                        <asp:BoundField DataField="SUBTOTAL" HeaderText="SUBTOTAL" DataFormatString="{0:c}" ReadOnly="true"/>
                     </Columns>
                 </asp:GridView>
             </div>
@@ -55,9 +51,9 @@
                 <div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
                     <h4>Total</h4>
                     <ul>
-                        <li>Subtotal: <i>-</i> <span>Q.183.96</span></li>
-                        <li>Envio: <i>-</i> <span>Q.183.96</span></li>
-                        <li>Total: <i>-</i> <span>Q.183.96</span></li>
+                        <li>Subtotal: <i>-</i><asp:Label ID="idSubtotal" runat="server" Text="Q.0.00"></asp:Label><span></span></li>
+                        <li>Envio: <i>-</i> <span><asp:Label ID="idEnvio" runat="server" Text="Q.0.00"></asp:Label></span></li>
+                        <li>Total: <i>-</i> <span><asp:Label ID="idTotal" runat="server" Text="Q.0.00"></asp:Label></span></li>
                     </ul>
 
                 </div>
