@@ -13,6 +13,15 @@ namespace ProyectoDW.WebForms.Carrito {
     public partial class WebCarrito {
         
         /// <summary>
+        /// Control idCarrito.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView idCarrito;
+        
+        /// <summary>
         /// Control HyperLink1.
         /// </summary>
         /// <remarks>

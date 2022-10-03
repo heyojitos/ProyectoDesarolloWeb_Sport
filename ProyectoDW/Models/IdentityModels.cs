@@ -29,7 +29,7 @@ namespace ProyectoDW.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("ApplicationServices", throwIfV1Schema: false)
+            : base("SistemaSPORT", throwIfV1Schema: false)
         {
         }
 
