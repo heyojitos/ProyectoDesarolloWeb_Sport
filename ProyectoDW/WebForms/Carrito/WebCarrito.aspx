@@ -27,9 +27,9 @@
                                 <asp:CheckBox ID="Remove" runat="server"></asp:CheckBox>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="ProductID" HeaderText="ID" SortExpression="ID_PRODUCTO"  />
-                        <asp:BoundField DataField="Product.ProductName" HeaderText="PRODUCTO" />
-                        <asp:BoundField DataField="Product.UnitPrice" HeaderText="PRECIO" DataFormatString="{0:c}" />
+                        <asp:BoundField DataField="" HeaderText="ID" SortExpression=""  />
+                        <asp:BoundField DataField="" HeaderText="PRODUCTO" />
+                        <asp:BoundField DataField="" HeaderText="PRECIO" DataFormatString="{0:c}" />
                         <asp:TemplateField HeaderText="Cantidad">
                             <ItemTemplate>
                                 <asp:TextBox ID="txtCantidad" runat="server" Text=""></asp:TextBox>
@@ -55,9 +55,9 @@
                 <div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
                     <h4>Total</h4>
                     <ul>
-                        <li>Subtotal: <i>-</i> <span>Q.183.96</span></li>
-                        <li>Envio: <i>-</i> <span>Q.183.96</span></li>
-                        <li>Total: <i>-</i> <span>Q.183.96</span></li>
+                        <li>Subtotal: <i>-</i> <span><asp:Label ID="lblSubtotal" runat="server" Text=""></asp:Label></span></li>
+                        <li>Envio: <i>-</i> <span><asp:Label ID="lblEnvio" runat="server" Text=""></asp:Label></span></li>
+                        <li>Total: <i>-</i> <span><asp:Label ID="lblTotal" runat="server" Text=""></asp:Label></span></li>
                     </ul>
 
                 </div>
