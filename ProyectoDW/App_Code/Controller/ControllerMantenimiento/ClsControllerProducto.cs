@@ -82,5 +82,21 @@ namespace ProyectoDW.App_Code.Controller.ControllerMantenimiento
             }
             return false;
         }
+        public bool Buscar_Producto(String buscarID)
+        {
+            try
+            {
+                if (objProducto.getProducto_by_ID(buscarID))
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                throw;
+            }
+            return false;
+        }
     }
 }

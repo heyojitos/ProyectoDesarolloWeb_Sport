@@ -37,7 +37,7 @@
                             <div class="info-product-price">
                                 <span class="item_price"><%# Eval("PRECIO", "{0:c}") %></span>
                             </div>
-                            <a href="#" class="item_add single-item hvr-outline-out button2">Agregar al carrito</a>
+                            <a href="../../Carrito/WebCarrito.aspx?idProducto=<%# Eval("ID_PRODUCTO") %>" class="item_add single-item hvr-outline-out button2">Agregar al carrito</a>
                         </div>
                     </div>
                 </div>
