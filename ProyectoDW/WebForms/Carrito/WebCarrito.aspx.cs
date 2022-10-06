@@ -14,27 +14,30 @@ namespace ProyectoDW.WebForms.Carrito
     {
         ClsProducto clsProducto = new ClsProducto();
         ClsControllerProducto clsControllerProducto = new ClsControllerProducto();
+        ClsCarritoCompra compra;
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["miCarro"] == null)
+            {
+                Session["miCarro"] = new ClsCarritoCompra();
+            }
+            compra = (ClsCarritoCompra)Session["miCarro"];
             if (!Page.IsPostBack)
             {
-                if (Request.QueryString["idProducto"] == null) return;
-                String idPro = Request.QueryString["idProducto"].ToString();
-                if (Request.QueryString["cantidad"] != null)
-                {
-                    String canti = Request.QueryString["cantidad"].ToString();
-                }
-                cargaCarrito(idPro);
-            }
-            else
-            {
-
-            }
+                FillData();
+            }            
         }
 
+        public void FillData()
+        {
+            gridCarrito.DataSource = compra.GetLista();
+            gridCarrito.DataBind();
+        }
+
+
         //Data table Virtual Carrito
-        public DataTable filldata()
+        /*public DataTable filldata()
         {
             DataTable dt = new DataTable();
             DataColumn correlativo = dt.Columns.Add("ID_DETALLE_REGISTRO", typeof(int));
@@ -68,12 +71,10 @@ namespace ProyectoDW.WebForms.Carrito
         public void setCarrito()
         {
 
-        }
-
-        public void 
+        }*/
 
 
-        protected void eliminarID_DETALLE_Click(object sender, ImageClickEventArgs e)
+        public void eliminarID_DETALLE_Click(object sender, ImageClickEventArgs e)
         {
 
         }

@@ -88,6 +88,7 @@ namespace ProyectoDW.App_Code.Controller.ControllerMantenimiento
             {
                 if (objProducto.getProducto_by_ID(buscarID))
                 {
+                    DsReturn = objProducto.DsReturn;
                     return true;
                 }
             }

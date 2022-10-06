@@ -5,14 +5,15 @@ using System.Web;
 
 namespace ProyectoDW.App_Code.Models
 {
-    public class ClsCarro
+    public class ClsCarroItem
     {
         private int id_regitro;
         private string codigo_producto;
         private string descripcion_producto;
+        private decimal precio;
         private int cantidad;
         private decimal subtotal;
-        private decimal total;
+        
 
         public int Id_regitro
         {
@@ -79,17 +80,31 @@ namespace ProyectoDW.App_Code.Models
             }
         }
 
-        public decimal Total
+        public decimal Precio
         {
             get
             {
-                return total;
+                return precio;
             }
 
             set
             {
-                total = value;
+                precio = value;
             }
         }
+
+        public ClsCarroItem()
+        {
+
+        }
+        public ClsCarroItem(int id_registro, string codigo_producto, string descripcion_producto, decimal precio, int cantidad, decimal subtotal)
+        {
+            this.Id_regitro = id_regitro;
+            this.Codigo_producto = codigo_producto;
+            this.Descripcion_producto = descripcion_producto;
+            this.Precio = precio;
+            this.Cantidad = cantidad;
+            this.Subtotal = subtotal;
+        }        
     }
 }

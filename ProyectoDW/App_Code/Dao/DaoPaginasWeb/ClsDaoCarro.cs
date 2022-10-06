@@ -7,5 +7,6 @@ namespace ProyectoDW.App_Code.Dao.DaoPaginasWeb
 {
     public class ClsDaoCarro
     {
+
     }
 }

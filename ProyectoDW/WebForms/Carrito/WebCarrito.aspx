@@ -20,7 +20,7 @@
         <div class="container">
             <h3>Mi Carrito</h3>
             <div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
-                <asp:GridView ID="idCarrito" runat="server" CssClass="timetable_sub" AutoGenerateColumns="False" ShowFooter="True" EnableCallBacks="false">
+                <asp:GridView ID="gridCarrito" runat="server" CssClass="timetable_sub" AutoGenerateColumns="False" ShowFooter="True" EnableCallBacks="false">
                     <Columns>
                         <asp:TemplateField HeaderText="Eliminar" ItemStyle-CssClass="">
                             <ItemTemplate>
@@ -30,7 +30,7 @@
                         <asp:BoundField DataField="ID_DETALLE_REGISTRO" HeaderText="ID_DETALLE" ReadOnly="true"/>
                         <asp:BoundField DataField="ID_PRODUCTO" HeaderText="ID_PRODUCTO" ReadOnly="true"/>        
                         <asp:BoundField DataField="PRODUCTO" HeaderText="PRODUCTO" ReadOnly="true"/>
-                        <asp:BoundField DataField="PRECIO_PRODUCTO" HeaderText="PRODUCTO" ReadOnly="true"/>
+                        <asp:BoundField DataField="PRECIO" HeaderText="PRODUCTO" ReadOnly="true"/>
                         <asp:TemplateField HeaderText="CANTIDAD">
                             <ItemTemplate>
                                 <asp:TextBox ID="txtCantidad" runat="server" Text=""></asp:TextBox>
