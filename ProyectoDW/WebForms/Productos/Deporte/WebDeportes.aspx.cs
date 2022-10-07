@@ -49,9 +49,8 @@ namespace ProyectoDW.WebForms.Productos.Deporte
                 if (clsProducto.Buscar_Producto(idPro.ToString()))
                 {
                     compra = (ClsCarritoCompra)Session["miCarro"];
-                    DataTable dt1 = clsProducto.DsReturn.Tables["BuscarProducto"];
-                    //DataTable dt2 = compra.TablaCarro();
-                    DataRow row = dt1.Rows[0];
+                    DataTable dt = clsProducto.DsReturn.Tables["BuscarProducto"];
+                    DataRow row = dt.Rows[0];
                     int idRegistro = compra.IndexRegistro();
                     int pro = int.Parse(row["ID_PRODUCTO"].ToString());
                     try
@@ -62,7 +61,7 @@ namespace ProyectoDW.WebForms.Productos.Deporte
                                 decimal.Parse(row["PRECIO"].ToString()), 1, decimal.Parse(row["PRECIO"].ToString()))))
                             {
                                 string StrQry = "<script language='javascript'>";
-                                StrQry += "alert('Se agrego correctamente el producto: " + row["PRODUCTO"] + " al carrito');";
+                                StrQry += "alert('Se agrego correctamente el producto: " + row["PRODUCTO"] + "');";
                                 StrQry += "</script>";
                                 ClientScript.RegisterStartupScript(GetType(), "mensaje", StrQry, false);
                             }

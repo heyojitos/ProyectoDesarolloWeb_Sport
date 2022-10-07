@@ -17,7 +17,7 @@
 
     <!-- single -->
     <div class="single">
-        <asp:DataList ID="dtlistSolo" runat="server">
+        <asp:DataList ID="dtlistSolo" runat="server" OnItemCommand="dtlistSolo_ItemCommand">
             <ItemTemplate>
                 <div class="container">
                     <div class="col-md-6 single-right-left animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
@@ -51,40 +51,15 @@
                         <div class="description">
                             <h5><%# Eval("DESCRIPCION") %></h5>
                         </div>
-                        <div class="color-quality">
-                            <div class="color-quality-right">
-                                <h5>Cantidad :</h5>
-                                <div class="quantity">
-                                    <div class="quantity-select">
-                                        <div class="entry value-minus">&nbsp;</div>
-                                        <div class="entry value"><span>1</span></div>
-                                        <div class="entry value-plus active">&nbsp;</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="occasional">
-                            
                             <div class="clearfix"></div>
                         </div>
                         <div class="occasion-cart">
-                            <a href="../../Carrito/WebCarrito.aspx?idProducto=<%# Eval("ID_PRODUCTO") %>&cantidad=1" class="item_add hvr-outline-out button2">Agregar al carrito</a>
+                            <asp:LinkButton ID="btnAgregar" runat="server" CommandName="Agregar" CommandArgument='<%# Eval("ID_PRODUCTO") %>' Text="Agregar al carrito" CssClass="item_add single-item hvr-outline-out button2"></asp:LinkButton>
                         </div>
                     </div>
                     <div class="clearfix"></div>
-                    <!--quantity-->
-                    <script ="text/javascript">
-                        $('.value-plus').on('click', function () {
-                            var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) + 1;
-                            divUpd.text(newVal);
-                        });
-
-                        $('.value-minus').on('click', function () {
-                            var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) - 1;
-                            if (newVal >= 1) divUpd.text(newVal);
-                        });
-                    </script>
-                    <!--quantity-->
                 </div>
             </ItemTemplate>
         </asp:DataList>

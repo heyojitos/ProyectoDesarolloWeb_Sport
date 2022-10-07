@@ -36,8 +36,7 @@
                             <h4><a href="#"><%# Eval("PRODUCTO") %></a></h4>
                             <div class="info-product-price">
                                 <span class="item_price"><%# Eval("PRECIO", "{0:c}") %></span>
-                            </div>                            
-                            <!--a href="../../Carrito/WebCarrito.aspx?idProducto=" class="">Agregar al carrito</!--a-->                
+                            </div>                                          
                             <asp:LinkButton ID="btnAgregar" runat="server" CommandName="Agregar" CommandArgument='<%# Eval("ID_PRODUCTO") %>' Text="Agregar al carrito" CssClass="item_add single-item hvr-outline-out button2"></asp:LinkButton>
                         </div>
                         

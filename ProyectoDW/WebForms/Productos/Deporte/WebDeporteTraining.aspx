@@ -17,12 +17,11 @@
    <div class="clearfix"></div>
 
     <div class="single-pro">
-        <asp:Repeater ID="contenidoProductos" runat="server">
+        <asp:Repeater ID="contenidoProductos" runat="server" OnItemCommand="contenidoProductos_ItemCommand">
             <ItemTemplate>
                 <div class="col-md-3 product-men">
                     <div class="men-pro-item simpleCart_shelfItem">
                         <div class="men-thumb-item">
-
                             <img src="../../../<%# Eval("IMAGEN") %>" alt="" class="pro-image-front" />
                             <img src="../../../<%# Eval("IMAGEN") %>" alt="" class="pro-image-back" />
                             <div class="men-cart-pro">
@@ -37,7 +36,7 @@
                             <div class="info-product-price">
                                 <span class="item_price"><%# Eval("PRECIO", "{0:c}") %></span>
                             </div>
-                            <a href="../../Carrito/WebCarrito.aspx?idProducto=<%# Eval("ID_PRODUCTO") %>" class="item_add single-item hvr-outline-out button2">Agregar al carrito</a>
+                            <asp:LinkButton ID="btnAgregar" runat="server" CommandName="Agregar" CommandArgument='<%# Eval("ID_PRODUCTO") %>' Text="Agregar al carrito" CssClass="item_add single-item hvr-outline-out button2"></asp:LinkButton>
                         </div>
                     </div>
                 </div>
