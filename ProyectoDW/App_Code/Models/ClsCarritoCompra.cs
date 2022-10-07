@@ -69,14 +69,20 @@ namespace ProyectoDW.App_Code.Models
 
         public void DeleteRegistro(int filaID)
         {
-            carroItems.RemoveAt(filaID);
+            carroItems.RemoveAt(filaID - 1);
+            int contador = 1;
+            foreach (ClsCarroItem item in carroItems)
+            {
+                item.ID_regitro = contador;
+                contador++;
+            }
         }
 
         public void UpdateRegistro(int filaID, int Cantidad)
         {
             if (Cantidad > 0)
             {
-                carroItems[filaID].Cantidad = Cantidad;
+                carroItems[filaID - 1].Cantidad = Cantidad;
             }
             else
             {

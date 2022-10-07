@@ -19,26 +19,23 @@
     <div class="checkout">
         <div class="container">
             <h3>Mi Carrito</h3>
+
             <div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
-                <asp:GridView ID="gridCarrito" runat="server" CssClass="timetable_sub" AutoGenerateColumns="False" ShowFooter="True" EnableCallBacks="false">
+                <asp:GridView ID="gridCarrito" runat="server" CssClass="timetable_sub" AutoGenerateColumns="False" ShowFooter="false" EnableCallBacks="false" OnRowDeleting="gridCarrito_RowDeleting">
                     <Columns>
-                        <asp:TemplateField HeaderText="Eliminar" ItemStyle-CssClass="">
-                            <ItemTemplate>
-                                <asp:ImageButton ID="eliminarID_DETALLE" runat="server" ImageUrl="~/Content/Images/close_1.png" OnClick="eliminarID_DETALLE_Click" CssClass=""/>
-                            </ItemTemplate>
-                        </asp:TemplateField>
+                        <asp:CommandField ShowDeleteButton="true" ButtonType="Image" DeleteImageUrl="~/Content/Images/close_1.png" />
                         <asp:BoundField DataField="ID_DETALLE_REGISTRO" HeaderText="N° Registro" ReadOnly="true"/>
                         <asp:BoundField DataField="ID_PRODUCTO" HeaderText="Codigo_Producto" ReadOnly="true"/>        
                         <asp:BoundField DataField="PRODUCTO" HeaderText="Producto" ReadOnly="true"/>
                         <asp:TemplateField HeaderText="Imagen">
                             <ItemTemplate>
-                                <img src="../../<%# Eval("IMAGEN") %>" class="img-responsive" width="150px" height="150px"/>
+                                <img src="../../<%# Eval("IMAGEN") %>" class="img-responsive" width="140px" height="140px"/>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:BoundField DataField="PRECIO" HeaderText="Precio" ReadOnly="true" DataFormatString="{0:c}"/>
                         <asp:TemplateField HeaderText="Cantidad">
                             <ItemTemplate>
-                                <asp:TextBox ID="txtCantidad" runat="server" Text='<%# Eval("CANTIDAD") %>'></asp:TextBox>
+                                <asp:TextBox ID="txtCantidad" runat="server" Text='<%# Eval("CANTIDAD") %>' AutoPostBack="true" OnTextChanged="txtCantidad_TextChanged"></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:BoundField DataField="SUBTOTAL" HeaderText="SubTotal" DataFormatString="{0:c}" ReadOnly="true"/>

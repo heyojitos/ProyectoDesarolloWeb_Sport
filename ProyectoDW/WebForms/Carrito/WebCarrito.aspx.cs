@@ -1,4 +1,5 @@
-﻿using ProyectoDW.App_Code.Controller.ControllerMantenimiento;
+﻿using DXWebApplication.App_Code.Utilidades;
+using ProyectoDW.App_Code.Controller.ControllerMantenimiento;
 using ProyectoDW.App_Code.Models;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,8 @@ namespace ProyectoDW.WebForms.Carrito
         ClsProducto clsProducto = new ClsProducto();
         ClsControllerProducto clsControllerProducto = new ClsControllerProducto();
         ClsCarritoCompra compra;
-        
+        ClsErrorHandler log = new ClsErrorHandler();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["miCarro"] == null)
@@ -49,12 +51,29 @@ namespace ProyectoDW.WebForms.Carrito
             gridCarrito.DataSource = dt;
             gridCarrito.DataBind();
 
+            Session["DatosCarro"] = dt;
+
             idTotal.Text = "Q." + compra.TotalCarro().ToString();
         }      
 
-        public void eliminarID_DETALLE_Click(object sender, ImageClickEventArgs e)
+        protected void gridCarrito_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            try
+            {
+                int CodigoRegistro = int.Parse(e.Values["ID_DETALLE_REGISTRO"].ToString());
+                compra.DeleteRegistro(CodigoRegistro);
+                FillData();
+                e.Cancel = true;               
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+            }
+        }
 
+        protected void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
