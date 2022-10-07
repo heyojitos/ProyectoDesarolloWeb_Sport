@@ -27,16 +27,21 @@
                                 <asp:ImageButton ID="eliminarID_DETALLE" runat="server" ImageUrl="~/Content/Images/close_1.png" OnClick="eliminarID_DETALLE_Click" CssClass=""/>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="ID_DETALLE_REGISTRO" HeaderText="ID_DETALLE" ReadOnly="true"/>
-                        <asp:BoundField DataField="ID_PRODUCTO" HeaderText="ID_PRODUCTO" ReadOnly="true"/>        
-                        <asp:BoundField DataField="PRODUCTO" HeaderText="PRODUCTO" ReadOnly="true"/>
-                        <asp:BoundField DataField="PRECIO" HeaderText="PRODUCTO" ReadOnly="true"/>
-                        <asp:TemplateField HeaderText="CANTIDAD">
+                        <asp:BoundField DataField="ID_DETALLE_REGISTRO" HeaderText="N° Registro" ReadOnly="true"/>
+                        <asp:BoundField DataField="ID_PRODUCTO" HeaderText="Codigo_Producto" ReadOnly="true"/>        
+                        <asp:BoundField DataField="PRODUCTO" HeaderText="Producto" ReadOnly="true"/>
+                        <asp:TemplateField HeaderText="Imagen">
                             <ItemTemplate>
-                                <asp:TextBox ID="txtCantidad" runat="server" Text=""></asp:TextBox>
+                                <img src="../../<%# Eval("IMAGEN") %>" class="img-responsive" width="150px" height="150px"/>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="SUBTOTAL" HeaderText="SUBTOTAL" DataFormatString="{0:c}" ReadOnly="true"/>
+                        <asp:BoundField DataField="PRECIO" HeaderText="Precio" ReadOnly="true" DataFormatString="{0:c}"/>
+                        <asp:TemplateField HeaderText="Cantidad">
+                            <ItemTemplate>
+                                <asp:TextBox ID="txtCantidad" runat="server" Text='<%# Eval("CANTIDAD") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="SUBTOTAL" HeaderText="SubTotal" DataFormatString="{0:c}" ReadOnly="true"/>
                     </Columns>
                 </asp:GridView>
             </div>
@@ -51,9 +56,9 @@
                 <div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
                     <h4>Total</h4>
                     <ul>
-                        <li>Subtotal: <i>-</i><asp:Label ID="idSubtotal" runat="server" Text="Q.0.00"></asp:Label><span></span></li>
-                        <li>Envio: <i>-</i> <span><asp:Label ID="idEnvio" runat="server" Text="Q.0.00"></asp:Label></span></li>
-                        <li>Total: <i>-</i> <span><asp:Label ID="idTotal" runat="server" Text="Q.0.00"></asp:Label></span></li>
+                        <li>Subtotal: <i>-</i><asp:Label ID="idSubtotal" runat="server" Text=""></asp:Label><span></span></li>
+                        <li>Envio: <i>-</i> <span><asp:Label ID="idEnvio" runat="server" Text=""></asp:Label></span></li>
+                        <li>Total: <i>-</i> <span><asp:Label ID="idTotal" runat="server" Text=""></asp:Label></span></li>
                     </ul>
 
                 </div>

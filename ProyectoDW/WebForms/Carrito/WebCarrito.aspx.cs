@@ -31,48 +31,26 @@ namespace ProyectoDW.WebForms.Carrito
 
         public void FillData()
         {
-            gridCarrito.DataSource = compra.GetLista();
+            DataTable dt = compra.TablaCarro();
+            DataRow fila;
+            foreach (var c in compra.carroItems)
+            {
+                fila = dt.NewRow();
+                fila[0] = c.ID_regitro;
+                fila[1] = c.Codigo_producto;
+                fila[2] = c.Descripcion_producto;
+                fila[3] = c.Imagen;
+                fila[4] = c.Precio;
+                fila[5] = c.Cantidad;
+                fila[6] = c.Subtotal;
+                dt.Rows.Add(fila);
+            }
+
+            gridCarrito.DataSource = dt;
             gridCarrito.DataBind();
-        }
 
-
-        //Data table Virtual Carrito
-        /*public DataTable filldata()
-        {
-            DataTable dt = new DataTable();
-            DataColumn correlativo = dt.Columns.Add("ID_DETALLE_REGISTRO", typeof(int));
-            dt.Columns.Add("ID_PRODUCTO", typeof(int));
-            dt.Columns.Add("PRODUCTO", typeof(string));
-            dt.Columns.Add("CANTIDAD", typeof(string));
-            dt.Columns.Add("PRECIO_PRODUCTO", typeof(decimal));
-            dt.Columns.Add("CANTIDAD", typeof(int));
-            dt.Columns.Add("SUBTOTAL", typeof(decimal));
-
-            //dt.Columns.Add("ELIMINAR", typeof(Button));
-            dt.PrimaryKey = new DataColumn[] { correlativo };
-            //correlativo.ReadOnly = true;
-
-            return dt;
-        }
-
-        public void cargaCarrito(String idPro)
-        {
-
-            DataTable dt = null;
-            int correlativo;
-            dt = filldata();
-            correlativo = 1;
-            DataRow fila = dt.NewRow();
-
-            fila[0] = correlativo;
-           
-        }
-
-        public void setCarrito()
-        {
-
-        }*/
-
+            idTotal.Text = "Q." + compra.TotalCarro().ToString();
+        }      
 
         public void eliminarID_DETALLE_Click(object sender, ImageClickEventArgs e)
         {

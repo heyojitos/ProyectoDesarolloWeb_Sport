@@ -2,31 +2,30 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 using System.Linq;
 using System.Web;
 
 namespace ProyectoDW.App_Code.Models
 {
+    
     public class ClsCarritoCompra
     {
         ClsErrorHandler log = new ClsErrorHandler();
-        private List<ClsCarroItem> carroItems { get; set; }
+        public List<ClsCarroItem> carroItems = new List<ClsCarroItem>();
 
-        public List<ClsCarroItem> GetLista()
-        {
-            return carroItems = new List<ClsCarroItem>();
-        }
+        
 
         public int IndexRegistro()
         {
             int retornar = 0;
-            if (carroItems == null)
+            if (carroItems.Count() == 0)
             {
                 retornar = 1;
             }
             else
             {
-                retornar = carroItems.Last().Id_regitro + 1;
+                retornar = carroItems.Last().ID_regitro + 1;
             }
             return retornar;
         }
@@ -52,17 +51,20 @@ namespace ProyectoDW.App_Code.Models
         }
 
 
-        public void InsertRegistro(ClsCarroItem item)
+        public bool InsertRegistro(ClsCarroItem item)
         {
+            bool bandera = false;
             try
             {
                 carroItems.Add(item);
+                bandera = true;
             }
             catch (Exception ex)
             {
                 log.LogError(ex.ToString(), ex.StackTrace);
+                bandera = false;
             }
-
+            return bandera;
         }
 
         public void DeleteRegistro(int filaID)
@@ -99,6 +101,24 @@ namespace ProyectoDW.App_Code.Models
                 retornar = total;
             }
             return retornar;
+        }
+
+        public DataTable TablaCarro()
+        {
+            DataTable dt = new DataTable();
+            DataColumn correlativo = dt.Columns.Add("ID_DETALLE_REGISTRO", typeof(int));
+            dt.Columns.Add("ID_PRODUCTO", typeof(int));
+            dt.Columns.Add("PRODUCTO", typeof(string));
+            dt.Columns.Add("IMAGEN", typeof(string));
+            dt.Columns.Add("PRECIO", typeof(decimal));
+            dt.Columns.Add("CANTIDAD", typeof(int));
+            dt.Columns.Add("SUBTOTAL", typeof(decimal));
+
+            //dt.Columns.Add("ELIMINAR", typeof(Button));
+            //dt.PrimaryKey = new DataColumn[] { correlativo };
+            //correlativo.ReadOnly = true;
+
+            return dt;
         }
         /*[Key]
         public int idDetallePedido { get; set; }
