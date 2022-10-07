@@ -83,6 +83,7 @@ namespace ProyectoDW.App_Code.Models
             if (Cantidad > 0)
             {
                 carroItems[filaID - 1].Cantidad = Cantidad;
+                carroItems[filaID - 1].Subtotal = carroItems[filaID - 1].Cantidad * carroItems[filaID - 1].Precio;
             }
             else
             {

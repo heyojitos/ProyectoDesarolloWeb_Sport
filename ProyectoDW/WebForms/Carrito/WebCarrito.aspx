@@ -19,13 +19,14 @@
     <div class="checkout">
         <div class="container">
             <h3>Mi Carrito</h3>
-
+            <h4>Cambio Dolar a Quetzal:</h4>
+            <h4><asp:Label ID="idCambioDolar" runat="server" Text=""></asp:Label></h4>           
             <div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
                 <asp:GridView ID="gridCarrito" runat="server" CssClass="timetable_sub" AutoGenerateColumns="False" ShowFooter="false" EnableCallBacks="false" OnRowDeleting="gridCarrito_RowDeleting">
                     <Columns>
                         <asp:CommandField ShowDeleteButton="true" ButtonType="Image" DeleteImageUrl="~/Content/Images/close_1.png" />
                         <asp:BoundField DataField="ID_DETALLE_REGISTRO" HeaderText="N° Registro" ReadOnly="true"/>
-                        <asp:BoundField DataField="ID_PRODUCTO" HeaderText="Codigo_Producto" ReadOnly="true"/>        
+                        <asp:BoundField DataField="ID_PRODUCTO" HeaderText="Codigo_Producto" ReadOnly="true" Visible="false"/>        
                         <asp:BoundField DataField="PRODUCTO" HeaderText="Producto" ReadOnly="true"/>
                         <asp:TemplateField HeaderText="Imagen">
                             <ItemTemplate>

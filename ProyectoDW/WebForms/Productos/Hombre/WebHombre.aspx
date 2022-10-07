@@ -10,7 +10,7 @@
     <!-- banner -->
     <div class="page-head">
         <div class="container">
-            <h3>Productos para Hombre</h3>
+            <h3>Productos para Hombre</h3>           
         </div>
     </div>
     <!-- //banner -->

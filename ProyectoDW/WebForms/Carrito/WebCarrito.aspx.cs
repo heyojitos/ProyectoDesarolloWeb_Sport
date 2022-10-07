@@ -17,6 +17,7 @@ namespace ProyectoDW.WebForms.Carrito
         ClsControllerProducto clsControllerProducto = new ClsControllerProducto();
         ClsCarritoCompra compra;
         ClsErrorHandler log = new ClsErrorHandler();
+        ServiceBanguat.TipoCambioSoapClient wsbanguat = new ServiceBanguat.TipoCambioSoapClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,7 +29,9 @@ namespace ProyectoDW.WebForms.Carrito
             if (!Page.IsPostBack)
             {
                 FillData();
-            }            
+            }
+            var res = wsbanguat.TipoCambioDia();
+            idCambioDolar.Text = "Q. " + res.CambioDolar.First().referencia.ToString();
         }
 
         public void FillData()
@@ -73,7 +76,14 @@ namespace ProyectoDW.WebForms.Carrito
 
         protected void txtCantidad_TextChanged(object sender, EventArgs e)
         {
-            
+            GridViewRow row = ((TextBox)sender).NamingContainer as GridViewRow;
+            TextBox txtCanti = (TextBox)row.FindControl("txtCantidad");
+
+            int codReg = int.Parse(row.Cells[1].Text);
+            int can = int.Parse(txtCanti.Text);
+
+            compra.UpdateRegistro(codReg, can);
+            FillData();
         }
     }
 }

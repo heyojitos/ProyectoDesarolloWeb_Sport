@@ -104,6 +104,8 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -218,6 +220,42 @@
     <Content Include="bin\ru\DevExpress.Printing.v17.2.Core.resources.dll" />
     <Content Include="bin\ru\DevExpress.RichEdit.v17.2.Core.resources.dll" />
     <Content Include="bin\ru\DevExpress.Web.v17.2.resources.dll" />
+    <None Include="Connected Services\ServiceBanguat\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceBanguat\configuration.svcinfo" />
+    <Content Include="Connected Services\ServiceBanguat\ProyectoDW.ServiceBanguat.DataVariable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceBanguat\ProyectoDW.ServiceBanguat.InfoVariable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceBanguat\ProyectoDW.ServiceBanguat.TipoCambioDiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceBanguat\ProyectoDW.ServiceBanguat.TipoCambioDiaStringResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceBanguat\ProyectoDW.ServiceBanguat.TipoCambioFechaInicialMonedaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceBanguat\ProyectoDW.ServiceBanguat.TipoCambioFechaInicialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceBanguat\ProyectoDW.ServiceBanguat.TipoCambioRangoMonedaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceBanguat\ProyectoDW.ServiceBanguat.TipoCambioRangoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceBanguat\ProyectoDW.ServiceBanguat.VariablesDisponiblesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceBanguat\ProyectoDW.ServiceBanguat.VariablesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceBanguat\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -325,6 +363,7 @@
     <Content Include="WebForms\Productos\Mujer\WebMujerCalzado.aspx" />
     <Content Include="WebForms\Productos\Mujer\WebMujerRopa.aspx" />
     <Content Include="WebForms\Productos\SoloProducto\WebSoloProducto.aspx" />
+    <None Include="Connected Services\ServiceBanguat\TipoCambio.wsdl" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery-1.9.0.min.js" />
@@ -517,6 +556,11 @@
     <Compile Include="App_Code\Dao\ClsDataLayer.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoUsrDireccion.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoUsrTelefono.cs" />
+    <Compile Include="Connected Services\ServiceBanguat\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="WebForms\Carrito\WebCarrito.aspx.cs">
       <DependentUpon>WebCarrito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -688,7 +732,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceBanguat\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
