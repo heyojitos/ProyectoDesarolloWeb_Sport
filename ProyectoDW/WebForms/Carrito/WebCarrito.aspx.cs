@@ -66,7 +66,7 @@ namespace ProyectoDW.WebForms.Carrito
                 int CodigoRegistro = int.Parse(e.Values["ID_DETALLE_REGISTRO"].ToString());
                 compra.DeleteRegistro(CodigoRegistro);
                 FillData();
-                e.Cancel = true;               
+                e.Cancel = true;
             }
             catch (Exception ex)
             {

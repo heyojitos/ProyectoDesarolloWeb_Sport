@@ -6,44 +6,44 @@
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/flexslider.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/jquery-ui.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/pignose.layerslider.css") %>" type="text/css" media="all" />
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
     <!-- banner -->
     <div class="page-head">
         <div class="container">
-            <h3>Productos para Hombre</h3>           
+            <h3>Productos para Hombre</h3>
         </div>
     </div>
     <!-- //banner -->
+            <div class="clearfix"></div>
 
-    <div class="clearfix"></div>
-
-    <div class="single-pro">
-        <asp:Repeater ID="contenidoProductos" runat="server" OnItemCommand="contenidoProductos_ItemCommand">
-            <ItemTemplate>
-                <div class="col-md-3 product-men">
-                    <div class="men-pro-item simpleCart_shelfItem">
-                        <div class="men-thumb-item">
-                            <img src="../../../<%# Eval("IMAGEN") %>" alt="" class="pro-image-front" />
-                            <img src="../../../<%# Eval("IMAGEN") %>" alt="" class="pro-image-back" />
-                            <div class="men-cart-pro">
-                                <div class="inner-men-cart-pro">
-                                    <a class="link-product-add-cart" href="../SoloProducto/WebSoloProducto.aspx?idProducto=<%# Eval("ID_PRODUCTO") %>">Vista Rapida</a>
+            <div class="single-pro">
+                <asp:Repeater ID="contenidoProductos" runat="server" OnItemCommand="contenidoProductos_ItemCommand">
+                    <ItemTemplate>
+                        <div class="col-md-3 product-men">
+                            <div class="men-pro-item simpleCart_shelfItem">
+                                <div class="men-thumb-item">
+                                    <img src="../../../<%# Eval("IMAGEN") %>" alt="" class="pro-image-front" />
+                                    <img src="../../../<%# Eval("IMAGEN") %>" alt="" class="pro-image-back" />
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a class="link-product-add-cart" href="../SoloProducto/WebSoloProducto.aspx?idProducto=<%# Eval("ID_PRODUCTO") %>">Vista Rapida</a>
+                                        </div>
+                                    </div>
+                                    <!--span class="product-new-top">New</!--span-->
+                                </div>
+                                <div class="item-info-product ">
+                                    <h4><a href="#"><%# Eval("PRODUCTO") %></a></h4>
+                                    <div class="info-product-price">
+                                        <span class="item_price"><%# Eval("PRECIO", "{0:c}") %></span>
+                                    </div>
+                                    <asp:LinkButton ID="btnAgregar" runat="server" CommandName="Agregar" CommandArgument='<%# Eval("ID_PRODUCTO") %>' Text="Agregar al carrito" CssClass="item_add single-item hvr-outline-out button2"></asp:LinkButton>
                                 </div>
                             </div>
-                            <!--span class="product-new-top">New</!--span-->
                         </div>
-                        <div class="item-info-product ">
-                            <h4><a href="#"><%# Eval("PRODUCTO") %></a></h4>
-                            <div class="info-product-price">
-                                <span class="item_price"><%# Eval("PRECIO", "{0:c}") %></span>
-                            </div>
-                            <asp:LinkButton ID="btnAgregar" runat="server" CommandName="Agregar" CommandArgument='<%# Eval("ID_PRODUCTO") %>' Text="Agregar al carrito" CssClass="item_add single-item hvr-outline-out button2"></asp:LinkButton>
-                        </div>
-                    </div>
-                </div>
-            </ItemTemplate>
-        </asp:Repeater>
+                    </ItemTemplate>
+                </asp:Repeater>
 
-        <div class="clearfix"></div>
-    </div>
+                <div class="clearfix"></div>
+            </div>
 </asp:Content>

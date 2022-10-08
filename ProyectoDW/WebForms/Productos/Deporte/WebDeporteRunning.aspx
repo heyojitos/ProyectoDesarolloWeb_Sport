@@ -6,6 +6,7 @@
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/flexslider.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/jquery-ui.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/pignose.layerslider.css") %>" type="text/css" media="all" />
+    <script type="text/javascript" src="<%= ResolveUrl("~/Content/sweetalert2/sweetalert2.all.min.js") %>"></script>
 
     <!-- banner -->
     <div class="page-head">

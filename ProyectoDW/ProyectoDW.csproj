@@ -301,6 +301,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\StyleWebFactura.css" />
     <Content Include="Content\StyleWebForm.css" />
+    <Content Include="Content\sweetalert2\sweetalert2.all.js" />
+    <Content Include="Content\sweetalert2\sweetalert2.all.min.js" />
+    <Content Include="Content\sweetalert2\sweetalert2.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="public\uploads\AccesoriosHombre\AccH1.png" />
