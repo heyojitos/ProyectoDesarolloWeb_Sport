@@ -60,33 +60,25 @@ namespace ProyectoDW.WebForms.Productos.Deporte
                             if (compra.InsertRegistro(new ClsCarroItem(idRegistro, row["ID_PRODUCTO"].ToString(), row["PRODUCTO"].ToString(), row["IMAGEN"].ToString(),
                                 decimal.Parse(row["PRECIO"].ToString()), 1, decimal.Parse(row["PRECIO"].ToString()))))
                             {
-                                string StrQry = "<script language='javascript'>";
-                                StrQry += "alert('Se agrego correctamente el producto: " + row["PRODUCTO"] + "');";
-                                StrQry += "</script>";
-                                ClientScript.RegisterStartupScript(GetType(), "mensaje", StrQry, false);
+                                string mensaje_alerta = "Se agrego correctamente el producto: " + row["PRODUCTO"] + "";
+                                ClientScript.RegisterStartupScript(GetType(), "alerta", "Agregado('" + mensaje_alerta + "')", true);
                             }
                             else
                             {
-                                string StrQry = "<script language='javascript'>";
-                                StrQry += "alert('Error al agregar al carrito'); ";
-                                StrQry += "</script>";
-                                ClientScript.RegisterStartupScript(GetType(), "mensaje", StrQry, false);
-                            }                            
+                                string mensaje_alerta = "Error al agregar al carrito";
+                                ClientScript.RegisterStartupScript(GetType(), "alerta", "Error('" + mensaje_alerta + "')", true);
+                            }
                         }
                         else
                         {
-                            string StrQry = "<script language='javascript'>";
-                            StrQry += "alert('Ya existe este producto en el carrito'); ";
-                            StrQry += "</script>";
-                            ClientScript.RegisterStartupScript(GetType(), "mensaje", StrQry, false);
+                            string mensaje_alerta = "Ya existe este producto en el carrito";
+                            ClientScript.RegisterStartupScript(GetType(), "alerta", "Repite('" + mensaje_alerta + "')", true);
                         }
                     }
                     catch (Exception ex)
                     {
-                        string StrQry = "<script language='javascript'>";
-                        StrQry += "alert('Error al agregar al carrito'); ";
-                        StrQry += "</script>";
-                        ClientScript.RegisterStartupScript(GetType(), "mensaje", StrQry, false);
+                        string mensaje_alerta = "No se pudo agregar el producto al carrito";
+                        ClientScript.RegisterStartupScript(GetType(), "alerta", "ErrorCatch('" + mensaje_alerta + "')", true);
                     }
                 }
             }

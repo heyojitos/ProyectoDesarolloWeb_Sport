@@ -6,8 +6,35 @@
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/flexslider.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/jquery-ui.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/pignose.layerslider.css") %>" type="text/css" media="all" />
-    <script type="text/javascript" src="<%= ResolveUrl("~/Content/sweetalert2/sweetalert2.all.min.js") %>"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>;
+    
+    <script = "text/javascript" >
+        function Agregado(msg) {
+            Swal.fire({
+                icon: 'success',
+                title: msg
+            })
+        }
+        function Error(msg) {
+            Swal.fire({
+                icon: 'warning',
+                title: msg
+            })
+        }
+        function Repite(msg) {
+            Swal.fire({
+                icon: 'info',
+                title: msg
+            })
+        }
+        function ErrorCatch(msg) {
+            Swal.fire({
+                icon: 'error',
+                title: msg
+            })
+        }
 
+    </script> 
     <!-- banner -->
     <div class="page-head">
         <div class="container">

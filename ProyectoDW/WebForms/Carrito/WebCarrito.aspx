@@ -13,8 +13,6 @@
     <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/jquery.flexslider.js") %>"></script>
     <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/simpleCart.min.js") %>"></script>
     <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/bootstrap-3.1.1.min.js") %>"></script>
-    <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/jquery.easing.min.js") %>"></script>
-    <script type="text/javascript" src="<%= ResolveUrl("~/Content/sweetalert2/sweetalert2.all.min.js") %>"></script>
 
     <!-- check out -->
     <div class="checkout">
