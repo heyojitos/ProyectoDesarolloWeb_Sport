@@ -6,7 +6,7 @@
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/flexslider.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/jquery-ui.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/pignose.layerslider.css") %>" type="text/css" media="all" />
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>;
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <script = "text/javascript" >
         function Agregado(msg) {

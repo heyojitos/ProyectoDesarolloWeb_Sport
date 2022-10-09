@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="flexslider.css" type="text/css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="jquery.flexslider.js" type="text/javascript"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>;
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <script = "text/javascript" >
         function Agregado(msg) {
