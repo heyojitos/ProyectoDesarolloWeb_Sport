@@ -30,6 +30,8 @@
                                         <a href="~/Account/Login.aspx" runat="server" id="loginLink">Iniciar Sesion</a> 
                                         | 
                                         <a href="~/Account/Register.aspx" runat="server" id="registerLink">Registro</a>
+                                        | 
+                                        <a href="~/WebForms/Mantenimientos/WebLogin.aspx" runat="server" id="A1">Mantenimiento</a>
                                     </AnonymousTemplate>
                                     <LoggedInTemplate>
                                         Bienvenido <span class="bold">

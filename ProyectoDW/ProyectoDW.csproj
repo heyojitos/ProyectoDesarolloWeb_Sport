@@ -351,6 +351,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="WebForms\Carrito\WebCarrito.aspx" />
     <Content Include="WebForms\Mantenimientos\WebCategoria.aspx" />
+    <Content Include="WebForms\Mantenimientos\WebLogin.aspx" />
     <Content Include="WebForms\Productos\Deporte\WebDeporteRunning.aspx" />
     <Content Include="WebForms\Productos\Deporte\WebDeportes.aspx" />
     <Content Include="WebForms\Productos\Deporte\WebDeporteTraining.aspx" />
@@ -632,6 +633,13 @@
       <DependentUpon>Root.master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="WebForms\Mantenimientos\WebLogin.aspx.cs">
+      <DependentUpon>WebLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Mantenimientos\WebLogin.aspx.designer.cs">
+      <DependentUpon>WebLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForms\Mantenimientos\WebProducto.aspx.cs">
       <DependentUpon>WebProducto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

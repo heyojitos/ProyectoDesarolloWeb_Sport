@@ -15,10 +15,10 @@
     <item Text="Running" NavigateUrl="~/WebForms/Productos/Deporte/WebDeporteRunning.aspx"  />
     <item Text="Training" NavigateUrl="~/WebForms/Productos/Deporte/WebDeporteTraining.aspx"  />
   </group>
-  <group Text="Mantenimientos">
+  <!--<group Text="Mantenimientos">
     <item Text="Cliente" NavigateUrl="~/WebForms/Mantenimientos/WebClientes.aspx"  />
     <item Text="Producto" NavigateUrl="~/WebForms/Mantenimientos/WebProducto.aspx"  />
     <item Text="Categoria" NavigateUrl="~/WebForms/Mantenimientos/WebCategoria.aspx"  />
-  </group>
+  </group>-->
   <item Text="Carrito" NavigateUrl="~/WebForms/Carrito/WebCarrito.aspx"  />
 </items>
