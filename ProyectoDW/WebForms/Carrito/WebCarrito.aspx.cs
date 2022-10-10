@@ -57,6 +57,7 @@ namespace ProyectoDW.WebForms.Carrito
             Session["DatosCarro"] = dt;
 
             idTotal.Text = "Q." + compra.TotalCarro().ToString();
+            idTotalUSD.Text = "$. ";
         }      
 
         protected void gridCarrito_RowDeleting(object sender, GridViewDeleteEventArgs e)

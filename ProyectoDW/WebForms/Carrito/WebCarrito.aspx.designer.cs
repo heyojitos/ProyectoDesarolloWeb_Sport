@@ -49,6 +49,15 @@ namespace ProyectoDW.WebForms.Carrito {
         protected global::System.Web.UI.WebControls.Label idTotal;
         
         /// <summary>
+        /// Control idTotalUSD.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label idTotalUSD;
+        
+        /// <summary>
         /// Control BtnComprar.
         /// </summary>
         /// <remarks>
@@ -56,5 +65,14 @@ namespace ProyectoDW.WebForms.Carrito {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnComprar;
+        
+        /// <summary>
+        /// Control dxPopUpProducto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxPopupControl dxPopUpProducto;
     }
 }
