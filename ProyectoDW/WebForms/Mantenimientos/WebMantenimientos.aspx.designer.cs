@@ -10,33 +10,33 @@
 namespace ProyectoDW.WebForms.Mantenimientos {
     
     
-    public partial class WebLogin {
+    public partial class WebMantenimientos {
         
         /// <summary>
-        /// Control tbUserNameAdm.
+        /// Control btnRedirectCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox tbUserNameAdm;
+        protected global::DevExpress.Web.ASPxButton btnRedirectCategoria;
         
         /// <summary>
-        /// Control tbPasswordAdm.
+        /// Control btnRedirectCliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox tbPasswordAdm;
+        protected global::DevExpress.Web.ASPxButton btnRedirectCliente;
         
         /// <summary>
-        /// Control btnLoginAdm.
+        /// Control btnRedirectProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxButton btnLoginAdm;
+        protected global::DevExpress.Web.ASPxButton btnRedirectProducto;
     }
 }
