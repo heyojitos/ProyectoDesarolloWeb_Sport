@@ -90,6 +90,7 @@
                                     <strong>Credit Card</strong>
                                     <small>enter your card details</small>
                                 </div>
+                                <br />
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-12">
