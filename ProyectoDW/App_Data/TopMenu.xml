@@ -20,5 +20,5 @@
     <item Text="Producto" NavigateUrl="~/WebForms/Mantenimientos/WebProducto.aspx"  />
     <item Text="Categoria" NavigateUrl="~/WebForms/Mantenimientos/WebCategoria.aspx"  />
   </group>-->
-  <item Text="Carrito" NavigateUrl="~/WebForms/Carrito/WebCarrito.aspx"  />
+  <item Text="Carrito" NavigateUrl="~/WebForms/Carrito/WebCarrito.aspx"  /> <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
 </items>

@@ -15,5 +15,12 @@ namespace ProyectoDW {
         protected void HeadLoginStatus_LoggingOut(object sender, LoginCancelEventArgs e) {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
+
+        protected void HeaderMenu_Load(object sender, EventArgs e)
+        {
+            /*DevExpress.Web.MenuItem item = new DevExpress.Web.MenuItem();
+            item = HeaderMenu.Items.FindByName("itmCarritos");
+            item.Text = "Prueba";*/
+        }
     }
 }

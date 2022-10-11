@@ -8,6 +8,14 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
     <title></title>
     <link rel="stylesheet" type="text/css" href="Content/Site.css" />
+    <%--<link href="Content/css/pignose.layerslider.css" rel="stylesheet" />
+    <link href="Content/css/style.css" rel="stylesheet" />
+
+    <script src="Content/js/simpleCart.min.js"></script>
+    <script src="Content/js/bootstrap-3.1.1.min.js"></script>
+    <script src="Content/js/jquery.easing.min.js"></script>--%>
+    <link rel="Stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css" media="all" />
+    <link rel="Stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic" type="text/css" media="all" />
 </head>
 <body runat="server" id="Body">
     <form id="form1" runat="server">
@@ -20,39 +28,64 @@
             </Styles>
             <PanelCollection>
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
-                        <div class="headerTop">
-                            <div class="templateTitle">
-                                <a id="TitleLink" href="~/" runat="server">SPORT CENTER - tienda OnLine</a>
-                            </div>
-                            <div class="loginControl">
-                                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
-                                    <AnonymousTemplate>
-                                        <a href="~/Account/Login.aspx" runat="server" id="loginLink">Iniciar Sesion</a> 
-                                        | 
+                    <div class="headerTop">
+                        <div class="templateTitle">
+                            <a id="TitleLink" href="~/" runat="server">SPORT CENTER - tienda OnLine</a>
+                        </div>
+                        <div class="loginControl">
+                            <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                                <AnonymousTemplate>
+                                    <a href="~/Account/Login.aspx" runat="server" id="loginLink">Iniciar Sesion</a>
+                                    | 
                                         <a href="~/Account/Register.aspx" runat="server" id="registerLink">Registro</a>
-                                        | 
+                                    | 
                                         <a href="~/WebForms/Mantenimientos/WebLogin.aspx" runat="server" id="A1">Mantenimiento</a>
-                                    </AnonymousTemplate>
-                                    <LoggedInTemplate>
-                                        Bienvenido <span class="bold">
-                                        <a runat="server" href="~/Account/Manage.aspx" title="Manage your account"> 
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    Bienvenido <span class="bold">
+                                        <a runat="server" href="~/Account/Manage.aspx" title="Manage your account">
                                             <asp:LoginName ID="HeadLoginName" runat="server" />
-                                        </a> 
-                                        </span>! [
+                                        </a>
+                                    </span>! [
                                         <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
                                             LogoutPageUrl="~/" OnLoggingOut="HeadLoginStatus_LoggingOut" />
-                                        ]
-                                    </LoggedInTemplate>
-                                </asp:LoginView>
-                            </div>
+                                    ]
+                                </LoggedInTemplate>
+                            </asp:LoginView>
                         </div>
-                        <div class="headerMenu">
-                            <%-- DXCOMMENT: Configure the header menu --%>
-<dx:ASPxMenu ID="HeaderMenu" runat="server" CssClass="headerMenu" ClientInstanceName="headerMenu" ItemAutoWidth="False" Width="100%" DataSourceID="XmlDataSourceHeader">
-</dx:ASPxMenu>
+                    </div>
+                    <div class="headerMenu">
+                        <%-- DXCOMMENT: Configure the header menu --%>
+                        <dx:ASPxMenu ID="HeaderMenu" runat="server" CssClass="headerMenu" ClientInstanceName="headerMenu" ItemAutoWidth="False" Width="100%" DataSourceID="" OnLoad="HeaderMenu_Load">
+                            <Items>
+                                <dx:MenuItem Name="itmInicio" Text="Inicio" NavigateUrl="#"></dx:MenuItem>
+                                <dx:MenuItem Name="itmHombre" Text="Hombre" NavigateUrl="~/WebForms/Productos/Hombre/WebHombre.aspx" Image-Url="Content/Images/man.png">
+                                    <Items>
+                                        <dx:MenuItem Text="Calzados" NavigateUrl="~/WebForms/Productos/Hombre/WebHombreCalzados.aspx"></dx:MenuItem>
+                                        <dx:MenuItem Text="Ropa" NavigateUrl="~/WebForms/Productos/Hombre/WebHombreRopa.aspx"></dx:MenuItem>
+                                        <dx:MenuItem Text="Accesorios" NavigateUrl="~/WebForms/Productos/Hombre/WebHombreAccesorio.aspx"></dx:MenuItem>
+                                    </Items>
+                                </dx:MenuItem>
+                                <dx:MenuItem Name="itmMujer" Text="Mujer" NavigateUrl="~/WebForms/Productos/Mujer/WebMujer.aspx" Image-Url="Content/Images/woman.png">
+                                    <Items>
+                                        <dx:MenuItem Text="Calzados" NavigateUrl="~/WebForms/Productos/Mujer/WebMujerCalzado.aspx"></dx:MenuItem>
+                                        <dx:MenuItem Text="Ropa" NavigateUrl="~/WebForms/Productos/Mujer/WebMujerRopa.aspx"></dx:MenuItem>
+                                        <dx:MenuItem Text="Accesorios" NavigateUrl="~/WebForms/Productos/Mujer/WebMujerAccesorio.aspx"></dx:MenuItem>
+                                    </Items>
+                                </dx:MenuItem>
+                                <dx:MenuItem Name="itmDeporte" Text="Deporte" NavigateUrl="~/WebForms/Productos/Deporte/WebDeportes.aspx" Image-Url="Content/Images/sports.png">
+                                    <Items>
+                                        <dx:MenuItem Text="Running" NavigateUrl="~/WebForms/Productos/Deporte/WebDeporteRunning.aspx"></dx:MenuItem>
+                                        <dx:MenuItem Text="Training" NavigateUrl="~/WebForms/Productos/Deporte/WebDeporteTraining.aspx"></dx:MenuItem>
+                                    </Items>
+                                </dx:MenuItem>
+                                <dx:MenuItem Name="itmCarrito" Text="Carrito" NavigateUrl="~/WebForms/Carrito/WebCarrito.aspx" Image-Url="Content/Images/shopping-cart (1).png">
+                                </dx:MenuItem>
+                            </Items>
+                        </dx:ASPxMenu>
 
 
-                        </div>
+                    </div>
                 </dx:PanelContent>
             </PanelCollection>
             <ExpandBarTemplate>
@@ -63,10 +96,10 @@
         </dx:ASPxPanel>
 
         <script type="text/javascript">
-            function updateHeaderMenuOrientation(){
-                if(!window.headerMenu) return;
+            function updateHeaderMenuOrientation() {
+                if (!window.headerMenu) return;
                 var orientation = headerPane.IsExpandable() ? 'Vertical' : 'Horizontal';
-                if(orientation !== headerMenu.GetOrientation()) 
+                if (orientation !== headerMenu.GetOrientation())
                     headerMenu.SetOrientation(orientation);
             }
         </script>
@@ -91,23 +124,22 @@
             </Styles>
             <PanelCollection>
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
-                        <div class="footerMenu">
-                            
-                        </div>
-                        <div class="copyright">
-                            <dx:ASPxLabel ID="ASPxLabel2" runat="server">
-                            </dx:ASPxLabel>
-                        </div>
+                    <div class="footerMenu">
+                    </div>
+                    <div class="copyright">
+                        <dx:ASPxLabel ID="ASPxLabel2" runat="server">
+                        </dx:ASPxLabel>
+                    </div>
                 </dx:PanelContent>
             </PanelCollection>
         </dx:ASPxPanel>
 
-    
-<%-- DXCOMMENT: Configure a datasource for the header menu --%>
-<asp:XmlDataSource ID="XmlDataSourceHeader" runat="server" DataFile="~/App_Data/TopMenu.xml"
-    XPath="/items/*"></asp:XmlDataSource>
 
-    
+        <%-- DXCOMMENT: Configure a datasource for the header menu --%>
+        <asp:XmlDataSource ID="XmlDataSourceHeader" runat="server" DataFile="~/App_Data/TopMenu.xml"
+            XPath="/items/*"></asp:XmlDataSource>
+
+
     </form>
 </body>
 </html>

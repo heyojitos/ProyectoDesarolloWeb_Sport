@@ -282,12 +282,17 @@
     <Content Include="Content\Images\icons1.png" />
     <Content Include="Content\Images\img-sp.png" />
     <Content Include="Content\Images\loading2.gif" />
+    <Content Include="Content\Images\man.png" />
     <Content Include="Content\Images\mark1.png" />
     <Content Include="Content\Images\new.png" />
     <Content Include="Content\Images\PlasticBlueHeader.jpg" />
     <Content Include="Content\Images\RedWineHeader.jpg" />
     <Content Include="Content\Images\search.png" />
+    <Content Include="Content\Images\shopping-cart %281%29.png" />
+    <Content Include="Content\Images\shopping-cart.png" />
+    <Content Include="Content\Images\sports.png" />
     <Content Include="Content\Images\tick-mark1.png" />
+    <Content Include="Content\Images\woman.png" />
     <Content Include="Content\js\bootstrap-3.1.1.min.js" />
     <Content Include="Content\js\easyResponsiveTabs.js" />
     <Content Include="Content\js\imagezoom.js" />
