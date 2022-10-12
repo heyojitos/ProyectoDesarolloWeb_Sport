@@ -55,9 +55,13 @@ namespace ProyectoDW.WebForms.Carrito
             gridCarrito.DataBind();
 
             Session["DatosCarro"] = dt;
-
+            
             idTotal.Text = "Q." + compra.TotalCarro().ToString();
-            idTotalUSD.Text = "$. ";
+            decimal cambioTotal = compra.TotalCarro();
+            var res = wsbanguat.TipoCambioDia();
+            decimal cambio = decimal.Parse(res.CambioDolar.First().referencia.ToString());
+            decimal resultado = decimal.Round((cambioTotal / cambio), 2);
+            idTotalUSD.Text = "$. " + resultado.ToString();
         }      
 
         protected void gridCarrito_RowDeleting(object sender, GridViewDeleteEventArgs e)
