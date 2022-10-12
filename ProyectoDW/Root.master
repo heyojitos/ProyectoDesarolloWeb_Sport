@@ -56,7 +56,7 @@
                     </div>
                     <div class="headerMenu">
                         <%-- DXCOMMENT: Configure the header menu --%>
-                        <dx:ASPxMenu ID="HeaderMenu" runat="server" CssClass="headerMenu" ClientInstanceName="headerMenu" ItemAutoWidth="False" Width="100%" DataSourceID="" OnLoad="HeaderMenu_Load">
+                        <dx:ASPxMenu ID="HeaderMenu" runat="server" CssClass="headerMenu" ClientInstanceName="headerMenu" ItemAutoWidth="False" Width="100%" DataSourceID="" OnUnload="HeaderMenu_Unload">
                             <Items>
                                 <dx:MenuItem Name="itmInicio" Text="Inicio" NavigateUrl="#"></dx:MenuItem>
                                 <dx:MenuItem Name="itmHombre" Text="Hombre" NavigateUrl="~/WebForms/Productos/Hombre/WebHombre.aspx" Image-Url="Content/Images/man.png">
@@ -79,7 +79,7 @@
                                         <dx:MenuItem Text="Training" NavigateUrl="~/WebForms/Productos/Deporte/WebDeporteTraining.aspx"></dx:MenuItem>
                                     </Items>
                                 </dx:MenuItem>
-                                <dx:MenuItem Name="itmCarrito" Text="Carrito" NavigateUrl="~/WebForms/Carrito/WebCarrito.aspx" Image-Url="Content/Images/shopping-cart (1).png">
+                                <dx:MenuItem Name="itmCarrito" Text="Carrito" NavigateUrl="~/WebForms/Carrito/WebCarrito.aspx" Image-Url="Content/Images/shopping-cart.png">
                                 </dx:MenuItem>
                             </Items>
                         </dx:ASPxMenu>

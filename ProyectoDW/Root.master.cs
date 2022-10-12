@@ -16,11 +16,9 @@ namespace ProyectoDW {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
 
-        protected void HeaderMenu_Load(object sender, EventArgs e)
+        protected void HeaderMenu_Unload(object sender, EventArgs e)
         {
-            /*DevExpress.Web.MenuItem item = new DevExpress.Web.MenuItem();
-            item = HeaderMenu.Items.FindByName("itmCarritos");
-            item.Text = "Prueba";*/
+            ASPxMenu menu = new ASPxMenu();
         }
     }
 }
