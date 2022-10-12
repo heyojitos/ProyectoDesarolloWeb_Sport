@@ -15,6 +15,23 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="jquery.flexslider.js" type="text/javascript"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- banner -->
+            <div class="container">
+                <div class="top_nav_right">
+                    <div class="cart box_1">
+                            <h3>
+                                <div class="total">
+                                    <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
+                                    <asp:Label ID="lblIdTotal" runat="server" Text="" CssClass="simple_Cart_total"></asp:Label><asp:Label ID="lblIdCantidad" runat="server" Text=""></asp:Label>
+                                </div>
+                            </h3>
+                        <p><asp:HyperLink ID="linkCarrito" runat="server" Text="Ver Carrito" CssClass="simpleCart_empty" NavigateUrl="~/WebForms/Carrito/WebCarrito.aspx"></asp:HyperLink></p>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        <!-- //banner-top -->
     
     <script = "text/javascript" >
         function Agregado(msg) {

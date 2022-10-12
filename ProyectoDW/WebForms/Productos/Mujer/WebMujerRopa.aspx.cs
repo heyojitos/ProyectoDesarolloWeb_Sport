@@ -19,6 +19,20 @@ namespace ProyectoDW.WebForms.Productos.Mujer
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["miCarro"] == null)
+                {
+                    compra = new ClsCarritoCompra();
+                    Session["miCarro"] = compra;
+                }
+                else
+                {
+                    compra = (ClsCarritoCompra)Session["miCarro"];
+                }
+                lblIdTotal.Text = "Q." + compra.TotalCarro().ToString();
+                lblIdCantidad.Text = " (" + compra.Contador_registros().ToString() + " agregados)";
+            }
             cargarProductos();
         }
 
@@ -55,23 +69,31 @@ namespace ProyectoDW.WebForms.Productos.Mujer
                             if (compra.InsertRegistro(new ClsCarroItem(idRegistro, row["ID_PRODUCTO"].ToString(), row["PRODUCTO"].ToString(), row["IMAGEN"].ToString(),
                                 decimal.Parse(row["PRECIO"].ToString()), 1, decimal.Parse(row["PRECIO"].ToString()))))
                             {
+                                lblIdTotal.Text = "Q." + compra.TotalCarro().ToString();
+                                lblIdCantidad.Text = " (" + compra.Contador_registros().ToString() + " agregados)";
                                 string mensaje_alerta = "Se agrego correctamente el producto: " + row["PRODUCTO"] + "";
                                 ClientScript.RegisterStartupScript(GetType(), "alerta", "Agregado('" + mensaje_alerta + "')", true);
                             }
                             else
                             {
+                                lblIdTotal.Text = "Q." + compra.TotalCarro().ToString();
+                                lblIdCantidad.Text = " (" + compra.Contador_registros().ToString() + " agregados)";
                                 string mensaje_alerta = "Error al agregar al carrito";
                                 ClientScript.RegisterStartupScript(GetType(), "alerta", "Error('" + mensaje_alerta + "')", true);
                             }
                         }
                         else
                         {
+                            lblIdTotal.Text = "Q." + compra.TotalCarro().ToString();
+                            lblIdCantidad.Text = " (" + compra.Contador_registros().ToString() + " agregados)";
                             string mensaje_alerta = "Ya existe este producto en el carrito";
                             ClientScript.RegisterStartupScript(GetType(), "alerta", "Repite('" + mensaje_alerta + "')", true);
                         }
                     }
                     catch (Exception ex)
                     {
+                        lblIdTotal.Text = "Q." + compra.TotalCarro().ToString();
+                        lblIdCantidad.Text = " (" + compra.Contador_registros().ToString() + " agregados)";
                         string mensaje_alerta = "No se pudo agregar el producto al carrito";
                         ClientScript.RegisterStartupScript(GetType(), "alerta", "ErrorCatch('" + mensaje_alerta + "')", true);
                     }

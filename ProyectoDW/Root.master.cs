@@ -6,9 +6,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DevExpress.Web;
 using Microsoft.AspNet.Identity;
+using ProyectoDW.App_Code.Models;
 
 namespace ProyectoDW {
     public partial class RootMaster : System.Web.UI.MasterPage {
+        ClsCarritoCompra compra = new ClsCarritoCompra();
+
         protected void Page_Load(object sender, EventArgs e) {
             ASPxLabel2.Text = DateTime.Now.Year + Server.HtmlDecode(" &copy; Copyright by SportCenter S.A.");
         }
@@ -16,9 +19,5 @@ namespace ProyectoDW {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
 
-        protected void HeaderMenu_Unload(object sender, EventArgs e)
-        {
-            ASPxMenu menu = new ASPxMenu();
-        }
     }
 }

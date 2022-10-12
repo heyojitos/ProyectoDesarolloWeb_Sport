@@ -30,6 +30,20 @@ namespace ProyectoDW.App_Code.Models
             return retornar;
         }
 
+        public int Contador_registros()
+        {
+            int retornar = 0;
+            if (carroItems.Count() == 0)
+            {
+                retornar = 0;
+            }
+            else
+            {
+                retornar = carroItems.Last().ID_regitro;
+            }
+            return retornar;
+        }
+
         public bool buscarFilaRepetida(int CodPro)
         {
             bool bandera = true;
