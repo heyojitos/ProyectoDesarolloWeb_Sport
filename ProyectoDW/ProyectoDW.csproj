@@ -293,6 +293,9 @@
     <Content Include="Content\Images\man.png" />
     <Content Include="Content\Images\mark1.png" />
     <Content Include="Content\Images\new.png" />
+    <Content Include="Content\Images\new2.jpg" />
+    <Content Include="Content\Images\new3.jpg" />
+    <Content Include="Content\Images\new4.jpg" />
     <Content Include="Content\Images\PlasticBlueHeader.jpg" />
     <Content Include="Content\Images\RedWineHeader.jpg" />
     <Content Include="Content\Images\search.png" />
@@ -363,6 +366,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="WebForms\Carrito\WebCarrito.aspx" />
+    <Content Include="WebForms\Contacto\WebContacto.aspx" />
     <Content Include="WebForms\Inicio\WebInicio.aspx" />
     <Content Include="WebForms\Mantenimientos\WebCategoria.aspx" />
     <Content Include="WebForms\Mantenimientos\WebLogin.aspx" />
@@ -583,6 +587,13 @@
     </Compile>
     <Compile Include="WebForms\Carrito\WebCarrito.aspx.designer.cs">
       <DependentUpon>WebCarrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Contacto\WebContacto.aspx.cs">
+      <DependentUpon>WebContacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Contacto\WebContacto.aspx.designer.cs">
+      <DependentUpon>WebContacto.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\Inicio\WebInicio.aspx.cs">
       <DependentUpon>WebInicio.aspx</DependentUpon>
