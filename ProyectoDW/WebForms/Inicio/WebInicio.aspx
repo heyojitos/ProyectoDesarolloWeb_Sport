@@ -21,7 +21,7 @@
                         <img class="img-responsive" src="../../Content/Images/ba3.jpg" alt="Dummy Image" /></li>
                 </ul>
 
-                <!-- Slide Description Image Area (316 x 328) -->
+                <!-- Slide Description Image Area (316 x 328) HOLA -->
                 <div class="script-wrap">
                     <ul class="script-group">
                         <li>
