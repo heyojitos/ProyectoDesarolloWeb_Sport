@@ -270,6 +270,12 @@
     <Content Include="Content\Images\2.png" />
     <Content Include="Content\Images\AquaHeader.jpg" />
     <Content Include="Content\Images\arrow.png" />
+    <Content Include="Content\Images\ba1.jpg" />
+    <Content Include="Content\Images\ba2.jpg" />
+    <Content Include="Content\Images\ba3.jpg" />
+    <Content Include="Content\Images\baa1.jpg" />
+    <Content Include="Content\Images\baa2.jpg" />
+    <Content Include="Content\Images\baa3.jpg" />
     <Content Include="Content\Images\BlackGlassHeader.jpg" />
     <Content Include="Content\Images\borrar.png" />
     <Content Include="Content\Images\btn_next.png" />
