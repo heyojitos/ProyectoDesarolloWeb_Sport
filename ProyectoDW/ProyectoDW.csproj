@@ -277,8 +277,10 @@
     <Content Include="Content\Images\btn_play.png" />
     <Content Include="Content\Images\btn_prev.png" />
     <Content Include="Content\Images\close_1.png" />
+    <Content Include="Content\Images\communicate.png" />
     <Content Include="Content\Images\edit.png" />
     <Content Include="Content\Images\GlassHeader.jpg" />
+    <Content Include="Content\Images\home-page.png" />
     <Content Include="Content\Images\icons1.png" />
     <Content Include="Content\Images\img-sp.png" />
     <Content Include="Content\Images\loading2.gif" />
