@@ -5,6 +5,7 @@
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/flexslider.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/jquery-ui.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/pignose.layerslider.css") %>" type="text/css" media="all" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
     <!-- banner -->
     <div class="banner-grid">
@@ -13,11 +14,11 @@
                 <!-- Slide Image Area (1000 x 424) -->
                 <ul class="slide-group">
                     <li>
-                        <img class="img-responsive" src="images/ba1.jpg" alt="Dummy Image" /></li>
+                        <img class="img-responsive" src="../../Content/Images/ba1.jpg" alt="Dummy Image" /></li>
                     <li>
-                        <img class="img-responsive" src="images/ba2.jpg" alt="Dummy Image" /></li>
+                        <img class="img-responsive" src="../../Content/Images/ba2.jpg" alt="Dummy Image" /></li>
                     <li>
-                        <img class="img-responsive" src="images/ba3.jpg" alt="Dummy Image" /></li>
+                        <img class="img-responsive" src="../../Content/Images/ba3.jpg" alt="Dummy Image" /></li>
                 </ul>
 
                 <!-- Slide Description Image Area (316 x 328) -->
@@ -25,15 +26,15 @@
                     <ul class="script-group">
                         <li>
                             <div class="inner-script">
-                                <img class="img-responsive" src="images/baa1.jpg" alt="Dummy Image" /></div>
+                                <img class="img-responsive" src="../../Content/Images/baa1.jpg" alt="Dummy Image" /></div>
                         </li>
                         <li>
                             <div class="inner-script">
-                                <img class="img-responsive" src="images/baa2.jpg" alt="Dummy Image" /></div>
+                                <img class="img-responsive" src="../../Content/Images/baa2.jpg" alt="Dummy Image" /></div>
                         </li>
                         <li>
                             <div class="inner-script">
-                                <img class="img-responsive" src="images/baa3.jpg" alt="Dummy Image" /></div>
+                                <img class="img-responsive" src="../../Content/Images/baa3.jpg" alt="Dummy Image" /></div>
                         </li>
                     </ul>
                     <div class="slide-controller">
@@ -51,7 +52,7 @@
             </div>
             <div class="clearfix"></div>
         </div>
-        <script type="text/javascript" src="js/pignose.layerslider.js"></script>
+        <script type="text/javascript" src="../../Content/js/pignose.layerslider.js"></script>
         <script type="text/javascript">
             //<![CDATA[
             $(window).load(function () {
@@ -71,15 +72,15 @@
 
     <div class="new_arrivals">
         <div class="container">
-            <h3><span>new </span>arrivals</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+            <h3><span>Nuevos </span>Productos</h3>
+            <p>Aproveche nuestros nuevos lanzamientos por cambio de temporada</p>
             <div class="new_grids">
                 <div class="col-md-4 new-gd-left">
-                    <img src="images/wed1.jpg" alt=" " />
+                    <img src="../../public/uploads/CalzadoMujer/ZapatoM5.png" alt=" " />
                     <div class="wed-brand simpleCart_shelfItem">
-                        <h4>Wedding Collections</h4>
-                        <h5>Flat 50% Discount</h5>
-                        <p><i>$250</i> <span class="item_price">$500</span><a class="item_add hvr-outline-out button2" href="#">add to cart </a></p>
+                        <h4>Ultraboost 5 Dna De Mujer</h4>
+                        <h5>Promo 20% Descuento</h5>
+                        <p><i>Q2,099.95</i> <span class="item_price">Q1,679.95</span><a class="item_add hvr-outline-out button2" href="../Productos/Mujer/WebMujerCalzado.aspx">Ver más info </a></p>
                     </div>
                 </div>
                 <div class="col-md-4 new-gd-middle">
@@ -106,10 +107,10 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="col-md-4 new-gd-left">
-                    <img src="images/wed2.jpg" alt=" " />
+                    <img src="../../public/uploads/RopaMujer/RPM4.png" alt=" " />
                     <div class="wed-brandtwo simpleCart_shelfItem">
-                        <h4>Spring / Summer</h4>
-                        <p>Shop Men</p>
+                        <h4>Run Icons Running 3</h4>
+                        <p>de Mujer</p>
                     </div>
                 </div>
                 <div class="clearfix"></div>
