@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <items>
-  <item Text="Inicio" NavigateUrl="#" />
+  <item Text="Inicio" NavigateUrl="~/WebForms/Inicio/WebInicio.aspx" />
   <group Text="Hombre" NavigateUrl="~/WebForms/Productos/Hombre/WebHombre.aspx">
     <item Text="Calzados" NavigateUrl="~/WebForms/Productos/Hombre/WebHombreCalzados.aspx"  />
     <item Text="Ropa" NavigateUrl="~/WebForms/Productos/Hombre/WebHombreRopa.aspx"  />
