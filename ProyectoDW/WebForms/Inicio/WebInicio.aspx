@@ -7,7 +7,8 @@
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/pignose.layerslider.css") %>" type="text/css" media="all" />
     <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/jquery-2.1.4.min.jss") %>"></script>
     <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/jquery.easing.min.js") %>"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
 
     <!-- banner -->
     <div class="banner-grid">
@@ -54,7 +55,7 @@
             </div>
             <div class="clearfix"></div>
         </div>
-        <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/pignose.layerslider.js") %>"></script>
+        <script type="text/javascript" src="../../Content/js/pignose.layerslider.js"></script>
         <script type="text/javascript">
             //<![CDATA[
             $(window).load(function () {
@@ -186,7 +187,7 @@
     <div class="product-easy">
         <div class="container">
 
-            <script src="<%= ResolveUrl("~/Content/js/responsiveslides.min.js") %>" type="text/javascript"></script>
+            <script src="../../Content/js/responsiveslides.min.js" type="text/javascript"></script>
             <script type="text/javascript">
                 $(document).ready(function () {
                     $('#horizontalTab').easyResponsiveTabs({
