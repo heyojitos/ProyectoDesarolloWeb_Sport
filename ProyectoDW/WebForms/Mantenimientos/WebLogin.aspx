@@ -19,7 +19,6 @@
                 
             </dx:ASPxTextBox>
         </div>
-        v
         <div class="pt-1 mb-4">
             <dx:ASPxButton ID="btnLoginAdm" runat="server" Text="Ingresar" ValidationGroup="LoginUserValidationGroup" CssClass=" btn-lg" Width="200px" OnClick="btnLoginAdm_Click">
             </dx:ASPxButton>

@@ -268,6 +268,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Images\1.png" />
     <Content Include="Content\Images\2.png" />
+    <Content Include="Content\Images\adidas.png" />
     <Content Include="Content\Images\AquaHeader.jpg" />
     <Content Include="Content\Images\arrow.png" />
     <Content Include="Content\Images\ba1.jpg" />
@@ -285,6 +286,9 @@
     <Content Include="Content\Images\close_1.png" />
     <Content Include="Content\Images\communicate.png" />
     <Content Include="Content\Images\edit.png" />
+    <Content Include="Content\Images\front2_1.jpg" />
+    <Content Include="Content\Images\front3_1.jpg" />
+    <Content Include="Content\Images\front4_1.jpg" />
     <Content Include="Content\Images\GlassHeader.jpg" />
     <Content Include="Content\Images\home-page.png" />
     <Content Include="Content\Images\icons1.png" />
@@ -296,6 +300,7 @@
     <Content Include="Content\Images\new2.jpg" />
     <Content Include="Content\Images\new3.jpg" />
     <Content Include="Content\Images\new4.jpg" />
+    <Content Include="Content\Images\nike.png" />
     <Content Include="Content\Images\PlasticBlueHeader.jpg" />
     <Content Include="Content\Images\RedWineHeader.jpg" />
     <Content Include="Content\Images\search.png" />

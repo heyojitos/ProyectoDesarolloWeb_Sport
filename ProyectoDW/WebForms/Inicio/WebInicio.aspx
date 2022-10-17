@@ -5,6 +5,8 @@
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/flexslider.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/jquery-ui.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/pignose.layerslider.css") %>" type="text/css" media="all" />
+    <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/jquery-2.1.4.min.jss") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/jquery.easing.min.js") %>"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
     <!-- banner -->
@@ -39,20 +41,20 @@
                     </ul>
                     <div class="slide-controller">
                         <a href="#" class="btn-prev">
-                            <img src="images/btn_prev.png" alt="Prev Slide" /></a>
+                            <img src="../../Content/Images/btn_prev.png" alt="Prev Slide" /></a>
                         <a href="#" class="btn-play">
-                            <img src="images/btn_play.png" alt="Start Slide" /></a>
+                            <img src="../../Content/Images/btn_play.png" alt="Start Slide" /></a>
                         <a href="#" class="btn-pause">
-                            <img src="images/btn_pause.png" alt="Pause Slide" /></a>
+                            <img src="../../Content/Images/btn_pause.png" alt="Pause Slide" /></a>
                         <a href="#" class="btn-next">
-                            <img src="images/btn_next.png" alt="Next Slide" /></a>
+                            <img src="../../Content/Images/btn_next.png" alt="Next Slide" /></a>
                     </div>
                 </div>
                 <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
         </div>
-        <script type="text/javascript" src="../../Content/js/pignose.layerslider.js"></script>
+        <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/pignose.layerslider.js") %>"></script>
         <script type="text/javascript">
             //<![CDATA[
             $(window).load(function () {
@@ -76,41 +78,40 @@
             <p>Aproveche nuestros nuevos lanzamientos por cambio de temporada</p>
             <div class="new_grids">
                 <div class="col-md-4 new-gd-left">
-                    <img src="../../public/uploads/CalzadoMujer/ZapatoM5.png" alt=" " />
+                    <img src="../../Content/Images/front4_1.jpg" alt=""/>
                     <div class="wed-brand simpleCart_shelfItem">
-                        <h4>Ultraboost 5 Dna De Mujer</h4>
-                        <h5>Promo 20% Descuento</h5>
-                        <p><i>Q2,099.95</i> <span class="item_price">Q1,679.95</span><a class="item_add hvr-outline-out button2" href="../Productos/Mujer/WebMujerCalzado.aspx">Ver más info </a></p>
+                        <h4>Coleccion deportiva</h4>
+                        <h5>Mujer</h5>
                     </div>
                 </div>
                 <div class="col-md-4 new-gd-middle">
                     <div class="new-levis">
                         <div class="mid-img">
-                            <img src="images/levis1.png" alt=" " />
+                            <img src="../../Content/Images/nike.png" />
                         </div>
                         <div class="mid-text">
-                            <h4>up to 40% <span>off</span></h4>
-                            <a class="hvr-outline-out button2" href="product.html">Shop now </a>
+                            <h4><span>Revise catalogo de hombre</span></h4>
+                            <a class="hvr-outline-out button2" href="../Productos/Hombre/WebHombre.aspx">Más Info</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
                     <div class="new-levis">
                         <div class="mid-text">
-                            <h4>up to 50% <span>off</span></h4>
-                            <a class="hvr-outline-out button2" href="product.html">Shop now </a>
+                            <h4><span>Revise catalogo de mujer</span></h4>
+                            <a class="hvr-outline-out button2" href="../Productos/Mujer/WebMujer.aspx">Más Info</a>
                         </div>
                         <div class="mid-img">
-                            <img src="images/dig.jpg" alt=" " />
+                            <img src="../../Content/Images/adidas.png" />
                         </div>
                         <div class="clearfix"></div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="col-md-4 new-gd-left">
-                    <img src="../../public/uploads/RopaMujer/RPM4.png" alt=" " />
+                    <img src="../../Content/Images/front3_1.jpg" alt=""/>
                     <div class="wed-brandtwo simpleCart_shelfItem">
-                        <h4>Run Icons Running 3</h4>
-                        <p>de Mujer</p>
+                        <h4>Coleccion deportiva</h4>
+                        <p>Hombre</p>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -126,7 +127,7 @@
             <div class="col-sm-6 content-img-left text-center">
                 <div class="content-grid-effect slow-zoom vertical">
                     <div class="img-box">
-                        <img src="images/p1.jpg" alt="image" class="img-responsive zoom-img"></div>
+                        <img src="" alt="image" class="img-responsive zoom-img"></div>
                     <div class="info-box">
                         <div class="info-content simpleCart_shelfItem">
                             <h4>Mobiles</h4>
@@ -148,7 +149,7 @@
             <div class="col-sm-6 content-img-left text-center">
                 <div class="content-grid-effect slow-zoom vertical">
                     <div class="img-box">
-                        <img src="images/p2.jpg" alt="image" class="img-responsive zoom-img"></div>
+                        <img src="" alt="image" class="img-responsive zoom-img"></div>
                     <div class="info-box">
                         <div class="info-content simpleCart_shelfItem">
                             <h4>Watches</h4>
@@ -165,7 +166,7 @@
         <div class="col-md-5 content-rgrid text-center">
             <div class="content-grid-effect slow-zoom vertical">
                 <div class="img-box">
-                    <img src="images/p4.jpg" alt="image" class="img-responsive zoom-img"></div>
+                    <img src="" alt="image" class="img-responsive zoom-img"></div>
                 <div class="info-box">
                     <div class="info-content simpleCart_shelfItem">
                         <h4>Shoes</h4>
@@ -185,7 +186,7 @@
     <div class="product-easy">
         <div class="container">
 
-            <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+            <script src="<%= ResolveUrl("~/Content/js/responsiveslides.min.js") %>" type="text/javascript"></script>
             <script type="text/javascript">
                 $(document).ready(function () {
                     $('#horizontalTab').easyResponsiveTabs({
@@ -199,20 +200,20 @@
             <div class="sap_tabs">
                 <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
                     <ul class="resp-tabs-list">
-                        <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Latest Designs</span></li>
-                        <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Special Offers</span></li>
-                        <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Collections</span></li>
+                        <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Hombre</span></li>
+                        <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Mujer</span></li>
+                        <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Deportes</span></li>
                     </ul>
                     <div class="resp-tabs-container">
                         <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                             <div class="col-md-3 product-men">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="images/a1.png" alt="" class="pro-image-front">
-                                        <img src="images/a1.png" alt="" class="pro-image-back">
+                                        <img src="#" alt="" class="pro-image-front">
+                                        <img src="#" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="#" class="link-product-add-cart">Quick View</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
