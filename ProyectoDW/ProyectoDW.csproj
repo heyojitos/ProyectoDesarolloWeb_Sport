@@ -296,6 +296,9 @@
     <Content Include="Content\Images\loading2.gif" />
     <Content Include="Content\Images\man.png" />
     <Content Include="Content\Images\mark1.png" />
+    <Content Include="Content\Images\mini_slider1_1.jpg" />
+    <Content Include="Content\Images\mini_slider2_1.jpg" />
+    <Content Include="Content\Images\mini_slider3_1.jpg" />
     <Content Include="Content\Images\new.png" />
     <Content Include="Content\Images\new2.jpg" />
     <Content Include="Content\Images\new3.jpg" />
@@ -306,6 +309,9 @@
     <Content Include="Content\Images\search.png" />
     <Content Include="Content\Images\shopping-cart %281%29.png" />
     <Content Include="Content\Images\shopping-cart.png" />
+    <Content Include="Content\Images\slider1_1.jpg" />
+    <Content Include="Content\Images\slider2_1.jpg" />
+    <Content Include="Content\Images\slider3_1.jpg" />
     <Content Include="Content\Images\sports.png" />
     <Content Include="Content\Images\tick-mark1.png" />
     <Content Include="Content\Images\woman.png" />

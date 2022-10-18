@@ -9,6 +9,7 @@
     <script type="text/javascript" src="<%= ResolveUrl("~/Content/js/jquery.easing.min.js") %>"></script>
     <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
     <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
     <!-- banner -->
     <div class="banner-grid">
@@ -17,27 +18,27 @@
                 <!-- Slide Image Area (1000 x 424) -->
                 <ul class="slide-group">
                     <li>
-                        <img class="img-responsive" src="../../Content/Images/ba1.jpg" alt="Dummy Image" /></li>
+                        <img class="img-responsive" src="../../Content/Images/slider1_1.jpg" alt="Dummy Image" /></li>
                     <li>
-                        <img class="img-responsive" src="../../Content/Images/ba2.jpg" alt="Dummy Image" /></li>
+                        <img class="img-responsive" src="../../Content/Images/slider2_1.jpg" alt="Dummy Image" /></li>
                     <li>
-                        <img class="img-responsive" src="../../Content/Images/ba3.jpg" alt="Dummy Image" /></li>
+                        <img class="img-responsive" src="../../Content/Images/slider3_1.jpg" alt="Dummy Image" /></li>
                 </ul>
 
-                <!-- Slide Description Image Area (316 x 328) HOLA -->
+                <!-- Slide Description Image Area (276 x 286) -->
                 <div class="script-wrap">
                     <ul class="script-group">
                         <li>
                             <div class="inner-script">
-                                <img class="img-responsive" src="../../Content/Images/baa1.jpg" alt="Dummy Image" /></div>
+                                <img class="img-responsive" src="../../Content/Images/mini_slider1_1.jpg" alt="Dummy Image" /></div>
                         </li>
                         <li>
                             <div class="inner-script">
-                                <img class="img-responsive" src="../../Content/Images/baa2.jpg" alt="Dummy Image" /></div>
+                                <img class="img-responsive" src="../../Content/Images/mini_slider2_1.jpg" alt="Dummy Image" /></div>
                         </li>
                         <li>
                             <div class="inner-script">
-                                <img class="img-responsive" src="../../Content/Images/baa3.jpg" alt="Dummy Image" /></div>
+                                <img class="img-responsive" src="../../Content/Images/mini_slider3_1.jpg" alt="Dummy Image" /></div>
                         </li>
                     </ul>
                     <div class="slide-controller">
