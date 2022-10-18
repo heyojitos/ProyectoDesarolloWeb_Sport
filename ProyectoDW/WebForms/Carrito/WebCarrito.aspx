@@ -19,8 +19,16 @@
     <script = "text/javascript" >
         function MostrarPopUp() {
             dxPopUpProducto.Show();
+            //dxPopUpLogin.Show();
         }
 
+        function MostrarCardIn() {
+            dxPopUpProducto.Show();
+        }
+
+        function EmailNotFound() {
+            swal("Correo no encontrado!");
+        }
     </script> 
 
     <!-- check out -->
@@ -75,6 +83,55 @@
     <!-- //check out -->
     <!-- //product-nav -->
 
+    <dx:ASPxPopupControl ID="dxPopUpLogin" runat="server" AllowDragging="true" ClientInstanceName="dxPopUpLogin" CloseAction="CloseButton" EnableViewState="false" Modal="true"
+        Height="0px" PopupAnimationType="Slide" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" Width="0px" HeaderText="Iniciar Sesion">
+        <SettingsAdaptivity Mode="Always" VerticalAlign="WindowCenter" MaxWidth="700px" />
+        <ContentCollection>
+            <dx:PopupControlContentControl runat="server">
+                <div class="accountHeader">
+            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Iniciar sesion</h3>
+        </div>
+
+        <div class="form-outline mb-4">
+            <dx:ASPxTextBox ID="tbUserName" runat="server" Width="400px" Caption="Correo Electronico" CssClass="form-control form-control-lg">
+                <CaptionSettings Position="Top" />
+                <ValidationSettings ValidationGroup="LoginUserValidationGroup" ErrorTextPosition="Bottom" Display="Dynamic" ErrorDisplayMode="Text">
+                    <RegularExpression ErrorText="Falla de validación de correo" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+                    <RequiredField ErrorText="Completa este campo." IsRequired="true" />
+                </ValidationSettings>
+            </dx:ASPxTextBox>
+        </div>
+
+        <div class="form-outline mb-4">
+            <dx:ASPxTextBox ID="tbPassword" runat="server" Password="true" Width="400px" Caption="Clave" CssClass="form-control form-control-lg">
+                <CaptionSettings Position="Top" />
+                <ValidationSettings ValidationGroup="LoginUserValidationGroup" ErrorTextPosition="Bottom" Display="Dynamic" ErrorDisplayMode="Text">
+                    <RequiredField ErrorText="Completa este campo." IsRequired="true" />
+                </ValidationSettings>
+            </dx:ASPxTextBox>
+        </div>
+
+        <div class="form-outline mb-4">
+        </div>
+        <%--<div class="form-outline mb-4">
+            <p>
+                <a href="Register.aspx">Crear una cuenta.</a>
+            </p>
+        </div>--%>
+        <br />
+        <div class="pt-1 mb-4">
+            <%--<dx:ASPxButton ID="btnLogin" runat="server" Text="Ingresar" ValidationGroup="LoginUserValidationGroup" CssClass=" btn-lg" Width="200px" OnClick="btnLogin_Click">
+            </dx:ASPxButton>--%>
+            <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Ingresar" CssClass=" btn-lg" Width="200px" OnClick="btnLogin_Click">
+            </dx:ASPxButton>
+        </div>
+                <%--<div class="contact-form2">
+                    <asp:Button ID="Button2" runat="server" Text="Ingresar" OnClientClick="MostrarCardIn(); return false;" />
+                </div>--%>
+            </dx:PopupControlContentControl>
+        </ContentCollection>
+    </dx:ASPxPopupControl>
+
     <dx:ASPxPopupControl ID="dxPopUpProducto" runat="server" AllowDragging="True" ClientInstanceName="dxPopUpProducto" CloseAction="CloseButton" EnableViewState="False" Modal="true"
         Height="0px" PopupAnimationType="Slide" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" Width="0px" HeaderText="Pago Tarjeta">
         <SettingsAdaptivity Mode="Always" VerticalAlign="WindowCenter" MaxWidth="700px" />
@@ -85,16 +142,16 @@
                         <div class="col-sm-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong>Credit Card</strong>
-                                    <small>enter your card details</small>
+                                    <strong>Tarjeta de Credito</strong>
+                                    <small>Ingrese los detalles de su tarjeta</small>
                                 </div>
                                 <br />
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label for="name">Name</label>
-                                                <input class="form-control" id="name" type="text" placeholder="Enter your name">
+                                                <label for="name">Nombre</label>
+                                                <input class="form-control" id="name" type="text" placeholder="Ingrese nombre registrado">
                                             </div>
                                         </div>
                                     </div>
@@ -102,7 +159,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label for="ccnumber">Credit Card Number</label>
+                                                <label for="ccnumber">Numero de tarjeta</label>
                                                 <div class="input-group">
                                                     <input class="form-control" type="text" placeholder="0000 0000 0000 0000" autocomplete="email">
                                                     <div class="input-group-append">
@@ -117,7 +174,7 @@
 
                                     <div class="row">
                                         <div class="form-group col-sm-4">
-                                            <label for="ccmonth">Month</label>
+                                            <label for="ccmonth">Mes</label>
                                             <select class="form-control" id="ccmonth">
                                                 <option>1</option>
                                                 <option>2</option>
@@ -134,7 +191,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group col-sm-4">
-                                            <label for="ccyear">Year</label>
+                                            <label for="ccyear">Año</label>
                                             <select class="form-control" id="ccyear">
                                                 <option>2023</option>
                                                 <option>2024</option>
@@ -153,9 +210,9 @@
                                 </div>
                                 <div class="card-footer">
                                     <button class="btn btn-sm btn-success float-right" type="submit">
-                                        <i class="mdi mdi-gamepad-circle"></i>Continue</button>
+                                        <i class="mdi mdi-gamepad-circle"></i>Continuar</button>
                                     <button class="btn btn-sm btn-danger" type="reset">
-                                        <i class="mdi mdi-lock-reset"></i>Reset</button>
+                                        <i class="mdi mdi-lock-reset"></i>Resetear</button>
                                 </div>
                             </div>
                         </div>
