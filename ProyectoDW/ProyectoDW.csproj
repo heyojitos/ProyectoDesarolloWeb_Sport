@@ -147,7 +147,9 @@
       <DependentUpon>NWind.mdf</DependentUpon>
     </Content>
     <Content Include="App_Data\SideMenu.xml" />
-    <Content Include="App_Data\TopMenu.xml" />
+    <Content Include="App_Data\TopMenu.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="bin\DevExpress.Data.v17.2.dll" />
     <Content Include="bin\DevExpress.Data.v17.2.xml" />
     <Content Include="bin\DevExpress.Images.v17.2.dll" />
@@ -376,6 +378,7 @@
     <Content Include="WebForms\Carrito\WebCarrito.aspx" />
     <Content Include="WebForms\Contacto\WebContacto.aspx" />
     <Content Include="WebForms\Inicio\WebInicio.aspx" />
+    <Content Include="WebForms\LogIn\WebLogin.aspx" />
     <Content Include="WebForms\Mantenimientos\WebCategoria.aspx" />
     <Content Include="WebForms\Mantenimientos\WebLogin.aspx" />
     <Content Include="WebForms\Mantenimientos\WebMantenimientos.aspx" />
@@ -610,6 +613,13 @@
     <Compile Include="WebForms\Inicio\WebInicio.aspx.designer.cs">
       <DependentUpon>WebInicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForms\LogIn\WebLogin.aspx.cs">
+      <DependentUpon>WebLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\LogIn\WebLogin.aspx.designer.cs">
+      <DependentUpon>WebLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForms\Mantenimientos\WebCategoria.aspx.cs">
       <DependentUpon>WebCategoria.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -783,7 +793,6 @@
   <ItemGroup>
     <Folder Include="Eventos\Log\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="WebForms\LogIn\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />

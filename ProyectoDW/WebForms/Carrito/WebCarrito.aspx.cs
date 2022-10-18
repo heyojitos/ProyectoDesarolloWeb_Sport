@@ -1,5 +1,6 @@
 ﻿using DXWebApplication.App_Code.Utilidades;
 using ProyectoDW.App_Code.Controller.ControllerMantenimiento;
+using ProyectoDW.App_Code.Dao.DaoMantenimiento;
 using ProyectoDW.App_Code.Models;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace ProyectoDW.WebForms.Carrito
     {
         ClsProducto clsProducto = new ClsProducto();
         ClsControllerProducto clsControllerProducto = new ClsControllerProducto();
+        ClsDaoCliente objCliente = new ClsDaoCliente();
         ClsCarritoCompra compra;
         ClsErrorHandler log = new ClsErrorHandler();
         ServiceBanguat.TipoCambioSoapClient wsbanguat = new ServiceBanguat.TipoCambioSoapClient();
@@ -89,6 +91,33 @@ namespace ProyectoDW.WebForms.Carrito
 
             compra.UpdateRegistro(codReg, can);
             FillData();
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            ClsUsuario clsUsuario = new ClsUsuario();
+            string Script1 = "MostrarCardIn()";
+            string Script2 = "EmailNotFound()";
+            string emailCliente = tbUserName.Text;
+
+            try
+            {
+                objCliente.BuscarEmailCliente(emailCliente);
+                if (objCliente.DsReturn.Tables["EmailCliente"].Rows.Count > 0)
+                {
+                    //ScriptManager.RegisterStartupScript(this, this.GetType(), "Encontrado", Script1, true);
+                    ClientScript.RegisterStartupScript(GetType(), "Pago por tarjeta", "MostrarCardId()", true);
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "No encontrado",Script2, true);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                //throw;
+            }
         }
     }
 }

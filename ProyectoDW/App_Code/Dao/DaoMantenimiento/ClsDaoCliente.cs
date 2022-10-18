@@ -114,5 +114,20 @@ namespace ProyectoDW.App_Code.Dao.DaoMantenimiento
             strSql = "DELETE FROM TB_USUARIO WHERE ID_USUARIO = " + usuario.IdUsuario;
             return ExecuteSql(strSql);
         }
+
+        public bool BuscarEmailCliente(string email)
+        {
+            try
+            {
+                strSql = "SELECT Email FROM AspNetUsers WHERE Email = '"+ email +"'";
+                DsReturn = objSql.EjectuaSQL(strSql, "EmailCliente");
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                return false;
+            }
+            return true;
+        }
     }
 }
