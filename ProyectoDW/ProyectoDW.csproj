@@ -271,12 +271,6 @@
     <Content Include="Content\Images\adidas.png" />
     <Content Include="Content\Images\AquaHeader.jpg" />
     <Content Include="Content\Images\arrow.png" />
-    <Content Include="Content\Images\ba1.jpg" />
-    <Content Include="Content\Images\ba2.jpg" />
-    <Content Include="Content\Images\ba3.jpg" />
-    <Content Include="Content\Images\baa1.jpg" />
-    <Content Include="Content\Images\baa2.jpg" />
-    <Content Include="Content\Images\baa3.jpg" />
     <Content Include="Content\Images\BlackGlassHeader.jpg" />
     <Content Include="Content\Images\borrar.png" />
     <Content Include="Content\Images\btn_next.png" />
@@ -304,6 +298,9 @@
     <Content Include="Content\Images\new3.jpg" />
     <Content Include="Content\Images\new4.jpg" />
     <Content Include="Content\Images\nike.png" />
+    <Content Include="Content\Images\p1_1.jpg" />
+    <Content Include="Content\Images\p2_1.jpg" />
+    <Content Include="Content\Images\p4_1.jpg" />
     <Content Include="Content\Images\PlasticBlueHeader.jpg" />
     <Content Include="Content\Images\RedWineHeader.jpg" />
     <Content Include="Content\Images\search.png" />

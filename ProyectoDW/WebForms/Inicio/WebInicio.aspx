@@ -92,14 +92,14 @@
                             <img src="../../Content/Images/nike.png" />
                         </div>
                         <div class="mid-text">
-                            <h4><span>Revise catalogo de hombre</span></h4>
+                            <h4><span>Catalogo de hombre</span></h4>
                             <a class="hvr-outline-out button2" href="../Productos/Hombre/WebHombre.aspx">Más Info</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
                     <div class="new-levis">
                         <div class="mid-text">
-                            <h4><span>Revise catalogo de mujer</span></h4>
+                            <h4><span>Catalogo de mujer</span></h4>
                             <a class="hvr-outline-out button2" href="../Productos/Mujer/WebMujer.aspx">Más Info</a>
                         </div>
                         <div class="mid-img">
@@ -129,36 +129,36 @@
             <div class="col-sm-6 content-img-left text-center">
                 <div class="content-grid-effect slow-zoom vertical">
                     <div class="img-box">
-                        <img src="" alt="image" class="img-responsive zoom-img"></div>
+                        <img src="../../Content/Images/p1_1.jpg" alt="image" class="img-responsive zoom-img"></div>
                     <div class="info-box">
                         <div class="info-content simpleCart_shelfItem">
-                            <h4>Mobiles</h4>
+                            <h4>Calzado Mujer</h4>
                             <span class="separator"></span>
-                            <p><span class="item_price">$500</span></p>
+                            <p><span class="item_price">Desde Q.500</span></p>
                             <span class="separator"></span>
-                            <a class="item_add hvr-outline-out button2" href="#">add to cart </a>
+                            <a class="item_add hvr-outline-out button2" href="../Productos/Mujer/WebMujerCalzado.aspx">Más Info</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 content-img-right">
-                <h3>Special Offers and 50%<span>Discount On</span> Mobiles</h3>
+                <h3>Ofertas especiales<span>Ropa y Calzado</span> Fin de temporada</h3>
             </div>
 
             <div class="col-sm-6 content-img-right">
-                <h3>Buy 1 get 1  free on <span>Branded</span> Watches</h3>
+                <h3>Adquiere tus productos<span>Últimos Dias</span> Deportivos en tiendas</h3>
             </div>
             <div class="col-sm-6 content-img-left text-center">
                 <div class="content-grid-effect slow-zoom vertical">
                     <div class="img-box">
-                        <img src="" alt="image" class="img-responsive zoom-img"></div>
+                        <img src="../../Content/Images/p2_1.jpg" alt="image" class="img-responsive zoom-img"></div>
                     <div class="info-box">
                         <div class="info-content simpleCart_shelfItem">
-                            <h4>Watches</h4>
+                            <h4>Training Kit</h4>
                             <span class="separator"></span>
-                            <p><span class="item_price">$250</span></p>
+                            <p><span class="item_price">Desde Q.400</span></p>
                             <span class="separator"></span>
-                            <a class="item_add hvr-outline-out button2" href="#">add to cart </a>
+                            <a class="item_add hvr-outline-out button2" href="../Productos/Deporte/WebDeporteTraining.aspx">Más Info</a>
                         </div>
                     </div>
                 </div>
@@ -168,14 +168,14 @@
         <div class="col-md-5 content-rgrid text-center">
             <div class="content-grid-effect slow-zoom vertical">
                 <div class="img-box">
-                    <img src="" alt="image" class="img-responsive zoom-img"></div>
+                    <img src="../../Content/Images/p4_1.jpg" alt="image" class="img-responsive zoom-img"></div>
                 <div class="info-box">
                     <div class="info-content simpleCart_shelfItem">
-                        <h4>Shoes</h4>
+                        <h4>Ropa Hombre</h4>
                         <span class="separator"></span>
-                        <p><span class="item_price">$150</span></p>
+                        <p><span class="item_price">Desde Q.300</span></p>
                         <span class="separator"></span>
-                        <a class="item_add hvr-outline-out button2" href="#">add to cart </a>
+                        <a class="item_add hvr-outline-out button2" href="../Productos/Hombre/WebHombreRopa.aspx">Más Info</a>
                     </div>
                 </div>
             </div>

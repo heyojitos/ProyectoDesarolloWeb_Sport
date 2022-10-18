@@ -21,14 +21,14 @@
 				<div class="col-md-4 contact-grid text-center animated wow slideInLeft" data-wow-delay=".5s">
 					<div class="contact-grid1">
 						<i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
-						<h4>Direccion</h4>
+						<h4>Dirección</h4>
 						<p>Guatemala</p>
 					</div>
 				</div>
 				<div class="col-md-4 contact-grid text-center animated wow slideInUp" data-wow-delay=".5s">
 					<div class="contact-grid2">
 						<i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>
-						<h4>Llamanos</h4>
+						<h4>Llámenos</h4>
 						<p></p>
 					</div>
 				</div>
