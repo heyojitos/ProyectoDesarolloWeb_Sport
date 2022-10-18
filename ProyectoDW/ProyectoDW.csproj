@@ -279,6 +279,8 @@
     <Content Include="Content\Images\btn_prev.png" />
     <Content Include="Content\Images\close_1.png" />
     <Content Include="Content\Images\communicate.png" />
+    <Content Include="Content\Images\correo_e.jpg" />
+    <Content Include="Content\Images\direccion.jpg" />
     <Content Include="Content\Images\edit.png" />
     <Content Include="Content\Images\front2_1.jpg" />
     <Content Include="Content\Images\front3_1.jpg" />
@@ -287,6 +289,7 @@
     <Content Include="Content\Images\home-page.png" />
     <Content Include="Content\Images\icons1.png" />
     <Content Include="Content\Images\img-sp.png" />
+    <Content Include="Content\Images\llamar.jpg" />
     <Content Include="Content\Images\loading2.gif" />
     <Content Include="Content\Images\man.png" />
     <Content Include="Content\Images\mark1.png" />
@@ -294,9 +297,6 @@
     <Content Include="Content\Images\mini_slider2_1.jpg" />
     <Content Include="Content\Images\mini_slider3_1.jpg" />
     <Content Include="Content\Images\new.png" />
-    <Content Include="Content\Images\new2.jpg" />
-    <Content Include="Content\Images\new3.jpg" />
-    <Content Include="Content\Images\new4.jpg" />
     <Content Include="Content\Images\nike.png" />
     <Content Include="Content\Images\p1_1.jpg" />
     <Content Include="Content\Images\p2_1.jpg" />
