@@ -7,7 +7,20 @@
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/jquery-ui.css") %>" type="text/css" media="all" />
     <link rel="Stylesheet" href="<%= ResolveUrl("~/Content/css/pignose.layerslider.css") %>" type="text/css" media="all" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    <script = "text/javascript" >
+        function Agregado(msg) {
+            Swal.fire({
+                icon: 'success',
+                title: msg
+            })
+        }
+        function Error(msg) {
+            Swal.fire({
+                icon: 'error',
+                title: msg
+            })
+        }
+    </script> 
     <!-- banner -->
     <div class="page-head">
         <div class="container">
@@ -49,10 +62,10 @@
             <h3 class="tittle">Formulario de Contacto</h3>
             <form>
                 <div class="contact-form2">
-                    <input id="txtNombre" type="text" value="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="" />
-                    <input id="txtEmail" type="email" value="Correo Electronico" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="" />
-                    <textarea id="txtMensaje" cols="20" rows="2" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Mensaje...</textarea>
-                    <input id="btnEnviar" type="submit" value="Enviar" />
+                    <input id="txtNombre" type="text" placeholder="Nombre" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="" runat="server" />
+                    <input id="txtEmail" type="email" placeholder="Email" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="" runat="server"/>
+                    <textarea id="txtMensaje" placeholder="Mensaje..." cols="20" rows="2" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="" runat="server"></textarea>
+                    <asp:Button ID="btnEnviar2" runat="server" Text="Enviar" OnClick="btnEnviar2_Click"/>
                 </div>
             </form>
         </div>
