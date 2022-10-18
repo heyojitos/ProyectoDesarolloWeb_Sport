@@ -327,8 +327,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\StyleWebFactura.css" />
     <Content Include="Content\StyleWebForm.css" />
+    <Content Include="css\estilos.css" />
+    <Content Include="css\main.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="js\global.js" />
     <Content Include="public\uploads\AccesoriosHombre\AccH1.png" />
     <Content Include="public\uploads\AccesoriosHombre\AccH2.png" />
     <Content Include="public\uploads\AccesoriosHombre\AccH3.png" />
@@ -375,7 +378,22 @@
     <Content Include="public\uploads\zapato1.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="vendor\datepicker\daterangepicker.css" />
+    <Content Include="vendor\datepicker\daterangepicker.js" />
+    <Content Include="vendor\datepicker\moment.min.js" />
+    <Content Include="vendor\font-awesome-4.7\css\font-awesome.css" />
+    <Content Include="vendor\font-awesome-4.7\css\font-awesome.min.css" />
+    <Content Include="vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
+    <Content Include="vendor\font-awesome-4.7\HELP-US-OUT.txt" />
+    <Content Include="vendor\jquery\jquery.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="vendor\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="vendor\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="vendor\select2\select2.min.css" />
+    <Content Include="vendor\select2\select2.min.js" />
     <Content Include="WebForms\Carrito\WebCarrito.aspx" />
+    <Content Include="WebForms\Carrito\WebDatosCliente.aspx" />
     <Content Include="WebForms\Contacto\WebContacto.aspx" />
     <Content Include="WebForms\Inicio\WebInicio.aspx" />
     <Content Include="WebForms\LogIn\WebLogin.aspx" />
@@ -431,6 +449,15 @@
     <Content Include="obj\Debug\ProyectoDW.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.9.0.min.map" />
+    <Content Include="vendor\font-awesome-4.7\fonts\fontawesome-webfont.eot" />
+    <Content Include="vendor\font-awesome-4.7\fonts\fontawesome-webfont.ttf" />
+    <Content Include="vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff" />
+    <Content Include="vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff2" />
+    <Content Include="vendor\font-awesome-4.7\fonts\FontAwesome.otf" />
+    <Content Include="vendor\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -604,6 +631,13 @@
     </Compile>
     <Compile Include="WebForms\Carrito\WebCarrito.aspx.designer.cs">
       <DependentUpon>WebCarrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Carrito\WebDatosCliente.aspx.cs">
+      <DependentUpon>WebDatosCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Carrito\WebDatosCliente.aspx.designer.cs">
+      <DependentUpon>WebDatosCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\Contacto\WebContacto.aspx.cs">
       <DependentUpon>WebContacto.aspx</DependentUpon>
