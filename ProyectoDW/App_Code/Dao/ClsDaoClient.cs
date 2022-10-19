@@ -13,6 +13,7 @@ namespace ProyectoDW.App_Code.Dao
         ClsConexion objSql = new ClsConexion();
         ClsErrorHandler log = new ClsErrorHandler();
         String strSql = "";
+        int Existe = 0;
 
         public bool ExecuteSql(string strSql)
         {
@@ -45,11 +46,9 @@ namespace ProyectoDW.App_Code.Dao
 
         public bool InsertCliente(ClsClient cliente)
         {
-            strSql = "INSERT INTO TB_CLIENTE " +
-                     "(ID_CLIENTE, NOMBRE, APELLIDO, CORREO, CLAVE) " +
-                     "VALUES " +
-                     "((SELECT ISNULL(MAX(ID_CLIENTE),0) + 1 FROM TB_CLIENTE), '" + cliente.Nombre + "', '" + cliente.Apellido + "', " +
-                     "'" + cliente.Correo + "', '" + cliente.Clave + "')";
+            strSql = "INSERT INTO TB_CLIENT " +
+                     "(ID_CLIENTE, NOMBRE, CORREO, DIRECCION, TELEFONO) " +
+                     "VALUES (" + cliente.IdCliente + ", '" + cliente.Nombre + "', '" + cliente.Correo + "', '" + cliente.Direccion + "', '" + cliente.Telefono + "')";
             return ExecuteSql(strSql);
         }
 
@@ -64,7 +63,7 @@ namespace ProyectoDW.App_Code.Dao
             catch (Exception ex)
             {
                 log.LogError(ex.ToString(), ex.StackTrace);
-                //throw;
+                return false;
             }
             return true;
         }
@@ -73,15 +72,32 @@ namespace ProyectoDW.App_Code.Dao
         {
             try
             {
-                strSql = "SELECT ID_CLIENTE, NOMBRE, APELLIDO, CORREO, CLAVE FROM TB_CLIENTE  WHERE CORREO = '" + usuario.Correo + "';";
+                strSql = "SELECT ID_CLIENTE, NOMBRE, CORREO FROM TB_CLIENTE  WHERE CORREO = '" + usuario.Correo + "';";
                 DsReturn = objSql.EjectuaSQL(strSql, "TB_CLIENTE");
             }
             catch (Exception ex)
             {
                 log.LogError(ex.ToString(), ex.StackTrace);
-                //throw;
+                return false;
             }
             return true;
+        }
+
+        public bool getClienteXid(int id)
+        {
+            try
+            {
+                strSql = "SELECT ID_CLIENTE FROM TB_CLIENT WHERE ID_CLIENTE = " + id;
+                return objSql.ejecutarNonQuery(strSql);
+                
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                return false;
+            }
+
+            //return true;
         }
 
 
@@ -100,14 +116,11 @@ namespace ProyectoDW.App_Code.Dao
             return true;
         }
 
-
         public bool UpdateCliente(ClsClient usuario)
         {
             strSql = "UPDATE TB_CLIENTE SET" +
-                " NOMBRE = '" + usuario.Nombre + "'," +
-                " APELLIDO = '" + usuario.Apellido + "'," +
-                " CORREO = '" + usuario.Correo + "'," +
-                " CLAVE = '" + usuario.Clave + "' " +
+                " NOMBRE = '" + usuario.Nombre + "'," +                
+                " CORREO = '" + usuario.Correo + "' " +                
                 "WHERE ID_CLIENTE = " + usuario.IdCliente;
             return ExecuteSql(strSql);
         }

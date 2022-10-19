@@ -31,8 +31,7 @@ namespace ProyectoDW.WebForms.Carrito
         {
             if (Session["miCarro"] == null)
             {
-                Session["miCarro"] = new ClsCarritoCompra();
-                
+                Session["miCarro"] = new ClsCarritoCompra();                
             }
             compra = (ClsCarritoCompra)Session["miCarro"];
             if (!Page.IsPostBack)
@@ -99,30 +98,17 @@ namespace ProyectoDW.WebForms.Carrito
 
             compra.UpdateRegistro(codReg, can);
             FillData();
-        }
-
-        protected void btnLogin_Click(object sender, EventArgs e)
-        {
-            ClsUsuario clsUsuario = new ClsUsuario();
-            string Script1 = "MostrarCardIn()";
-            string Script2 = "EmailNotFound()";
-            string emailCliente = tbUserName.Text;
-
-            try
-            {
-                
-            }
-            catch (Exception ex)
-            {
-                log.LogError(ex.ToString(), ex.StackTrace);
-                //throw;
-            }
-        }
+        }        
 
         protected void btnContinuar_Click(object sender, EventArgs e)
         {
-
+            ClsPedido pedido = new ClsPedido();
+            ClsClient cliente = new ClsClient();
             String idClienteLogeado = User.Identity.GetUserId();
+            String direccionCliente = txtDireccion.Text;
+            String contactoCliente = txtContacto.Text;
+            String telefonoCliente = txtTelefono.Text;
+            int NoPedido = 0;
 
             try
             {
@@ -131,7 +117,30 @@ namespace ProyectoDW.WebForms.Carrito
                 if (objCliente.DsReturn.Tables["idCliente"].Rows.Count > 0)
                 {
                     int codigoCliente = int.Parse(objCliente.DsReturn.Tables["idCliente"].Rows[0]["Codigo"].ToString());
+                    String correoCliente = objCliente.DsReturn.Tables["idCliente"].Rows[0]["Email"].ToString();
 
+                    if (objCliente.getClienteXid(codigoCliente))
+                    {
+                        NoPedido = NoPedido + 1;
+                    }
+                    else
+                    {
+                        NoPedido = NoPedido + 1;
+                        cliente.IdCliente = codigoCliente;
+                        cliente.Nombre = contactoCliente;
+                        cliente.Correo = correoCliente;
+                        cliente.Direccion = direccionCliente;
+                        cliente.Telefono = telefonoCliente;
+
+                        objCliente.InsertCliente(cliente);
+                    }                    
+
+                    string StrQry = "<script language='javascript'>";
+                    StrQry += "alert('Operacion generada con exito!'); ";
+                    StrQry += "</script>";
+                    ClientScript.RegisterStartupScript(GetType(), "mensaje", StrQry, false);
+
+                    gotoHome();
                 }
                 else
                 {
@@ -141,14 +150,9 @@ namespace ProyectoDW.WebForms.Carrito
             catch (Exception ex)
             {
                 log.LogError(ex.ToString(), ex.StackTrace);
-                throw;
+                //throw;
             }
-
-
-            string StrQry = "<script language='javascript'>";
-            StrQry += "alert('Operacion generada con exito!'); ";
-            StrQry += "</script>";
-            ClientScript.RegisterStartupScript(GetType(), "mensaje", StrQry, false);
+            
         }
 
         public DataTable dtCliente()

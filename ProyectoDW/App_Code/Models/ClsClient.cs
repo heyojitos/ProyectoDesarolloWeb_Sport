@@ -9,12 +9,10 @@ namespace ProyectoDW.App_Code.Models
     public class ClsClient
     {
         private int idCliente;
-        private String nombre;
-        private String apellido;
-        private String correo;
-        private String clave;
-        private Boolean reestablecer;
-        private String fechaReg;
+        private String nombre;        
+        private String correo;        
+        private String direccion;
+        private String telefono;
 
         public int IdCliente
         {
@@ -42,19 +40,6 @@ namespace ProyectoDW.App_Code.Models
             }
         }
 
-        public string Apellido
-        {
-            get
-            {
-                return apellido;
-            }
-
-            set
-            {
-                apellido = value;
-            }
-        }
-
         public string Correo
         {
             get
@@ -68,42 +53,29 @@ namespace ProyectoDW.App_Code.Models
             }
         }
 
-        public string Clave
+        public string Direccion
         {
             get
             {
-                return clave;
+                return direccion;
             }
 
             set
             {
-                clave = value;
+                direccion = value;
             }
         }
 
-        public bool Reestablecer
+        public string Telefono
         {
             get
             {
-                return reestablecer;
+                return telefono;
             }
 
             set
             {
-                reestablecer = value;
-            }
-        }
-
-        public string FechaReg
-        {
-            get
-            {
-                return fechaReg;
-            }
-
-            set
-            {
-                fechaReg = value;
+                telefono = value;
             }
         }
     }
