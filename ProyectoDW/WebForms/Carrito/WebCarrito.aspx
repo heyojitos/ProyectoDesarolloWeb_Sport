@@ -81,62 +81,41 @@
         </div>
     </div>
     <!-- //check out -->
-    <!-- //product-nav -->
-
-    <dx:ASPxPopupControl ID="dxPopUpLogin" runat="server" AllowDragging="true" ClientInstanceName="dxPopUpLogin" CloseAction="CloseButton" EnableViewState="false" Modal="true"
-        Height="0px" PopupAnimationType="Slide" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" Width="0px" HeaderText="Iniciar Sesion">
-        <SettingsAdaptivity Mode="Always" VerticalAlign="WindowCenter" MaxWidth="700px" />
-        <ContentCollection>
-            <dx:PopupControlContentControl runat="server">
-                <div class="accountHeader">
-            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Iniciar sesion</h3>
-        </div>
-
-        <div class="form-outline mb-4">
-            <dx:ASPxTextBox ID="tbUserName" runat="server" Width="400px" Caption="Correo Electronico" CssClass="form-control form-control-lg">
-                <CaptionSettings Position="Top" />
-                <ValidationSettings ValidationGroup="LoginUserValidationGroup" ErrorTextPosition="Bottom" Display="Dynamic" ErrorDisplayMode="Text">
-                    <RegularExpression ErrorText="Falla de validación de correo" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
-                    <RequiredField ErrorText="Completa este campo." IsRequired="true" />
-                </ValidationSettings>
-            </dx:ASPxTextBox>
-        </div>
-
-        <div class="form-outline mb-4">
-            <dx:ASPxTextBox ID="tbPassword" runat="server" Password="true" Width="400px" Caption="Clave" CssClass="form-control form-control-lg">
-                <CaptionSettings Position="Top" />
-                <ValidationSettings ValidationGroup="LoginUserValidationGroup" ErrorTextPosition="Bottom" Display="Dynamic" ErrorDisplayMode="Text">
-                    <RequiredField ErrorText="Completa este campo." IsRequired="true" />
-                </ValidationSettings>
-            </dx:ASPxTextBox>
-        </div>
-
-        <div class="form-outline mb-4">
-        </div>
-        <%--<div class="form-outline mb-4">
-            <p>
-                <a href="Register.aspx">Crear una cuenta.</a>
-            </p>
-        </div>--%>
-        <br />
-        <div class="pt-1 mb-4">
-            <%--<dx:ASPxButton ID="btnLogin" runat="server" Text="Ingresar" ValidationGroup="LoginUserValidationGroup" CssClass=" btn-lg" Width="200px" OnClick="btnLogin_Click">
-            </dx:ASPxButton>--%>
-            <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Ingresar" CssClass=" btn-lg" Width="200px" OnClick="btnLogin_Click">
-            </dx:ASPxButton>
-        </div>
-                <%--<div class="contact-form2">
-                    <asp:Button ID="Button2" runat="server" Text="Ingresar" OnClientClick="MostrarCardIn(); return false;" />
-                </div>--%>
-            </dx:PopupControlContentControl>
-        </ContentCollection>
-    </dx:ASPxPopupControl>
+    <!-- //product-nav -->    
 
     <dx:ASPxPopupControl ID="dxPopUpProducto" runat="server" AllowDragging="True" ClientInstanceName="dxPopUpProducto" CloseAction="CloseButton" EnableViewState="False" Modal="true"
         Height="0px" PopupAnimationType="Slide" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" Width="0px" HeaderText="Pago Tarjeta">
         <SettingsAdaptivity Mode="Always" VerticalAlign="WindowCenter" MaxWidth="700px" />
         <ContentCollection>
             <dx:PopupControlContentControl runat="server">
+                <div class="padding">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2>Datos de envio</h2>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <asp:Label ID="lblDireccion" runat="server" Text="Direccion" CssClass="control-label col-sm-2"></asp:Label>
+                        <div class="col-sm-10">
+                            <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <asp:Label ID="lblContacto" runat="server" Text="Contacto" CssClass="control-label col-sm-2"></asp:Label>
+                        <div class="col-sm-10">
+                            <asp:TextBox ID="txtContacto" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <asp:Label ID="lblTelefono" runat="server" Text="Telefono" CssClass="control-label col-sm-2"></asp:Label>
+                        <div class="col-sm-10">
+                            <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                    <br />                    
+                </div>
                 <div class="padding">
                     <div class="row">
                         <div class="col-sm-6">
@@ -209,8 +188,17 @@
 
                                 </div>
                                 <div class="card-footer">
-                                    <button class="btn btn-sm btn-success float-right" type="submit">
-                                        <i class="mdi mdi-gamepad-circle"></i>Continuar</button>
+                                    <%--<button class="btn btn-sm btn-success float-right" type="submit">
+                                        <i class="mdi mdi-gamepad-circle"></i>Continuar</button>--%>
+                                    <dx:ASPxButton ID="dxBtnContinuar" 
+                                        runat="server" 
+                                        Text="Continuar" 
+                                        AutoPostBack="false" 
+                                        Font-Bold="true" 
+                                        Font-Size="Medium" 
+                                        OnClick="btnContinuar_Click" 
+                                        UseSubmitBehavior="false">
+                                    </dx:ASPxButton>
                                     <button class="btn btn-sm btn-danger" type="reset">
                                         <i class="mdi mdi-lock-reset"></i>Resetear</button>
                                 </div>
