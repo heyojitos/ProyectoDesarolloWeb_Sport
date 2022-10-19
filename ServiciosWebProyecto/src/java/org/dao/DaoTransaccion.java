@@ -32,7 +32,13 @@ public class DaoTransaccion {
     public List<ModelTransaccion> getListaTransacciones() {
         List<ModelTransaccion> lstTransaccion = new ArrayList<ModelTransaccion>();
         try {
-            strSql = "SELECT * FROM TB_TRANSACCION_PAGO WHERE ID_ESTADO_TRANSACCION = 1;";
+            strSql = "SELECT ID_TRANSACCION, "
+                    + "ULTIMOS_DIGITOS_TARJETA, "
+                    + "NOMBRE, "
+                    + "AUTORIZACION, "
+                    + "ID_ESTADO_TRANSACCION, "
+                    + "(SELECT ET.DES_ESTADO_TRANSACCION FROM TB_CAT_ESTADO_TRANSACCION ET WHERE ET.ID_ESTADO_TRANSACCION = TP.ID_ESTADO_TRANSACCION ) "
+                    + "ESTADO_TRANSACCION from TB_TRANSACCION_PAGO TP WHERE ID_ESTADO_TRANSACCION = 1;";
             conexion.open();
             rs = conexion.executeQuery(strSql);
 
@@ -43,6 +49,7 @@ public class DaoTransaccion {
                 transaccion.setNombre(rs.getString("NOMBRE"));
                 transaccion.setAutorizacion(rs.getString("AUTORIZACION"));
                 transaccion.setEstadoTransaccion(Integer.parseInt(rs.getString("ID_ESTADO_TRANSACCION")));
+                 transaccion.setEstadoTransaccions(rs.getString("ESTADO_TRANSACCION"));
                 lstTransaccion.add(transaccion);
             }
             rs.close();

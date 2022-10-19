@@ -15,6 +15,7 @@ public class ModelTransaccion {
     private String nombre;
     private String autorizacion;
     private int estadoTransaccion;
+    private String estadoTransaccions;
 
     public ModelTransaccion() {
     }
@@ -58,13 +59,21 @@ public class ModelTransaccion {
     public void setAutorizacion(String autorizacion) {
         this.autorizacion = autorizacion;
     }
-
-    public int getEstadoTransaccion() {
+    
+     public int getEstadoTransaccion() {
         return estadoTransaccion;
     }
 
     public void setEstadoTransaccion(int estadoTransaccion) {
         this.estadoTransaccion = estadoTransaccion;
+    }
+
+    public String getEstadoTransaccions() {
+        return estadoTransaccions;
+    }
+
+    public void setEstadoTransaccions(String estadoTransaccions) {
+        this.estadoTransaccions = estadoTransaccions;
     }
 
 }

@@ -24,4 +24,5 @@ public class ObtenerTransaccionesCierre {
         List<ModelTransaccion> listaTransaccion = daoTransaccion.getListaTransacciones();
         return listaTransaccion;
     }
+    
 }
