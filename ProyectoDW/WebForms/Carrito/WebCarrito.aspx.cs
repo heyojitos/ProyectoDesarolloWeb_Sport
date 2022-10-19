@@ -9,6 +9,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.Owin;
+using ProyectoDW.App_Code.Dao;
 
 namespace ProyectoDW.WebForms.Carrito
 {
@@ -16,8 +20,10 @@ namespace ProyectoDW.WebForms.Carrito
     {
         ClsProducto clsProducto = new ClsProducto();
         ClsControllerProducto clsControllerProducto = new ClsControllerProducto();
-        ClsDaoCliente objCliente = new ClsDaoCliente();
+        ClsDaoClient objCliente = new ClsDaoClient();
+        ClsAspNetUsers aspCliente = new ClsAspNetUsers();
         ClsCarritoCompra compra;
+
         ClsErrorHandler log = new ClsErrorHandler();
         ServiceBanguat.TipoCambioSoapClient wsbanguat = new ServiceBanguat.TipoCambioSoapClient();
 
@@ -26,11 +32,13 @@ namespace ProyectoDW.WebForms.Carrito
             if (Session["miCarro"] == null)
             {
                 Session["miCarro"] = new ClsCarritoCompra();
+                
             }
             compra = (ClsCarritoCompra)Session["miCarro"];
             if (!Page.IsPostBack)
             {
                 FillData();
+                Session["idCliente"] = User.Identity.GetUserId();
             }
             var res = wsbanguat.TipoCambioDia();
             idCambioDolar.Text = "Q. " + res.CambioDolar.First().referencia.ToString();
@@ -102,22 +110,65 @@ namespace ProyectoDW.WebForms.Carrito
 
             try
             {
-                objCliente.BuscarEmailCliente(emailCliente);
-                if (objCliente.DsReturn.Tables["EmailCliente"].Rows.Count > 0)
-                {
-                    //ScriptManager.RegisterStartupScript(this, this.GetType(), "Encontrado", Script1, true);
-                    ClientScript.RegisterStartupScript(GetType(), "Pago por tarjeta", "MostrarCardId()", true);
-                }
-                else
-                {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "No encontrado",Script2, true);
-                }
+                
             }
             catch (Exception ex)
             {
                 log.LogError(ex.ToString(), ex.StackTrace);
                 //throw;
             }
+        }
+
+        protected void btnContinuar_Click(object sender, EventArgs e)
+        {
+
+            String idClienteLogeado = User.Identity.GetUserId();
+
+            try
+            {
+                objCliente.getUsuarioID(idClienteLogeado);
+
+                if (objCliente.DsReturn.Tables["idCliente"].Rows.Count > 0)
+                {
+                    int codigoCliente = int.Parse(objCliente.DsReturn.Tables["idCliente"].Rows[0]["Codigo"].ToString());
+
+                }
+                else
+                {
+                    gotoHome();
+                }
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex.ToString(), ex.StackTrace);
+                throw;
+            }
+
+
+            string StrQry = "<script language='javascript'>";
+            StrQry += "alert('Operacion generada con exito!'); ";
+            StrQry += "</script>";
+            ClientScript.RegisterStartupScript(GetType(), "mensaje", StrQry, false);
+        }
+
+        public DataTable dtCliente()
+        {
+            DataTable dt = new DataTable();
+            DataColumn correlativo = dt.Columns.Add("id", typeof(string));
+            dt.Columns.Add("Email", typeof(string));
+            dt.Columns.Add("PhoneNumber", typeof(string));
+            dt.Columns.Add("UserName", typeof(string));
+            dt.Columns.Add("Codigo", typeof(string));
+
+            dt.PrimaryKey = new DataColumn[] { correlativo };
+            correlativo.ReadOnly = true;
+
+            return dt;
+        }
+
+        public void gotoHome()
+        {
+            Response.Redirect("../Inicio/WebInicio.aspx");
         }
     }
 }

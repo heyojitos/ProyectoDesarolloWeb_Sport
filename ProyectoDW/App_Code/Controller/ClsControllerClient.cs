@@ -32,7 +32,7 @@ namespace ProyectoDW.App_Code.Controller
             return false;
         }
 
-        public bool GetIdCliente(ClsClient cliente)
+        public bool GetIdCliente(String cliente)
         {
             try
             {

@@ -4,12 +4,13 @@
     <service name="GeneradorToken">
       <implementation-class>org.servicio.GeneradorToken</implementation-class>
     </service>
-    <service name="InsertarTransaccion">
-      <implementation-class>org.servicio.InsertarTransaccion</implementation-class>
-    </service>
     <service name="ObtenerTransaccionesCierre">
       <implementation-class>org.servicio.ObtenerTransaccionesCierre</implementation-class>
     </service>
+    <service name="InsertarTransaccion">
+      <implementation-class>org.servicio.InsertarTransaccion</implementation-class>
+    </service>
   </services>
   <clients/>
+  <jsr109>false</jsr109>
 </jax-ws>

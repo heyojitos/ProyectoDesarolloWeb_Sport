@@ -53,12 +53,12 @@ namespace ProyectoDW.App_Code.Dao
             return ExecuteSql(strSql);
         }
 
-        public bool getUsuarioID(ClsClient usuario)
+        public bool getUsuarioID(String usuario)
         {
 
             try
             {
-                strSql = "SELECT ID_CLIENTE FROM TB_CLIENTE WHERE NOMBRE = '" + usuario.Nombre + "'  AND [APELLIDO] = '" + usuario.Apellido + "' AND [CORREO] = '" + usuario.Correo + "' AND [CLAVE] = '" + usuario.Clave + "' ";
+                strSql = "SELECT Email, UserName, Codigo FROM AspNetUsers WHERE id = '" + usuario + "' ";
                 DsReturn = objSql.EjectuaSQL(strSql, "idCliente");
             }
             catch (Exception ex)

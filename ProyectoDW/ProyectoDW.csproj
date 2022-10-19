@@ -606,6 +606,7 @@
     <Compile Include="App_Code\Dao\DaoPaginasWeb\ClsDaoMujer.cs" />
     <Compile Include="App_Code\Dao\DaoPaginasWeb\ClsDaoHombre.cs" />
     <Compile Include="App_Code\Dao\DaoPaginasWeb\ClsDaoSolo.cs" />
+    <Compile Include="App_Code\Models\ClsAspNetUsers.cs" />
     <Compile Include="App_Code\Models\ClsCarritoCompra.cs" />
     <Content Include="App_Code\Models\ProductoContext.cs" />
     <Compile Include="App_Code\Models\ClsCarroItem.cs" />

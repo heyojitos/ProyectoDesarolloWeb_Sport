@@ -140,6 +140,34 @@
                 <div class="padding">
                     <div class="row">
                         <div class="col-sm-6">
+                            <h2>Datos de envio</h2>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <asp:Label ID="lblDireccion" runat="server" Text="Direccion" CssClass="control-label col-sm-2"></asp:Label>
+                        <div class="col-sm-10">
+                            <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <asp:Label ID="lblContacto" runat="server" Text="Contacto" CssClass="control-label col-sm-2"></asp:Label>
+                        <div class="col-sm-10">
+                            <asp:TextBox ID="txtContacto" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <asp:Label ID="lblTelefono" runat="server" Text="Telefono" CssClass="control-label col-sm-2"></asp:Label>
+                        <div class="col-sm-10">
+                            <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                    <br />                    
+                </div>
+                <div class="padding">
+                    <div class="row">
+                        <div class="col-sm-6">
                             <div class="card">
                                 <div class="card-header">
                                     <strong>Tarjeta de Credito</strong>
@@ -209,8 +237,17 @@
 
                                 </div>
                                 <div class="card-footer">
-                                    <button class="btn btn-sm btn-success float-right" type="submit">
-                                        <i class="mdi mdi-gamepad-circle"></i>Continuar</button>
+                                    <%--<button class="btn btn-sm btn-success float-right" type="submit">
+                                        <i class="mdi mdi-gamepad-circle"></i>Continuar</button>--%>
+                                    <dx:ASPxButton ID="dxBtnContinuar" 
+                                        runat="server" 
+                                        Text="Continuar" 
+                                        AutoPostBack="false" 
+                                        Font-Bold="true" 
+                                        Font-Size="Medium" 
+                                        OnClick="btnContinuar_Click" 
+                                        UseSubmitBehavior="false">
+                                    </dx:ASPxButton>
                                     <button class="btn btn-sm btn-danger" type="reset">
                                         <i class="mdi mdi-lock-reset"></i>Resetear</button>
                                 </div>
