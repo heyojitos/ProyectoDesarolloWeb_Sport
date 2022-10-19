@@ -23,6 +23,7 @@ public class InsertarTransaccion {
             @WebParam(name = "ultimosDitigosTarjeta") String ultimosDitigosTarjeta,
             @WebParam(name = "nombre") String nombre,
             @WebParam(name = "autorizacion") String autorizacion,
+            @WebParam(name = "monto") double monto,
             @WebParam(name = "estadoTransaccion") int estadoTransaccion) {
 
         if (ultimosDitigosTarjeta.length() > 4) {
@@ -30,7 +31,7 @@ public class InsertarTransaccion {
         } 
 
         DaoTransaccion daoTransaccion = new DaoTransaccion();
-        ModelTransaccion transaccion = new ModelTransaccion(idTransaccion, ultimosDitigosTarjeta, nombre, autorizacion, estadoTransaccion);
+        ModelTransaccion transaccion = new ModelTransaccion(idTransaccion, ultimosDitigosTarjeta, nombre, autorizacion, estadoTransaccion, monto);
         daoTransaccion.insertarCliente(transaccion);
 
         return transaccion;

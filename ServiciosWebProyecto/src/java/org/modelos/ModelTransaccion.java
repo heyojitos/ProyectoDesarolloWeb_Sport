@@ -15,17 +15,19 @@ public class ModelTransaccion {
     private String nombre;
     private String autorizacion;
     private int estadoTransaccion;
+   private double monto;
     private String estadoTransaccions;
 
     public ModelTransaccion() {
     }
 
-    public ModelTransaccion(int idTransaccion, String ultimosDitigosTarjeta, String nombre, String autorizacion, int estadoTransaccion) {
+    public ModelTransaccion(int idTransaccion, String ultimosDitigosTarjeta, String nombre, String autorizacion, int estadoTransaccion, double monto) {
         this.idTransaccion = idTransaccion;
         this.ultimosDitigosTarjeta = ultimosDitigosTarjeta;
         this.nombre = nombre;
         this.autorizacion = autorizacion;
         this.estadoTransaccion = estadoTransaccion;
+        this.monto = monto; 
     }
 
     public int getIdTransaccion() {
@@ -74,6 +76,14 @@ public class ModelTransaccion {
 
     public void setEstadoTransaccions(String estadoTransaccions) {
         this.estadoTransaccions = estadoTransaccions;
+    }
+    
+     public double getMonto() {
+        return monto;
+    }
+
+    public void setMonto(double monto) {
+        this.monto = monto;
     }
 
 }

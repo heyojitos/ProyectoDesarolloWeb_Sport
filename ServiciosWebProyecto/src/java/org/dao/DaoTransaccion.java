@@ -37,6 +37,7 @@ public class DaoTransaccion {
                     + "NOMBRE, "
                     + "AUTORIZACION, "
                     + "ID_ESTADO_TRANSACCION, "
+                    + "MONTO,"
                     + "(SELECT ET.DES_ESTADO_TRANSACCION FROM TB_CAT_ESTADO_TRANSACCION ET WHERE ET.ID_ESTADO_TRANSACCION = TP.ID_ESTADO_TRANSACCION ) "
                     + "ESTADO_TRANSACCION from TB_TRANSACCION_PAGO TP WHERE ID_ESTADO_TRANSACCION = 1;";
             conexion.open();
@@ -67,10 +68,11 @@ public class DaoTransaccion {
     //Método para hacer la inserción del cliente en la BD
     public boolean insertarCliente(ModelTransaccion transaccion) {
         //Se prepara la sentencia SQL a ejecutar en la BD
-        strSql = "INSERT INTO TB_TRANSACCION_PAGO (ULTIMOS_DIGITOS_TARJETA, NOMBRE, AUTORIZACION, ID_ESTADO_TRANSACCION) "
+        strSql = "INSERT INTO TB_TRANSACCION_PAGO (ULTIMOS_DIGITOS_TARJETA, NOMBRE, AUTORIZACION, MONTO,ID_ESTADO_TRANSACCION) "
                 + "VALUES('" + transaccion.getUltimosDitigosTarjeta() + "', "
                 + "'" + transaccion.getNombre() + "', "
                 + "'" + transaccion.getAutorizacion() + "', "
+                +  transaccion.getMonto() + ", "
                 + "" + transaccion.getEstadoTransaccion() + ")";
 
         try {
