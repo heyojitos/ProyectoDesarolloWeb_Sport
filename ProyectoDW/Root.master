@@ -81,6 +81,7 @@
                                     </Items>
                                 </dx:MenuItem>
                                 <dx:MenuItem Name="itmContacto" Text="Contacto" NavigateUrl="WebForms/Contacto/WebContacto.aspx" Image-Url="Content/Images/communicate.png"></dx:MenuItem>
+                                <dx:MenuItem Name="itmPedido" Text="Pedido" NavigateUrl="WebForms/Pedido/WebPedido.aspx" Image-Url="Content/Images/tracking.png"></dx:MenuItem>
                             </Items>
                         </dx:ASPxMenu>
                     </div>

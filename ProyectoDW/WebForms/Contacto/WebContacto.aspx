@@ -20,6 +20,13 @@
                 title: msg
             })
         }
+        function LlenarDatos(msg) {
+            Swal.fire({
+                icon: 'info',
+                title: msg
+            })
+        }
+
     </script> 
     <!-- banner -->
     <div class="page-head">
@@ -62,9 +69,9 @@
             <h3 class="tittle">Formulario de Contacto</h3>
             <form>
                 <div class="contact-form2">
-                    <input id="txtNombre" type="text" placeholder="Nombre" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="" runat="server" />
-                    <input id="txtEmail" type="email" placeholder="Email" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="" runat="server"/>
-                    <textarea id="txtMensaje" placeholder="Mensaje..." cols="20" rows="2" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="" runat="server"></textarea>
+                    <input id="txtNombre" type="text" placeholder="Nombre" value="" onfocus="" onblur="" required="required" runat="server" />
+                    <input id="txtEmail" type="email" placeholder="Email" value="" onfocus="" onblur="" required="required" runat="server"/>
+                    <textarea id="txtMensaje" placeholder="Mensaje..." cols="20" rows="2" onfocus="" onblur="" required="required" runat="server"></textarea>
                     <asp:Button ID="btnEnviar2" runat="server" Text="Enviar" OnClick="btnEnviar2_Click"/>
                 </div>
             </form>

@@ -29,22 +29,36 @@ namespace ProyectoDW.WebForms.Contacto
                 contacto.Nombre = txtNombre.Value;
                 contacto.Email = txtEmail.Value;
                 contacto.Mensaje = txtMensaje.Value;
-                if (clsController.InsertContacto(contacto))
+                if (contacto.Nombre == null || contacto.Email == null || contacto.Mensaje == null)
                 {
-                    string mensaje_alerta = "Hemos recibido correctamente su registro, nos pondremos en contacto";
-                    ClientScript.RegisterStartupScript(GetType(), "alerta", "Agregado('" + mensaje_alerta + "')", true);
+                    string mensaje_alerta = "Llene todos los datos del formulario";
+                    ClientScript.RegisterStartupScript(GetType(), "alerta", "LlenarDatos('" + mensaje_alerta + "')", true);
                 }
+                else
+                {
+                    if (clsController.InsertContacto(contacto))
+                    {
+                        txtNombre.Value = "";
+                        txtEmail.Value = "";
+                        txtMensaje.Value = "";
+                        string mensaje_alerta = "Hemos recibido correctamente su registro, nos pondremos en contacto";
+                        ClientScript.RegisterStartupScript(GetType(), "alerta", "Agregado('" + mensaje_alerta + "')", true);
+
+                    }
+                    else
+                    {
+                        string mensaje_alerta = "Ocurrio un error al ingresar el registro";
+                        ClientScript.RegisterStartupScript(GetType(), "alerta", "Error('" + mensaje_alerta + "')", true);
+                    }
+                }
+                
             }
             catch (Exception ex)
             {
                 log.LogError(ex.ToString(), ex.StackTrace);
                 string mensaje_alerta = "Ocurrio un error al ingresar el registro";
                 ClientScript.RegisterStartupScript(GetType(), "alerta", "Error('" + mensaje_alerta + "')", true);
-            }
-
-            txtNombre.Value = "";
-            txtEmail.Value = "";
-            txtMensaje.Value = "";
+            }          
         }
     }
 }
