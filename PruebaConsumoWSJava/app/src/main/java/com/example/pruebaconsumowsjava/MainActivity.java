@@ -2,12 +2,16 @@ package com.example.pruebaconsumowsjava;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -99,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                 Log.d("result", result.toString());
+
+
                 return "Ok";
             }catch(Exception ex){
                 Log.e("ex", ex.getMessage());
@@ -119,21 +125,56 @@ public class MainActivity extends AppCompatActivity {
             init();
             }else{
                tvMensaje.setText("NO HAY TRANSACCIONES PENDIENTES");
+
            }
+
+            //setContentView(R.layout.activity_main);
+
         }
 
         }
 
     private class segundoPlanoCierre extends AsyncTask<String,Void,String> {
+        String METHOD_NAME = "cierre";
+        String NAMESPACE = "http://servicio.org/";
+        String SOAP_ACTION =NAMESPACE+METHOD_NAME;
+        String URL = "http://192.168.0.5:23398/ServiciosWebProyecto/RealizarCierre?WSDL";
 
+        @SuppressLint("LongLogTag")
         @Override
         protected String doInBackground(String... strings) {
-            return null;
+            SoapObject request = new SoapObject(NAMESPACE,METHOD_NAME);
+            SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+            envelope.dotNet = false;
+            envelope.setOutputSoapObject(request);
+            HttpTransportSE transporte = new HttpTransportSE(URL);
+
+            Log.d("transporte", request.toString());
+
+
+            try {
+                transporte.call(SOAP_ACTION, envelope);
+                SoapPrimitive response = (SoapPrimitive) envelope.getResponse();
+                //SoapObject response = (SoapObject) envelope.bodyIn;
+
+                Log.d("Cierre", "actualizado correctamente");
+                return "Ok";
+            }catch(Exception ex){
+                Log.e("ex", ex.getMessage());
+                return null;
+            }
         }
         @Override
         protected void onPreExecute(){
             tvMensaje.setText("");
 
+
+           /* TableLayout stk = (TableLayout) findViewById(R.id.table_main);
+            int count = stk.getChildCount();
+            for (int i = 0; i < count; i++) {
+                View child = stk.getChildAt(i);
+                if (child instanceof TableRow)
+                    ((ViewGroup) child).removeAllViews(); }*/
 
         }
         @Override
@@ -213,6 +254,7 @@ public class MainActivity extends AppCompatActivity {
             tbrow.addView(t4v);
             stk.addView(tbrow);
         }
+        
 
     }
 
