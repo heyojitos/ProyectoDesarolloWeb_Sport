@@ -92,5 +92,26 @@ public class DaoTransaccion {
         }
         return respuesta;
     }
+    
+     public boolean actualizarTransacciones() {
+        //Se prepara la sentencia SQL a ejecutar en la BD
+        strSql = "UPDATE TB_TRANSACCION_PAGO SET ID_ESTADO_TRANSACCION = 2 WHERE ID_ESTADO_TRANSACCION = 1;";
+
+        try {
+            //se abre una conexión hacia la BD
+            conexion.open();
+            //Se ejecuta la instrucción y retorna si la ejecución fue satisfactoria
+            respuesta = conexion.executeSql(strSql);
+            //Se cierra la conexión hacia la BD
+            conexion.close();
+
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(DaoTransaccion.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        } catch (Exception ex) {
+            Logger.getLogger(DaoTransaccion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return respuesta;
+    }
 
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="bottom|top"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -11,27 +12,26 @@
         android:id="@+id/scrollView1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#3d455b"
-        android:layout_alignParentLeft="true" >
+        android:layout_alignParentLeft="true"
+        android:background="#3d455b">
 
         <HorizontalScrollView
             android:id="@+id/hscrll1"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:id="@+id/RelativeLayout1"
                 android:layout_width="fill_parent"
-                android:layout_gravity="center"
                 android:layout_height="fill_parent"
-                android:orientation="vertical" >
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <TableLayout
                     android:id="@+id/table_main"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true" >
-                </TableLayout>
+                    android:layout_centerHorizontal="true"></TableLayout>
             </RelativeLayout>
         </HorizontalScrollView>
     </ScrollView>
@@ -41,11 +41,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="132dp"
+        android:gravity="center_horizontal|center_vertical"
         android:text="Ver transacciones pendientes cierre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCierre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Realizar cierre" />
+
+    <TextView
+        android:id="@+id/tvMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="48sp" />
 
 
 </LinearLayout>

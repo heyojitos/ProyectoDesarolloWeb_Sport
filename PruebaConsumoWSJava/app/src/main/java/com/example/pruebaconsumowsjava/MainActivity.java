@@ -36,8 +36,9 @@ import java.util.Vector;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnConsumir;
+    private Button btnCierre;
+    private TextView tvMensaje;
 
-    String resultado="";
     SoapObject result;
 
     @Override
@@ -46,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnConsumir = findViewById(R.id.btnConsumir);
+        btnCierre = findViewById(R.id.btnCierre);
+        tvMensaje = findViewById(R.id.tvMensaje);
+
 
         btnConsumir.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -54,6 +58,16 @@ public class MainActivity extends AppCompatActivity {
                 tarea.execute();
             }
         });
+
+        btnCierre.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                segundoPlanoCierre tarea2 = new segundoPlanoCierre();
+                tarea2.execute();
+            }
+        });
+
+
     }
 
 
@@ -96,22 +110,38 @@ public class MainActivity extends AppCompatActivity {
         protected void onPreExecute(){
         }
 
-
-
         @Override
         protected void onPostExecute(String s) {
             Log.d("s", s);
-           // if(s.equals("OK")){
-
+           if(s.equals("Ok")&&(result.getPropertyCount()>0)){
             //requestWindowFeature(Window.FEATURE_NO_TITLE);
             setContentView(R.layout.activity_main);
-
             init();
-
-           // }
+            }else{
+               tvMensaje.setText("NO HAY TRANSACCIONES PENDIENTES");
+           }
         }
 
         }
+
+    private class segundoPlanoCierre extends AsyncTask<String,Void,String> {
+
+        @Override
+        protected String doInBackground(String... strings) {
+            return null;
+        }
+        @Override
+        protected void onPreExecute(){
+            tvMensaje.setText("");
+
+
+        }
+        @Override
+        protected void onPostExecute(String s) {
+
+        }
+
+    }
 
     public void init() {
         TableLayout stk = (TableLayout) findViewById(R.id.table_main);

@@ -10,6 +10,9 @@
     <service name="ObtenerTransaccionesCierre">
       <implementation-class>org.servicio.ObtenerTransaccionesCierre</implementation-class>
     </service>
+    <service name="RealizarCierre">
+      <implementation-class>org.servicio.RealizarCierre</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>
