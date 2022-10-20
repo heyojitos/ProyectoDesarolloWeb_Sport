@@ -34,12 +34,12 @@ public class DaoTransaccion {
         try {
             strSql = "SELECT ID_TRANSACCION, "
                     + "ULTIMOS_DIGITOS_TARJETA, "
-                    + "NOMBRE, "
-                    + "AUTORIZACION, "
+                    + "NOMBRE, AUTORIZACION, "
                     + "ID_ESTADO_TRANSACCION, "
                     + "MONTO,"
-                    + "(SELECT ET.DES_ESTADO_TRANSACCION FROM TB_CAT_ESTADO_TRANSACCION ET WHERE ET.ID_ESTADO_TRANSACCION = TP.ID_ESTADO_TRANSACCION ) "
-                    + "ESTADO_TRANSACCION from TB_TRANSACCION_PAGO TP WHERE ID_ESTADO_TRANSACCION = 1;";
+                    + "(SELECT ET.DES_ESTADO_TRANSACCION FROM TB_CAT_ESTADO_TRANSACCION ET WHERE ET.ID_ESTADO_TRANSACCION = TP.ID_ESTADO_TRANSACCION ) ESTADO_TRANSACCION "
+                    + "from TB_TRANSACCION_PAGO TP "
+                    + "WHERE ID_ESTADO_TRANSACCION = 1;";
             conexion.open();
             rs = conexion.executeQuery(strSql);
 
@@ -49,8 +49,9 @@ public class DaoTransaccion {
                 transaccion.setUltimosDitigosTarjeta(rs.getString("ULTIMOS_DIGITOS_TARJETA"));
                 transaccion.setNombre(rs.getString("NOMBRE"));
                 transaccion.setAutorizacion(rs.getString("AUTORIZACION"));
+                transaccion.setMonto(Double.parseDouble(rs.getString("MONTO")));
                 transaccion.setEstadoTransaccion(Integer.parseInt(rs.getString("ID_ESTADO_TRANSACCION")));
-                 transaccion.setEstadoTransaccions(rs.getString("ESTADO_TRANSACCION"));
+                transaccion.setEstadoTransaccions(rs.getString("ESTADO_TRANSACCION"));
                 lstTransaccion.add(transaccion);
             }
             rs.close();

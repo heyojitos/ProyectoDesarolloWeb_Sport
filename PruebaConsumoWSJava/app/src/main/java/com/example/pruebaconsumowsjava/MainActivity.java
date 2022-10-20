@@ -2,12 +2,17 @@ package com.example.pruebaconsumowsjava;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +29,7 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.Proxy;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
@@ -32,18 +38,14 @@ public class MainActivity extends AppCompatActivity {
     private Button btnConsumir;
 
     String resultado="";
-    String valor, msj;
     SoapObject result;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // txtResultado =  findViewById(R.id.txtResultado);
         btnConsumir = findViewById(R.id.btnConsumir);
-
 
         btnConsumir.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
     private class segundoPlano extends AsyncTask<String,Void,String> {
         String METHOD_NAME = "getTransaccionesParaCierre";
@@ -81,17 +84,6 @@ public class MainActivity extends AppCompatActivity {
                 result = (SoapObject) response;
 
 
-
-                for (int i = 0; i< result.getPropertyCount(); i++)
-                {
-                    SoapObject transaccion = (SoapObject) response.getProperty(i);
-                    String nombre = transaccion.getProperty("nombre").toString();
-                    String idTransaccion = transaccion.getProperty("idTransaccion").toString();
-                    Log.d("nombre", nombre);
-                    Log.d("idTransaccion", idTransaccion);
-
-                }
-
                 Log.d("result", result.toString());
                 return "Ok";
             }catch(Exception ex){
@@ -104,14 +96,97 @@ public class MainActivity extends AppCompatActivity {
         protected void onPreExecute(){
         }
 
+
+
         @Override
         protected void onPostExecute(String s) {
-            if(s=="OK"){
-               // txtResultado.setText(s);
-            }
+            Log.d("s", s);
+           // if(s.equals("OK")){
+
+            //requestWindowFeature(Window.FEATURE_NO_TITLE);
+            setContentView(R.layout.activity_main);
+
+            init();
+
+           // }
+        }
+
+        }
+
+    public void init() {
+        TableLayout stk = (TableLayout) findViewById(R.id.table_main);
+
+        TableRow tbrow0 = new TableRow(this);
+
+        TextView tv0 = new TextView(this);
+        tv0.setText("  ID  ");
+        tv0.setTextColor(Color.WHITE);
+        tbrow0.addView(tv0);
+
+        TextView tv1 = new TextView(this);
+        tv1.setText("       NOMBRE       ");
+        tv1.setTextColor(Color.WHITE);
+        tbrow0.addView(tv1);
+
+        TextView tv2 = new TextView(this);
+        tv2.setText("    MONTO    ");
+        tv2.setTextColor(Color.WHITE);
+        tbrow0.addView(tv2);
+
+        TextView tv3 = new TextView(this);
+        tv3.setText("   ESTADO   ");
+        tv3.setTextColor(Color.WHITE);
+        tbrow0.addView(tv3);
+
+        stk.addView(tbrow0);
+
+      /*  for (int i = 0; i< result.getPropertyCount(); i++)
+        {
+            SoapObject transaccion = (SoapObject) result.getProperty(i);
+            String nombre = transaccion.getProperty("nombre").toString();
+            String idTransaccion = transaccion.getProperty("idTransaccion").toString();
+            Log.d("nombre", nombre);
+            Log.d("idTransaccion", idTransaccion);
+
+        }*/
+
+        for (int i = 0; i< result.getPropertyCount(); i++) {
+            TableRow tbrow = new TableRow(this);
+            SoapObject transaccion = (SoapObject) result.getProperty(i);
+
+            TextView t1v = new TextView(this);
+            String idTransaccion = transaccion.getProperty("idTransaccion").toString();
+            t1v.setText(idTransaccion);
+            t1v.setTextColor(Color.WHITE);
+            t1v.setGravity(Gravity.CENTER);
+            tbrow.addView(t1v);
+
+            TextView t2v = new TextView(this);
+            String nombre = transaccion.getProperty("nombre").toString();
+            t2v.setText(nombre);
+            t2v.setTextColor(Color.WHITE);
+            t2v.setGravity(Gravity.CENTER);
+            tbrow.addView(t2v);
+
+            TextView t3v = new TextView(this);
+            String monto = transaccion.getProperty("monto").toString();
+            t3v.setText(monto);
+            t3v.setTextColor(Color.WHITE);
+            t3v.setGravity(Gravity.CENTER);
+            tbrow.addView(t3v);
+
+            TextView t4v = new TextView(this);
+            String estado = transaccion.getProperty("estadoTransaccions").toString();
+            t4v.setText(estado);
+            t4v.setTextColor(Color.WHITE);
+            t4v.setGravity(Gravity.CENTER);
+            tbrow.addView(t4v);
+            stk.addView(tbrow);
         }
 
     }
+
+
 
 }
 
