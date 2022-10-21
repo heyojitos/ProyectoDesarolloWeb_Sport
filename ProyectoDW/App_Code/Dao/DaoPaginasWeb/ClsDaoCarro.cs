@@ -28,7 +28,7 @@ namespace ProyectoDW.App_Code.Dao.DaoPaginasWeb
             try
             {
 
-                strSql = "INSERT INTO [dbo].[TB_PEDIDO] ([ID_PEDIDO],[ID_USUARIO],[NOMBRE_CLIENTE],[NIT],[FECHA_PEDIDO],[MONTO],[ID_ESTADO]) VALUES (" +
+                strSql = "INSERT INTO [TB_PEDIDO] ([ID_PEDIDO],[ID_USUARIO],[NOMBRE_CLIENTE],[NIT],[FECHA_PEDIDO],[MONTO],[ID_ESTADO]) VALUES (" +
                         "(SELECT ISNULL(MAX(ID_PEDIDO),0) + 1 FROM TB_PEDIDO)," +
                         ""+ client.IdCliente +"," +
                         "'"+ client.Contacto +"'," +
@@ -40,7 +40,7 @@ namespace ProyectoDW.App_Code.Dao.DaoPaginasWeb
 
                 foreach (ClsCarroItem cls in lstCarrito)
                 {
-                    strSql = "INSERT INTO [dbo].[TB_DETALLE_PEDIDO] ([ID_DETALLE_PEDIDO],[ID_PEDIDO],[ID_PRODUCTO],[CANTIDAD],[SUBTOTAL]) VALUES (" +
+                    strSql = "INSERT INTO [TB_DETALLE_PEDIDO] ([ID_DETALLE_PEDIDO],[ID_PEDIDO],[ID_PRODUCTO],[CANTIDAD],[SUBTOTAL]) VALUES (" +
                         " "+ cls.ID_regitro +"," +
                         "(SELECT MAX(ID_PEDIDO) FROM TB_PEDIDO)," +
                         " "+ cls.Codigo_producto +", " +
@@ -48,7 +48,7 @@ namespace ProyectoDW.App_Code.Dao.DaoPaginasWeb
                         " "+ cls.Subtotal +")";
                     objSql.EjectuaSQLT(conexion, transaccion, strSql);
 
-                    strSql = "UPDATE [dbo].[TB_PRODUCTO] SET [STOCK] = [STOCK] - "+ cls.Cantidad +" WHERE [ID_PRODUCTO] = "+ cls.Codigo_producto +" ";
+                    strSql = "UPDATE [TB_PRODUCTO] SET [STOCK] = [STOCK] - "+ cls.Cantidad +" WHERE [ID_PRODUCTO] = "+ cls.Codigo_producto +" ";
                     objSql.EjectuaSQLT(conexion, transaccion, strSql);
                 }
 

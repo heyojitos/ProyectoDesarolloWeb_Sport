@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoDW.App_Code.Controller.ControllerPaginasWeb;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,7 +10,14 @@ namespace ProyectoDW.WebForms.Pedido
 {
     public partial class WebDetallePedido : System.Web.UI.Page
     {
+        ClsControllerPedido controllerPedido = new ClsControllerPedido();
+
         protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LlenarDatosPedido()
         {
 
         }

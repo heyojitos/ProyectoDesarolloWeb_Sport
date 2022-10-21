@@ -113,7 +113,6 @@ namespace ProyectoDW.WebForms.Carrito
             String telefonoCliente = txtTelefono.Text;
             String nitCliente = txtNit.Text;
             List<ClsCarroItem> lstCarro = new List<ClsCarroItem>();
-            //int NoPedido = 0;
 
             try
             {

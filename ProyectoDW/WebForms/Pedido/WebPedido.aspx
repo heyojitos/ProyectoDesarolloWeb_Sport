@@ -28,8 +28,10 @@
                 <asp:GridView ID="gridPedidos" runat="server" CssClass="timetable_sub" AutoGenerateColumns="False" ShowFooter="false" EnableCallBacks="false">
                     <Columns>
                         <asp:BoundField DataField="ID_PEDIDO" HeaderText="Codigo de Compra" ReadOnly="true" />
-                        <asp:BoundField DataField="FECHA_COMPRA" HeaderText="Fecha de Compra" ReadOnly="true" Visible="false" />
-                        <asp:BoundField DataField="TOTAL" HeaderText="MONTO" ReadOnly="true" DataFormatString="{0:c}" />
+                        <asp:BoundField DataField="FECHA_PEDIDO" HeaderText="Fecha de Compra" ReadOnly="true" Visible="false" />
+                        <asp:BoundField DataField="NOMBRE_CLIENTE" HeaderText="Nombre del cliente" ReadOnly="true" Visible="false" />
+                        <asp:BoundField DataField="NIT" HeaderText="Nit del cliente" ReadOnly="true" Visible="false" />
+                        <asp:BoundField DataField="MONTO" HeaderText="Total" ReadOnly="true" DataFormatString="{0:c}" />
                         <asp:BoundField DataField="ESTADO" HeaderText="Estado" ReadOnly="true" />
                         <asp:TemplateField HeaderText="">
                             <ItemTemplate>
