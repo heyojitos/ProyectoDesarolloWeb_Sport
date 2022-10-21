@@ -15,6 +15,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script = "text/javascript" >
         function MostrarPopUp() {
@@ -28,6 +29,18 @@
 
         function EmailNotFound() {
             swal("Correo no encontrado!");
+        }
+        function Agregado(msg) {
+            Swal.fire({
+                icon: 'success',
+                title: msg
+            })
+        }
+        function Usuario(msg) {
+            Swal.fire({
+                icon: 'warning',
+                title: msg
+            })
         }
     </script> 
 
@@ -198,6 +211,7 @@
                                         Font-Size="Medium" 
                                         OnClick="btnContinuar_Click" 
                                         UseSubmitBehavior="false">
+                                        <ClientSideEvents Click="function(s, e) { dxPopUpProducto.Hide(); }" /> 
                                     </dx:ASPxButton>
                                     <button class="btn btn-sm btn-danger" type="reset">
                                         <i class="mdi mdi-lock-reset"></i>Resetear</button>

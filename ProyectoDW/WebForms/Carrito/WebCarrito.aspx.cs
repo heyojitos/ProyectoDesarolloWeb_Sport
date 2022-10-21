@@ -135,16 +135,14 @@ namespace ProyectoDW.WebForms.Carrito
                         objCliente.InsertCliente(cliente);
                     }                    
 
-                    string StrQry = "<script language='javascript'>";
-                    StrQry += "alert('Operacion generada con exito!'); ";
-                    StrQry += "</script>";
-                    ClientScript.RegisterStartupScript(GetType(), "mensaje", StrQry, false);
+                    string StrQry = "Se agregro correctamente";
+                    ClientScript.RegisterStartupScript(GetType(), "alerta", "Agregado('"+ StrQry +"')", true);
 
-                    gotoHome();
                 }
                 else
                 {
-                    gotoHome();
+                    string StrQry = "Debe de iniciar sesion para comprar";
+                    ClientScript.RegisterStartupScript(GetType(), "alerta", "Usuario('" + StrQry + "')", true);
                 }
             }
             catch (Exception ex)
@@ -168,11 +166,6 @@ namespace ProyectoDW.WebForms.Carrito
             correlativo.ReadOnly = true;
 
             return dt;
-        }
-
-        public void gotoHome()
-        {
-            Response.Redirect("../Inicio/WebInicio.aspx");
         }
     }
 }

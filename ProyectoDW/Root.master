@@ -49,7 +49,7 @@
                                         </a>
                                     </span>! [
                                         <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
-                                            LogoutPageUrl="~/" OnLoggingOut="HeadLoginStatus_LoggingOut" />
+                                            LogoutPageUrl="~/WebForms/Inicio/WebInicio.aspx" OnLoggingOut="HeadLoginStatus_LoggingOut" />
                                     ]
                                 </LoggedInTemplate>
                             </asp:LoginView>
@@ -81,7 +81,7 @@
                                     </Items>
                                 </dx:MenuItem>
                                 <dx:MenuItem Name="itmContacto" Text="Contacto" NavigateUrl="WebForms/Contacto/WebContacto.aspx" Image-Url="Content/Images/communicate.png"></dx:MenuItem>
-                                <dx:MenuItem Name="itmPedido" Text="Pedido" NavigateUrl="WebForms/Pedido/WebPedido.aspx" Image-Url="Content/Images/tracking.png"></dx:MenuItem>
+                                <dx:MenuItem Name="itmPedido" Text="Ver Compras" NavigateUrl="WebForms/Pedido/WebPedido.aspx" Image-Url="Content/Images/tracking.png"></dx:MenuItem>
                             </Items>
                         </dx:ASPxMenu>
                     </div>
