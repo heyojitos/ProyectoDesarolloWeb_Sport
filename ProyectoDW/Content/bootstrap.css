@@ -213,6 +213,17 @@ table {
   border-spacing: 0;
 }
 
+.abs-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+}
+
+.form{
+    width: 450px;
+}
+
 @media print {
   * {
     color: #000 !important;
