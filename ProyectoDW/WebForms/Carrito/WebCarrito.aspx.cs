@@ -13,6 +13,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using ProyectoDW.App_Code.Dao;
+using ProyectoDW.App_Code.Controller.ControllerPaginasWeb;
 
 namespace ProyectoDW.WebForms.Carrito
 {
@@ -20,6 +21,8 @@ namespace ProyectoDW.WebForms.Carrito
     {
         ClsProducto clsProducto = new ClsProducto();
         ClsControllerProducto clsControllerProducto = new ClsControllerProducto();
+        ClsControllerCarro carro = new ClsControllerCarro();
+        //ClsClient client = new ClsClient();
         ClsDaoClient objCliente = new ClsDaoClient();
         ClsAspNetUsers aspCliente = new ClsAspNetUsers();
         ClsCarritoCompra compra;
@@ -64,8 +67,8 @@ namespace ProyectoDW.WebForms.Carrito
             gridCarrito.DataBind();
 
             Session["DatosCarro"] = dt;
-            
-            idTotal.Text = "Q." + compra.TotalCarro().ToString();
+            Session["TotalCarro"] = compra.TotalCarro();
+            idTotal.Text = "Q." + Session["TotalCarro"].ToString();
             decimal cambioTotal = compra.TotalCarro();
             var res = wsbanguat.TipoCambioDia();
             decimal cambio = decimal.Parse(res.CambioDolar.First().referencia.ToString());
@@ -108,7 +111,9 @@ namespace ProyectoDW.WebForms.Carrito
             String direccionCliente = txtDireccion.Text;
             String contactoCliente = txtContacto.Text;
             String telefonoCliente = txtTelefono.Text;
-            int NoPedido = 0;
+            String nitCliente = txtNit.Text;
+            List<ClsCarroItem> lstCarro = new List<ClsCarroItem>();
+            //int NoPedido = 0;
 
             try
             {
@@ -119,25 +124,55 @@ namespace ProyectoDW.WebForms.Carrito
                     int codigoCliente = int.Parse(objCliente.DsReturn.Tables["idCliente"].Rows[0]["Codigo"].ToString());
                     String correoCliente = objCliente.DsReturn.Tables["idCliente"].Rows[0]["Email"].ToString();
 
+                    foreach (var c in compra.carroItems)
+                    {
+                        ClsCarroItem item = new ClsCarroItem();
+                        item.ID_regitro = c.ID_regitro;
+                        item.Codigo_producto = c.Codigo_producto;
+                        item.Cantidad = c.Cantidad;
+                        item.Subtotal = c.Subtotal;
+                        lstCarro.Add(item);
+                    }
                     if (objCliente.getClienteXid(codigoCliente))
                     {
-                        NoPedido = NoPedido + 1;
+                        cliente.IdCliente = codigoCliente;
+                        cliente.Contacto = contactoCliente;
+                        cliente.Nit = nitCliente;
+                        decimal total = decimal.Parse(Session["TotalCarro"].ToString());
+
+                        if (carro.InsertarPedido(cliente, lstCarro, total))
+                        {
+                            string StrQry = "Se agregro correctamente";
+                            ClientScript.RegisterStartupScript(GetType(), "alerta", "Agregado('" + StrQry + "')", true);
+                        }
+                        else
+                        {
+                            string StrQry = "Error al ingresar el pedido";
+                            ClientScript.RegisterStartupScript(GetType(), "alerta", "Error('" + StrQry + "')", true);
+                        }                       
                     }
                     else
                     {
-                        NoPedido = NoPedido + 1;
                         cliente.IdCliente = codigoCliente;
                         cliente.Nombre = contactoCliente;
                         cliente.Correo = correoCliente;
                         cliente.Direccion = direccionCliente;
                         cliente.Telefono = telefonoCliente;
-
+                        cliente.Nit = nitCliente;
+                        decimal total = decimal.Parse(Session["TotalCarro"].ToString());
                         objCliente.InsertCliente(cliente);
+
+                        if (carro.InsertarPedido(cliente, lstCarro, total))
+                        {
+                            string StrQry = "Se agregro correctamente";
+                            ClientScript.RegisterStartupScript(GetType(), "alerta", "Agregado('" + StrQry + "')", true);
+                        }
+                        else
+                        {
+                            string StrQry = "Error al ingresar el pedido";
+                            ClientScript.RegisterStartupScript(GetType(), "alerta", "Error('" + StrQry + "')", true);
+                        }
                     }                    
-
-                    string StrQry = "Se agregro correctamente";
-                    ClientScript.RegisterStartupScript(GetType(), "alerta", "Agregado('"+ StrQry +"')", true);
-
                 }
                 else
                 {

@@ -13,6 +13,10 @@ namespace ProyectoDW.App_Code.Models
         private String correo;        
         private String direccion;
         private String telefono;
+        private String nit;
+        private String contacto;
+
+
 
         public int IdCliente
         {
@@ -76,6 +80,32 @@ namespace ProyectoDW.App_Code.Models
             set
             {
                 telefono = value;
+            }
+        }
+
+        public string Nit
+        {
+            get
+            {
+                return nit;
+            }
+
+            set
+            {
+                nit = value;
+            }
+        }
+
+        public string Contacto
+        {
+            get
+            {
+                return contacto;
+            }
+
+            set
+            {
+                contacto = value;
             }
         }
     }

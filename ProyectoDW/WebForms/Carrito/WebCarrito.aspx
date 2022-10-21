@@ -42,6 +42,12 @@
                 title: msg
             })
         }
+        function Error(msg) {
+            Swal.fire({
+                icon: 'error',
+                title: msg
+            })
+        }
     </script> 
 
     <!-- check out -->
@@ -107,6 +113,13 @@
                             <h2>Datos de envio</h2>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <asp:Label ID="lblNit" runat="server" Text="Nit" CssClass="control-label col-sm-2"></asp:Label>
+                        <div class="col-sm-10">
+                            <asp:TextBox ID="txtNit" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                    <br />
                     <div class="form-group">
                         <asp:Label ID="lblDireccion" runat="server" Text="Direccion" CssClass="control-label col-sm-2"></asp:Label>
                         <div class="col-sm-10">

@@ -566,6 +566,7 @@
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerAnuncio.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerCategoria.cs" />
     <Compile Include="App_Code\Controller\ControllerMantenimiento\ClsControllerProducto.cs" />
+    <Compile Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerCarro.cs" />
     <Compile Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerContacto.cs" />
     <Compile Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerDeporte.cs" />
     <Compile Include="App_Code\Controller\ControllerPaginasWeb\ClsControllerHombre.cs" />

@@ -39,8 +39,6 @@
                     </Columns>
                 </asp:GridView>
             </div>
-
-
         </div>
     </div>
     <!-- //check out -->

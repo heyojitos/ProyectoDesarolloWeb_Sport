@@ -76,6 +76,24 @@ namespace ProyectoDW.WebForms.Carrito {
         protected global::DevExpress.Web.ASPxPopupControl dxPopUpProducto;
         
         /// <summary>
+        /// Control lblNit.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNit;
+        
+        /// <summary>
+        /// Control txtNit.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNit;
+        
+        /// <summary>
         /// Control lblDireccion.
         /// </summary>
         /// <remarks>
