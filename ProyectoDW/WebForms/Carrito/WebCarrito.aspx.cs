@@ -142,12 +142,20 @@ namespace ProyectoDW.WebForms.Carrito
 
                         if (carro.InsertarPedido(cliente, lstCarro, total))
                         {
-                            string StrQry = "Se agregro correctamente";
+                            Session["miCarro"] = null;
+                            Session["miCarro"] = new ClsCarritoCompra();
+                            compra = (ClsCarritoCompra)Session["miCarro"];
+                            FillData();
+                            txtNit.Text = "";
+                            txtContacto.Text = "";
+                            txtDireccion.Text = "";
+                            txtTelefono.Text = "";
+                            string StrQry = "Se guardo correctamente el pedido, podrá verlo en Ver Compras";
                             ClientScript.RegisterStartupScript(GetType(), "alerta", "Agregado('" + StrQry + "')", true);
                         }
                         else
                         {
-                            string StrQry = "Error al ingresar el pedido";
+                            string StrQry = "Ocurrio un error al ingresar el pedido";
                             ClientScript.RegisterStartupScript(GetType(), "alerta", "Error('" + StrQry + "')", true);
                         }                       
                     }
@@ -164,12 +172,19 @@ namespace ProyectoDW.WebForms.Carrito
 
                         if (carro.InsertarPedido(cliente, lstCarro, total))
                         {
-                            string StrQry = "Se agregro correctamente";
+                            Session["miCarro"] = null;
+                            Session["miCarro"] = new ClsCarritoCompra();
+                            FillData();
+                            txtNit.Text = "";
+                            txtContacto.Text = "";
+                            txtDireccion.Text = "";
+                            txtTelefono.Text = "";
+                            string StrQry = "Se guardo correctamente el pedido, podrá verlo en Ver Compras";
                             ClientScript.RegisterStartupScript(GetType(), "alerta", "Agregado('" + StrQry + "')", true);
                         }
                         else
                         {
-                            string StrQry = "Error al ingresar el pedido";
+                            string StrQry = "Ocurrio un error al ingresar el pedido";
                             ClientScript.RegisterStartupScript(GetType(), "alerta", "Error('" + StrQry + "')", true);
                         }
                     }                    
