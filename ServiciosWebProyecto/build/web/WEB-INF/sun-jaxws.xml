@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<endpoints version="2.0" xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
-  <endpoint implementation="org.servicio.GeneradorToken" name="GeneradorToken" url-pattern="/GeneradorToken"/>
-  <endpoint implementation="org.servicio.ObtenerTransaccionesCierre" name="ObtenerTransaccionesCierre" url-pattern="/ObtenerTransaccionesCierre"/>
-  <endpoint implementation="org.servicio.RealizarCierre" name="RealizarCierre" url-pattern="/RealizarCierre"/>
-  <endpoint implementation="org.servicio.InsertarTransaccion" name="InsertarTransaccion" url-pattern="/InsertarTransaccion"/>
-</endpoints>

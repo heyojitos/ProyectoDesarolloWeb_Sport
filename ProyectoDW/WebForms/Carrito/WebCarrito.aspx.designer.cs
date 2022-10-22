@@ -148,6 +148,51 @@ namespace ProyectoDW.WebForms.Carrito {
         protected global::System.Web.UI.WebControls.TextBox txtTelefono;
         
         /// <summary>
+        /// Control txtNombreTar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTextBox txtNombreTar;
+        
+        /// <summary>
+        /// Control txtNumTar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTextBox txtNumTar;
+        
+        /// <summary>
+        /// Control cbxMes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxComboBox cbxMes;
+        
+        /// <summary>
+        /// Control cbxYear.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxComboBox cbxYear;
+        
+        /// <summary>
+        /// Control txtCvv.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTextBox txtCvv;
+        
+        /// <summary>
         /// Control dxBtnContinuar.
         /// </summary>
         /// <remarks>

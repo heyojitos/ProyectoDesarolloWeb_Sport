@@ -156,7 +156,8 @@
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label for="name">Nombre</label>
-                                                <input class="form-control" id="name" type="text" placeholder="Ingrese nombre registrado">
+                                                <dx:ASPxTextBox ID="txtNombreTar" CssClass="form-control" runat="server" Width="170px" NullText="Ingrese nombre registrado"></dx:ASPxTextBox>
+                                                <%--<input class="form-control" id="txtNombreTarjeta"  type="text" placeholder="Ingrese nombre registrado" />--%>
                                             </div>
                                         </div>
                                     </div>
@@ -166,7 +167,8 @@
                                             <div class="form-group">
                                                 <label for="ccnumber">Numero de tarjeta</label>
                                                 <div class="input-group">
-                                                    <input class="form-control" type="text" placeholder="0000 0000 0000 0000" autocomplete="email">
+                                                    <dx:ASPxTextBox ID="txtNumTar" CssClass="form-control" runat="server" Width="170px" NullText="0000 0000 0000 0000"></dx:ASPxTextBox>
+                                                    <%--<input id="txtNumeroTarjeta" class="form-control" type="text" placeholder="0000 0000 0000 0000" autocomplete="email" />--%>
                                                     <div class="input-group-append">
                                                         <span class="input-group-text">
                                                             <i class="mdi mdi-credit-card"></i>
@@ -180,7 +182,23 @@
                                     <div class="row">
                                         <div class="form-group col-sm-4">
                                             <label for="ccmonth">Mes</label>
-                                            <select class="form-control" id="ccmonth">
+                                            <dx:ASPxComboBox ID="cbxMes" CssClass="form-control" runat="server" ValueType="System.String">
+                                                <Items>
+                                                    <dx:ListEditItem Text="Enero" Value="1"/>
+                                                    <dx:ListEditItem Text="Febrero" Value="2"/>
+                                                    <dx:ListEditItem Text="Marzo" Value="3"/>
+                                                    <dx:ListEditItem Text="Abril" Value="4"/>
+                                                    <dx:ListEditItem Text="Mayo" Value="5"/>
+                                                    <dx:ListEditItem Text="Junio" Value="6"/>
+                                                    <dx:ListEditItem Text="Julio" Value="7"/>
+                                                    <dx:ListEditItem Text="Agosto" Value="8"/>
+                                                    <dx:ListEditItem Text="Septiembre" Value="9"/>
+                                                    <dx:ListEditItem Text="Octubre" Value="10"/>
+                                                    <dx:ListEditItem Text="Noviembre" Value="11"/>
+                                                    <dx:ListEditItem Text="Diciembre" Value="12"/>
+                                                </Items>
+                                            </dx:ASPxComboBox>
+                                            <%--<select class="form-control" id="ccmonth" runat="server">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -193,21 +211,30 @@
                                                 <option>10</option>
                                                 <option>11</option>
                                                 <option>12</option>
-                                            </select>
+                                            </select>--%>
                                         </div>
                                         <div class="form-group col-sm-4">
                                             <label for="ccyear">Año</label>
-                                            <select class="form-control" id="ccyear">
+                                            <dx:ASPxComboBox ID="cbxYear" CssClass="form-control" runat="server" ValueType="System.String">
+                                                <Items>
+                                                    <dx:ListEditItem Text="2023" Value="2023"/>
+                                                    <dx:ListEditItem Text="2024" Value="2024"/>
+                                                    <dx:ListEditItem Text="2025" Value="2025"/>
+                                                    <dx:ListEditItem Text="2026" Value="2026"/>
+                                                </Items>
+                                            </dx:ASPxComboBox>
+                                            <%--<select class="form-control" id="ccyear" runat="server">
                                                 <option>2023</option>
                                                 <option>2024</option>
                                                 <option>2025</option>
                                                 <option>2026</option>
-                                            </select>
+                                            </select>--%>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="cvv">CVV/CVC</label>
-                                                <input class="form-control" id="cvv" type="text" placeholder="123">
+                                                <dx:ASPxTextBox ID="txtCvv" runat="server" class="form-control" Width="170px" NullText="123"></dx:ASPxTextBox>
+                                                <%--<input id="txtCVV" class="form-control" id="cvv" type="text" placeholder="123" />--%>
                                             </div>
                                         </div>
                                     </div>

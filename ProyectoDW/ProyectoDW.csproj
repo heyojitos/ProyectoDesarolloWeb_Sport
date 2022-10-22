@@ -222,8 +222,37 @@
     <Content Include="bin\ru\DevExpress.Printing.v17.2.Core.resources.dll" />
     <Content Include="bin\ru\DevExpress.RichEdit.v17.2.Core.resources.dll" />
     <Content Include="bin\ru\DevExpress.Web.v17.2.resources.dll" />
+    <None Include="Connected Services\ServiceGeneraToken\GeneradorToken.wsdl" />
+    <None Include="Connected Services\ServiceGeneraToken\GeneradorToken.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\ServiceGeneraToken\ProyectoDW.ServiceGeneraToken.getTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceInsertTransaccion\InsertarTransaccion.wsdl" />
+    <None Include="Connected Services\ServiceInsertTransaccion\InsertarTransaccion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceGeneraToken\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceGeneraToken\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceGeneraToken\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Connected Services\ServiceBanguat\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceBanguat\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceInsertTransaccion\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceInsertTransaccion\configuration.svcinfo" />
+    <Content Include="Connected Services\ServiceInsertTransaccion\ProyectoDW.ServiceInsertTransaccion.ingresarTransaccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceInsertTransaccion\ProyectoDW.ServiceInsertTransaccion.modelTransaccion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceInsertTransaccion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\ServiceBanguat\ProyectoDW.ServiceBanguat.DataVariable.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -600,6 +629,16 @@
     <Compile Include="App_Code\Dao\ClsDataLayer.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoUsrDireccion.cs" />
     <Compile Include="App_Code\Dao\DaoMantenimiento\ClsDaoUsrTelefono.cs" />
+    <Compile Include="Connected Services\ServiceGeneraToken\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceInsertTransaccion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServiceBanguat\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -828,6 +867,8 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceGeneraToken\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceInsertTransaccion\" />
     <WCFMetadataStorage Include="Connected Services\ServiceBanguat\" />
   </ItemGroup>
   <PropertyGroup>

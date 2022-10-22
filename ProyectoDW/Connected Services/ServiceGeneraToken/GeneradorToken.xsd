@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://servicio.org/" targetNamespace="http://servicio.org/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getToken" type="tns:getToken" />
+  <xs:element name="getTokenResponse" type="tns:getTokenResponse" />
+  <xs:complexType name="getToken">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroTarjeta" type="xs:string" />
+      <xs:element name="mes" type="xs:int" />
+      <xs:element name="anio" type="xs:int" />
+      <xs:element minOccurs="0" name="cvv" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTokenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

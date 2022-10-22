@@ -29,12 +29,16 @@ namespace ProyectoDW.WebForms.Carrito
 
         ClsErrorHandler log = new ClsErrorHandler();
         ServiceBanguat.TipoCambioSoapClient wsbanguat = new ServiceBanguat.TipoCambioSoapClient();
+        ServiceGeneraToken.GeneradorTokenClient wstoken = new ServiceGeneraToken.GeneradorTokenClient();
+        ServiceInsertTransaccion.InsertarTransaccionClient insertarTransaccion = new ServiceInsertTransaccion.InsertarTransaccionClient();
+
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["miCarro"] == null)
             {
-                Session["miCarro"] = new ClsCarritoCompra();                
+                Session["miCarro"] = new ClsCarritoCompra();               
             }
             compra = (ClsCarritoCompra)Session["miCarro"];
             if (!Page.IsPostBack)
@@ -112,6 +116,11 @@ namespace ProyectoDW.WebForms.Carrito
             String contactoCliente = txtContacto.Text;
             String telefonoCliente = txtTelefono.Text;
             String nitCliente = txtNit.Text;
+            String nombreTarjeta = txtNombreTar.Text;
+            String numeroTarjeta = txtNumTar.Text;
+            String tarjetaCVV = txtCvv.Text;
+            int mesTarjeta = int.Parse(cbxMes.SelectedItem.Value.ToString());
+            int anioTarjeta = int.Parse(cbxYear.SelectedItem.ToString());
             List<ClsCarroItem> lstCarro = new List<ClsCarroItem>();
 
             try
@@ -138,6 +147,20 @@ namespace ProyectoDW.WebForms.Carrito
                         cliente.Contacto = contactoCliente;
                         cliente.Nit = nitCliente;
                         decimal total = decimal.Parse(Session["TotalCarro"].ToString());
+
+                        string resultado = wstoken.getToken(nombreTarjeta, numeroTarjeta, mesTarjeta, anioTarjeta, tarjetaCVV);
+                        int estado;
+                        double monto = double.Parse(total.ToString());
+                        if (resultado == null || resultado == "")
+                        {
+                            estado = 3;
+                            insertarTransaccion.ingresarTransaccion(0, numeroTarjeta, nombreTarjeta, resultado, monto, estado);
+                        }
+                        else
+                        {
+                            estado = 1;
+                            insertarTransaccion.ingresarTransaccion(0, numeroTarjeta, nombreTarjeta, resultado, monto, estado);
+                        }
 
                         if (carro.InsertarPedido(cliente, lstCarro, total))
                         {
@@ -168,6 +191,20 @@ namespace ProyectoDW.WebForms.Carrito
                         cliente.Nit = nitCliente;
                         decimal total = decimal.Parse(Session["TotalCarro"].ToString());
                         objCliente.InsertCliente(cliente);
+
+                        string resultado = wstoken.getToken(nombreTarjeta, numeroTarjeta, mesTarjeta, anioTarjeta, tarjetaCVV);
+                        int estado;
+                        double monto = double.Parse(total.ToString());
+                        if (resultado == null || resultado == "")
+                        {
+                            estado = 3;
+                            insertarTransaccion.ingresarTransaccion(0, numeroTarjeta, nombreTarjeta, resultado, monto, estado);
+                        }
+                        else
+                        {
+                            estado = 1;
+                            insertarTransaccion.ingresarTransaccion(0, numeroTarjeta, nombreTarjeta, resultado, monto, estado);
+                        }
 
                         if (carro.InsertarPedido(cliente, lstCarro, total))
                         {

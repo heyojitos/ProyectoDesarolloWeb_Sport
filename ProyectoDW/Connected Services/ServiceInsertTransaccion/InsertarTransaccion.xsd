@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://servicio.org/" targetNamespace="http://servicio.org/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ingresarTransaccion" type="tns:ingresarTransaccion" />
+  <xs:element name="ingresarTransaccionResponse" type="tns:ingresarTransaccionResponse" />
+  <xs:complexType name="ingresarTransaccion">
+    <xs:sequence>
+      <xs:element name="idTransaccion" type="xs:int" />
+      <xs:element minOccurs="0" name="ultimosDitigosTarjeta" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="autorizacion" type="xs:string" />
+      <xs:element name="monto" type="xs:double" />
+      <xs:element name="estadoTransaccion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ingresarTransaccionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:modelTransaccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modelTransaccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="autorizacion" type="xs:string" />
+      <xs:element name="estadoTransaccion" type="xs:int" />
+      <xs:element minOccurs="0" name="estadoTransaccions" type="xs:string" />
+      <xs:element name="idTransaccion" type="xs:int" />
+      <xs:element name="monto" type="xs:double" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="ultimosDitigosTarjeta" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
