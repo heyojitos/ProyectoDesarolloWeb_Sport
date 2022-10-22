@@ -19,7 +19,7 @@ namespace ProyectoDW.App_Code.Dao.DaoPaginasWeb
         {
             try
             {
-                strSql = "SELECT TB_PEDIDO.ID_PEDIDO, TB_PEDIDO.FECHA_PEDIDO, TB_PEDIDO.NOMBRE_CLIENTE, TB_PEDIDO.NIT, TB_PEDIDO.MONTO, TB_ESTADO.DESCRIPCION " +
+                strSql = "SELECT TB_PEDIDO.ID_PEDIDO, TB_PEDIDO.FECHA_PEDIDO, TB_PEDIDO.NOMBRE_CLIENTE, TB_PEDIDO.NIT, TB_PEDIDO.MONTO, TB_ESTADO.DESCRIPCION as 'ESTADO' " +
                     "FROM TB_PEDIDO INNER JOIN TB_ESTADO ON TB_PEDIDO.ID_ESTADO = TB_ESTADO.ID_ESTADO WHERE TB_PEDIDO.ID_USUARIO = " + id_cliente;
                 DsReturn = objSql.EjectuaSQL(strSql, "PedidoCliente");
             }

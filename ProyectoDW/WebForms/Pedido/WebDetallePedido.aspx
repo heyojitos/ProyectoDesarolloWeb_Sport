@@ -25,13 +25,13 @@
             <h3>Detalle Compra</h3>
 
             <div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
-                <asp:GridView ID="gridPedidos" runat="server" CssClass="timetable_sub" AutoGenerateColumns="False" ShowFooter="false" EnableCallBacks="false">
+                <asp:GridView ID="gridDetallePedidos" runat="server" CssClass="timetable_sub" AutoGenerateColumns="False" ShowFooter="false" EnableCallBacks="false">
                     <Columns>
-                        <asp:BoundField DataField="ID_DETALLE_PEDIDO" HeaderText="Codigo de Compra" ReadOnly="true" />
+                        <asp:BoundField DataField="ID_DETALLE_PEDIDO" HeaderText="Id Detalle" ReadOnly="true" />
                         <asp:BoundField DataField="PRODUCTO" HeaderText="Producto" ReadOnly="true" />
                         <asp:TemplateField HeaderText="Imagen">
                             <ItemTemplate>
-                                <img src="../../" class="img-responsive" width="140px" height="140px" />                          
+                                <img src="../../<%# Eval("IMAGEN") %>" class="img-responsive" width="140px" height="140px" />                          
                             </ItemTemplate>
                         </asp:TemplateField>                       
                         <asp:BoundField DataField="CANTIDAD" HeaderText="Cantidad" ReadOnly="true"  />
@@ -42,12 +42,6 @@
             <div class="checkout-left">
                 <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/WebForms/Pedido/WebPedido.aspx"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Regresar</asp:HyperLink>
-                </div>
-
-                <div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
-                    <ul>
-                        <li>Monto Total: <i>-</i> <span><asp:Label ID="idTotal" runat="server" Text=""></asp:Label></span></li>
-                    </ul>
                 </div>
                 <div class="clearfix"></div>
         </div>

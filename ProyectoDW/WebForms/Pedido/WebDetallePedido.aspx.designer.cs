@@ -13,13 +13,13 @@ namespace ProyectoDW.WebForms.Pedido {
     public partial class WebDetallePedido {
         
         /// <summary>
-        /// Control gridPedidos.
+        /// Control gridDetallePedidos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridPedidos;
+        protected global::System.Web.UI.WebControls.GridView gridDetallePedidos;
         
         /// <summary>
         /// Control HyperLink1.
@@ -29,14 +29,5 @@ namespace ProyectoDW.WebForms.Pedido {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
-        
-        /// <summary>
-        /// Control idTotal.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idTotal;
     }
 }
